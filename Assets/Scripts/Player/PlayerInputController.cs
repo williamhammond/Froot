@@ -1,13 +1,12 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Vector2=UnityEngine.Vector2;
 
 namespace Player {
     public class PlayerInputController : MonoBehaviour {
-        private const int MoveSpeed = 10;
+        private const int MoveSpeed = 5;
         private CharacterController _controller;
-        
+    
         private PlayerInput _playerInput;
         private InputAction _playerMove;
         
@@ -15,7 +14,7 @@ namespace Player {
 
         public void Awake () {
             _controller = gameObject.AddComponent<CharacterController>();
-            
+
             _playerInput = gameObject.GetComponent<PlayerInput>();
             _playerMove = _playerInput.actions["Move"];
         }
@@ -31,6 +30,8 @@ namespace Player {
 
         void Update() {
             HandleMovement();
+            var ray = new Ray(transform.position, transform.forward);
+            Debug.DrawLine(ray.origin, ray.direction * 2 , Color.red);
         }
 
         private void HandlePlayerAction (InputAction.CallbackContext ctx) {
@@ -52,6 +53,11 @@ namespace Player {
             var input = _playerMove.ReadValue<Vector2>();
             var move = new Vector3(input.x, 0, input.y);
             _controller.Move(move * (Time.deltaTime * MoveSpeed));
+            transform.Translate(move.normalized * MoveSpeed * Time.deltaTime, Space.World);
+            if (move != Vector3.zero) {
+                Quaternion toRotation = Quaternion.LookRotation(move.normalized, Vector3.up);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 360 * Time.deltaTime);     
+            }
         }
     }
 }
