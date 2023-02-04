@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../../</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F56A610C-C7C4-F874-B68B-7ADDF94EBB7A}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<SwitchGroups>
+				<SwitchGroup Id="2720040714" Name="Player_Surface">
+					<Switches>
+						<Switch Id="2144363834" Name="Rock"/>
+						<Switch Id="2195636714" Name="Dirt"/>
+						<Switch Id="2654748154" Name="Water"/>
+						<Switch Id="4248645337" Name="Grass"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{880AA0D5-19B8-0FAF-0586-22F1966FA1D1}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="8121666" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Water, Ice, Puddle, Deep SND51723_DB583C0D.wem</CachePath>
+				</File>
+				<File Id="348220615" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Water, Ice, Puddle, Deep SND51723_B1175918.wem</CachePath>
+				</File>
+				<File Id="384430572" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Walking, Puddle, Forest, Boots SND17456.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Walking, Puddle, Forest, Boots SND17456_F0081714.wem</CachePath>
+				</File>
+				<File Id="392359634" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_AF9F25C5.wem</CachePath>
+				</File>
+				<File Id="551084772" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Walking, Puddle, Forest, Boots SND17456.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Walking, Puddle, Forest, Boots SND17456_E6326C29.wem</CachePath>
+				</File>
+				<File Id="588652881" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_944ACFD9.wem</CachePath>
+				</File>
+				<File Id="592245145" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_684CB475.wem</CachePath>
+				</File>
+				<File Id="647409730" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_13CF74BC.wem</CachePath>
+				</File>
+				<File Id="667377362" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Water, Ice, Puddle, Deep SND51723_C4A0CBCB.wem</CachePath>
+				</File>
+				<File Id="717201257" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_C441F1CD.wem</CachePath>
+				</File>
+				<File Id="725348334" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_2972EA5D.wem</CachePath>
+				</File>
+				<File Id="730147860" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_1588402B.wem</CachePath>
+				</File>
+				<File Id="762911541" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Water, Ice, Puddle, Deep SND51723_FF4E6EAD.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1602358412" Name="Play_Footstep" DurationType="OneShot" DurationMin="0" DurationMax="0.28043225">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2720040714" Id="4248645337" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="392359634"/>
+								<MediaRef Id="588652881"/>
+								<MediaRef Id="592245145"/>
+								<MediaRef Id="647409730"/>
+								<MediaRef Id="717201257"/>
+								<MediaRef Id="725348334"/>
+								<MediaRef Id="730147860"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2720040714" Id="2654748154"/>
+							<MediaRefs>
+								<MediaRef Id="8121666"/>
+								<MediaRef Id="348220615"/>
+								<MediaRef Id="384430572"/>
+								<MediaRef Id="551084772"/>
+								<MediaRef Id="667377362"/>
+								<MediaRef Id="762911541"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="2720040714" Name="Player_Surface">
+					<Switches>
+						<Switch Id="2144363834" Name="Rock"/>
+						<Switch Id="2195636714" Name="Dirt"/>
+						<Switch Id="2654748154" Name="Water"/>
+						<Switch Id="4248645337" Name="Grass"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{4B35D8A1-FA50-ADB7-6F8F-6369B5D7BDF2}</FileHash>
+</SoundBanksInfo>
