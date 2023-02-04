@@ -4,11 +4,20 @@
 		<WorkUnit Name="Default Work Unit" ID="{6C39AB2C-F0FC-4C87-9754-3B7B7254F6D6}" PersistMode="Standalone">
 			<ChildrenList>
 				<SwitchGroup Name="Player_Surface" ID="{54CFC667-2E1D-409D-BF8B-B3901FDD9A21}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Switch Name="Dirt" ID="{AA435702-BBE5-4084-A7D7-ECDD7B628F7F}"/>
 						<Switch Name="Grass" ID="{54640D42-BA97-45F1-830E-18E30E1813CD}"/>
 						<Switch Name="Rock" ID="{86E0D440-CDD5-4DB0-8230-C1D22B7A4C14}"/>
 						<Switch Name="Water" ID="{5935718E-DAFB-4CFC-8AFE-34AE6EFBBC25}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Player_Surface_2" ID="{C706D544-4B2D-462B-8335-0D71F9FA6CE1}">
+					<ChildrenList>
+						<Switch Name="Dirt" ID="{C2401168-016C-418E-AE83-DA2503D7A452}"/>
+						<Switch Name="Water" ID="{DD3D8CC9-0FE8-4973-9685-5AFA1D78F4E7}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E32D463C-0C5F-4D97-B23D-FB0BDB1C95FB}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="PlayerChar_Footsteps" ID="{E32D463C-0C5F-4D97-B23D-FB0BDB1C95FB}" OwnerID="{00000000-0000-0000-0000-000000000000}" PersistMode="Nested"/>
+	</AudioObjects>
+</WwiseDocument>

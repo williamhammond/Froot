@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D2C8EC28-80CF-45AA-AAA3-DC02FF0A8855}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Ambience" ID="{D2C8EC28-80CF-45AA-AAA3-DC02FF0A8855}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Wind" ID="{CC7B509D-9F7A-4451-A32C-EA9FC1A2F320}">
+					<ChildrenList>
+						<Action Name="" ID="{EBF99DE6-737A-4BD2-AF8E-4862D43434C4}" ShortID="380702712">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind_Loop" ID="{E5CE42EC-26F7-4DBB-85A1-62D294E0B477}" WorkUnitID="{58BC939A-E22A-487F-A5DF-B84E41EBFC32}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

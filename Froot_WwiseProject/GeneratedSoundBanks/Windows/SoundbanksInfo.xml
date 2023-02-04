@@ -32,7 +32,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{880AA0D5-19B8-0FAF-0586-22F1966FA1D1}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{B6EF365C-183C-4A88-0D54-F2854D46082D}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -40,9 +40,17 @@
 					<ShortName>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</ShortName>
 					<CachePath>SFX/Footsteps, Human, Water, Ice, Puddle, Deep SND51723_DB583C0D.wem</CachePath>
 				</File>
+				<File Id="21190378" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Dirty Ground, Walk SND62078.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Dirty Ground, Walk SND62078_5C3BFB3F.wem</CachePath>
+				</File>
 				<File Id="348220615" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</ShortName>
 					<CachePath>SFX/Footsteps, Human, Water, Ice, Puddle, Deep SND51723_B1175918.wem</CachePath>
+				</File>
+				<File Id="369482409" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Dirty Ground, Walk SND62078.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Dirty Ground, Walk SND62078_B0E41A26.wem</CachePath>
 				</File>
 				<File Id="384430572" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Walking, Puddle, Forest, Boots SND17456.wav</ShortName>
@@ -64,6 +72,10 @@
 					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
 					<CachePath>SFX/Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_684CB475.wem</CachePath>
 				</File>
+				<File Id="635240201" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Dirty Ground, Walk SND62078.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Dirty Ground, Walk SND62078_2B6F675A.wem</CachePath>
+				</File>
 				<File Id="647409730" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
 					<CachePath>SFX/Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_13CF74BC.wem</CachePath>
@@ -71,6 +83,10 @@
 				<File Id="667377362" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</ShortName>
 					<CachePath>SFX/Footsteps, Human, Water, Ice, Puddle, Deep SND51723_C4A0CBCB.wem</CachePath>
+				</File>
+				<File Id="677710584" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Dirty Ground, Walk SND62078.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Dirty Ground, Walk SND62078_E613B47E.wem</CachePath>
 				</File>
 				<File Id="717201257" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
@@ -84,16 +100,45 @@
 					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
 					<CachePath>SFX/Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_1588402B.wem</CachePath>
 				</File>
+				<File Id="750403855" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Dirty Ground, Walk SND62078.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Dirty Ground, Walk SND62078_36AA4836.wem</CachePath>
+				</File>
 				<File Id="762911541" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</ShortName>
 					<CachePath>SFX/Footsteps, Human, Water, Ice, Puddle, Deep SND51723_FF4E6EAD.wem</CachePath>
 				</File>
+				<File Id="808539231" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Dirty Ground, Walk SND62078.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Dirty Ground, Walk SND62078_EA13D931.wem</CachePath>
+				</File>
+				<File Id="833378520" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Dirty Ground, Walk SND62078.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Dirty Ground, Walk SND62078_38C5CDB1.wem</CachePath>
+				</File>
+				<File Id="897591067" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps, Human, Dirty Ground, Walk SND62078.wav</ShortName>
+					<CachePath>SFX/Footsteps, Human, Dirty Ground, Walk SND62078_F09AA35C.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
-				<Event Id="1602358412" Name="Play_Footstep" DurationType="OneShot" DurationMin="0" DurationMax="0.28043225">
+				<Event Id="1602358412" Name="Play_Footstep" DurationType="OneShot" DurationMin="0" DurationMax="0.28226146">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="2720040714" Id="4248645337" Default="true"/>
+							<SwitchValue GroupType="Switch" GroupId="2720040714" Id="2195636714"/>
+							<MediaRefs>
+								<MediaRef Id="21190378"/>
+								<MediaRef Id="369482409"/>
+								<MediaRef Id="635240201"/>
+								<MediaRef Id="677710584"/>
+								<MediaRef Id="750403855"/>
+								<MediaRef Id="808539231"/>
+								<MediaRef Id="833378520"/>
+								<MediaRef Id="897591067"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2720040714" Id="4248645337"/>
 							<MediaRefs>
 								<MediaRef Id="392359634"/>
 								<MediaRef Id="588652881"/>
@@ -105,7 +150,7 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="2720040714" Id="2654748154"/>
+							<SwitchValue GroupType="Switch" GroupId="2720040714" Id="2654748154" Default="true"/>
 							<MediaRefs>
 								<MediaRef Id="8121666"/>
 								<MediaRef Id="348220615"/>
@@ -130,5 +175,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5FBD136B-0A1A-D124-DFE1-981D3B6B3D5D}</FileHash>
+	<FileHash>{C6D66753-4B45-D5D8-7691-08114B852F24}</FileHash>
 </SoundBanksInfo>

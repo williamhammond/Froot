@@ -3,13 +3,13 @@
 	<AudioObjects>
 		<WorkUnit Name="PlayerChar" ID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}" OwnerID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}" PersistMode="Nested">
 			<ChildrenList>
-				<SwitchContainer Name="Footsteps" ID="{A7A3B4BB-656C-41D9-9226-AAB6E598A945}" ShortID="806143781">
+				<SwitchContainer Name="Footsteps" ID="{9DEA12D7-FED2-415C-8C26-010F8745F90C}" ShortID="806143782">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
 						</Reference>
 						<Reference Name="DefaultSwitchOrState">
-							<ObjectRef Name="Grass" ID="{54640D42-BA97-45F1-830E-18E30E1813CD}" WorkUnitID="{6C39AB2C-F0FC-4C87-9754-3B7B7254F6D6}"/>
+							<ObjectRef Name="Dirt" ID="{AA435702-BBE5-4084-A7D7-ECDD7B628F7F}" WorkUnitID="{6C39AB2C-F0FC-4C87-9754-3B7B7254F6D6}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
@@ -593,6 +593,280 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Footsteps_Dirt" ID="{6C4C26A1-9FA8-4740-9C64-0588EEE7318F}" ShortID="726905601">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{371E64EF-A1EE-4530-A8EE-3BBD1F67B626}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="355"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Footsteps_Dirt_1" ID="{09A0CF4A-0309-4BB4-A4CB-43D22B6FB220}" ShortID="744640504">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{51416754-407A-45DE-94E8-96486D92C05F}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00268260214305638"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.046945537503488"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.79956254809794"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.04904803921569"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Dirty Ground, Walk SND62078.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="808539231"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{51416754-407A-45DE-94E8-96486D92C05F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Dirt_2" ID="{46D80313-1D45-410E-9F13-BD258053B6C2}" ShortID="121113765">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{0386FE2B-292C-46F6-93BA-DFFB0AB8CBA7}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.011176191894655"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0308365116344338"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.23811746695014"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.52037891496353"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Dirty Ground, Walk SND62078.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="369482409"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{0386FE2B-292C-46F6-93BA-DFFB0AB8CBA7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Dirt_3" ID="{81D23D13-2BE6-4754-9521-405A2FAA4C45}" ShortID="431059177">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{EC82A672-4EE4-41A6-B316-2C5744EDC7D4}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.005005814791609"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.045052333124481"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.44432475431415"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.63577876132186"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Dirty Ground, Walk SND62078.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="21190378"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{EC82A672-4EE4-41A6-B316-2C5744EDC7D4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Dirt_4" ID="{824812F2-79CF-4D41-B6D3-C991244BAE42}" ShortID="511967630">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{D77CB846-4982-4745-82F4-E719ADA3782D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00242050066477262"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0145736531310945"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="5.04642085233653"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.25364722108891"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Dirty Ground, Walk SND62078.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="833378520"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{D77CB846-4982-4745-82F4-E719ADA3782D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Dirt_5" ID="{613D871A-9152-4099-8308-9A87FF64C76E}" ShortID="676850740">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{505905E0-3764-4C16-9CDB-36A7AB47405E}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00233315276535961"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0167066671457476"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="5.77993706534441"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.01030420482115"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Dirty Ground, Walk SND62078.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="635240201"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{505905E0-3764-4C16-9CDB-36A7AB47405E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Dirt_6" ID="{19D508F3-03E1-45A3-BF9D-92E81E040DF0}" ShortID="200928001">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{A1909D64-953D-41F7-89BE-BF478D824491}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00320101368452086"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0353206493567626"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="6.49046530267935"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.69408789225704"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Dirty Ground, Walk SND62078.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="897591067"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{A1909D64-953D-41F7-89BE-BF478D824491}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Dirt_7" ID="{F3DB2528-E94B-42F2-B0F7-CDF25CE5098A}" ShortID="3645792">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{15B120E2-1DA7-4D69-BA1F-654A1334A989}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00302851794892334"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0696559128252421"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="7.18178059256107"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.44326327666026"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Dirty Ground, Walk SND62078.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="677710584"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{15B120E2-1DA7-4D69-BA1F-654A1334A989}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Dirt_8" ID="{CD3A13E8-DF33-4008-82DD-A92664030E8D}" ShortID="279236898">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{F8DF28BF-A801-4C92-B3FD-939E3FD87500}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0139159581640015"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0556638326560059"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.598968844954814"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.853657049808183"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Dirty Ground, Walk SND62078.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="750403855"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{F8DF28BF-A801-4C92-B3FD-939E3FD87500}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Footsteps_Rock" ID="{1961EFBB-B223-4002-B48A-34A7431BC9BD}" ShortID="827529822">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -613,10 +887,19 @@
 								<ItemRef Name="Footsteps_Grass" ID="{2EF4A64D-8C5F-4FCE-9724-C5FF7EE629EA}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
+								<ItemRef Name="Footsteps_Dirt" ID="{6C4C26A1-9FA8-4740-9C64-0588EEE7318F}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
 								<ItemRef Name="Footsteps_Rock" ID="{1961EFBB-B223-4002-B48A-34A7431BC9BD}"/>
 							</GroupingBehavior>
 						</GroupingBehaviorList>
 						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Dirt" ID="{AA435702-BBE5-4084-A7D7-ECDD7B628F7F}"/>
+								<ItemList>
+									<ItemRef Name="Footsteps_Dirt" ID="{6C4C26A1-9FA8-4740-9C64-0588EEE7318F}"/>
+								</ItemList>
+							</Grouping>
 							<Grouping>
 								<SwitchRef Name="Rock" ID="{86E0D440-CDD5-4DB0-8230-C1D22B7A4C14}"/>
 								<ItemList>

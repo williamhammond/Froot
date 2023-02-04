@@ -29,10 +29,10 @@
 	<ValidationCacheItem File="Z:\Users\jacksonmumford\Documents\GitHub\Froot_WwiseIntegrationTemp\Froot_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1675527114" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1675538342" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\States\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1675532924" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Queries\Factory Queries.wwu" DateLow="1675527159" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1675527159" DateHigh="0"/>
@@ -43,9 +43,12 @@
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Froot_WwiseProject.wproj" DateLow="1675527159" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Froot_WwiseProject.crossover.wsettings" DateLow="1675531469" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Events\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Froot_WwiseProject.wproj" DateLow="1675537585" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Froot_WwiseProject.crossover.wsettings" DateLow="1675538345" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Events\World.wwu" DateLow="1675537585" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Events\PlayerChar.wwu" DateLow="1675537937" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Events\Default Work Unit.wwu" DateLow="1675532778" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Events\Ambience.wwu" DateLow="1675538322" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Effects\Factory Effects.wwu" DateLow="1675527159" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
@@ -56,7 +59,9 @@
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1675527159" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Actor-Mixer Hierarchy\World.wwu" DateLow="1675527259" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Actor-Mixer Hierarchy\UI.wwu" DateLow="1675527653" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Actor-Mixer Hierarchy\PlayerChar.wwu" DateLow="1675531467" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Actor-Mixer Hierarchy\JordanPlayerChar.wwu" DateLow="1675531408" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Actor-Mixer Hierarchy\PlayerChar_Footsteps.wwu" DateLow="1675516968" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Actor-Mixer Hierarchy\PlayerChar.wwu" DateLow="1675538342" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Actor-Mixer Hierarchy\JordanPlayerChar.wwu" DateLow="1675516986" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1675527665" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\Froot\Froot_WwiseProject\Actor-Mixer Hierarchy\Ambience.wwu" DateLow="1675537937" DateHigh="0"/>
 </ValidationCache>
