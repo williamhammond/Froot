@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="PlayerChar" ID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}" PersistMode="Reference"/>
+				<WorkUnit Name="World" ID="{DCFC86AC-2A37-42CA-BABF-3C6DB0C50DD0}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
