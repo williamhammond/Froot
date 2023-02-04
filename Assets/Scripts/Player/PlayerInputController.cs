@@ -4,6 +4,8 @@ using Vector2=UnityEngine.Vector2;
 
 namespace Player {
     public class PlayerInputController : MonoBehaviour {
+        [SerializeField] Camera mainCam;
+
         private const int MoveSpeed = 5;
         private CharacterController _controller;
     
@@ -12,7 +14,12 @@ namespace Player {
         
         private InputAction _playerAction;
 
+        Vector3 mousePos;
+        Plane originPlane;
+
         public void Awake () {
+            originPlane = new(Vector3.up, Vector3.zero);
+
             _controller = gameObject.AddComponent<CharacterController>();
 
             _playerInput = gameObject.GetComponent<PlayerInput>();
@@ -32,6 +39,13 @@ namespace Player {
             HandleMovement();
             var ray = new Ray(transform.position, transform.forward);
             Debug.DrawLine(ray.origin, ray.direction * 2 , Color.red);
+
+            var mouseRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());
+            if (originPlane.Raycast(mouseRay, out float hit))
+            {
+                mousePos = mouseRay.GetPoint(hit);
+            }
+
         }
 
         private void HandlePlayerAction (InputAction.CallbackContext ctx) {
@@ -54,10 +68,10 @@ namespace Player {
             var move = new Vector3(input.x, 0, input.y);
             _controller.Move(move * (Time.deltaTime * MoveSpeed));
             transform.Translate(move.normalized * MoveSpeed * Time.deltaTime, Space.World);
-            if (move != Vector3.zero) {
-                Quaternion toRotation = Quaternion.LookRotation(move.normalized, Vector3.up);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 360 * Time.deltaTime);     
-            }
+
+            //Rotation
+            Quaternion toRotation = Quaternion.LookRotation(mousePos - transform.position, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 360 * Time.deltaTime);     
         }
     }
 }
