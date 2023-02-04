@@ -3,7 +3,7 @@
 on:
   push:
     branches: ['*']
-    paths: ['Assets/**', '.github/**']
+    paths: ['Assets/**', '.github/**', 'ProjectSettings/**']
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
