@@ -78,8 +78,11 @@ public class OxygenTank : MonoBehaviour
         UpdateScale();
     }
 
+    [SerializeField]
+    UnityEvent<string> changedOxygen;
     void UpdateScale()
     {//Animate tank here
+        changedOxygen?.Invoke(oxygenRounded.ToString());
     }
 
 
