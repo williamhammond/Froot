@@ -14,7 +14,7 @@ env:
 jobs:
   buildWebGL:
     name: Build for WebGL 🖥️
-    runs-on: windows-latest
+    runs-on: macos-latest
     strategy:
       fail-fast: false
     steps:
@@ -44,7 +44,7 @@ jobs:
 
   buildWindows:
     name: Build for Windows 🖥️
-    runs-on: windows-latest
+    runs-on: macos-latest
     strategy:
       fail-fast: true
     steps:
