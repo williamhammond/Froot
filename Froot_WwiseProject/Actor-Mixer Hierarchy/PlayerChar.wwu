@@ -1,6 +1,644 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}" SchemaVersion="110" RootDocumentID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}" ParentDocumentID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}">
 	<AudioObjects>
-		<WorkUnit Name="PlayerChar" ID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}" OwnerID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}" PersistMode="Nested"/>
+		<WorkUnit Name="PlayerChar" ID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}" OwnerID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}" PersistMode="Nested">
+			<ChildrenList>
+				<SwitchContainer Name="Footsteps" ID="{A7A3B4BB-656C-41D9-9226-AAB6E598A945}" ShortID="806143781">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Grass" ID="{54640D42-BA97-45F1-830E-18E30E1813CD}" WorkUnitID="{6C39AB2C-F0FC-4C87-9754-3B7B7254F6D6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="Player_Surface" ID="{54CFC667-2E1D-409D-BF8B-B3901FDD9A21}" WorkUnitID="{6C39AB2C-F0FC-4C87-9754-3B7B7254F6D6}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Footsteps_Water" ID="{884D692A-D4AC-4418-99EE-B42118FEA02E}" ShortID="598519246">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E5740245-9888-4390-B3D9-6668F997479C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="329"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Footsteps_Water_1" ID="{12056DFC-3A9E-47CA-B336-9F01BB5E0283}" ShortID="705462307">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Water, Splash, Rock Thrown In Puddle SND30264" ID="{7E69C3E6-BA62-4AD4-92CB-1E1A34D3DCFA}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0595915032679739"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.286039215686275"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Water, Splash, Rock Thrown In Puddle SND30264.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="537832675"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Water, Splash, Rock Thrown In Puddle SND30264 1" ID="{498CD7FC-F474-472C-B9A2-A1B983A800D9}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0204339869281046"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0217111111111111"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00255424836601307"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.264364705882353"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Water, Splash, Rock Thrown In Puddle SND30264 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="239170451"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Footsteps, Human, Walking Through Icy Puddle, Woods SND17439" ID="{00375841-7DE5-47E1-BA9C-5C2DDC7A50AB}">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Walking Through Icy Puddle, Woods SND17439.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="800484528"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Footsteps, Human, Walking, Puddle, Forest, Boots SND17456" ID="{7B9C42E4-D3E5-45E7-9C14-A9D085D50E90}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00843956443416633"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.025318693302499"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00984615850652739"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.240239002922863"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Walking, Puddle, Forest, Boots SND17456.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="551084772"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Walking, Puddle, Forest, Boots SND17456" ID="{7B9C42E4-D3E5-45E7-9C14-A9D085D50E90}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Water_2" ID="{DEF53517-99A0-45FB-BE5C-405A9410FDE8}" ShortID="383126784">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{B01680FE-1E99-44CD-8240-3890B78DFE62}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00134232192982395"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00939625350876766"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0107385754385916"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.242945323116622"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="667377362"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{B01680FE-1E99-44CD-8240-3890B78DFE62}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Water_3" ID="{9DF106E2-82EA-4303-9596-A83C073CB717}" ShortID="291525239">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{D0E4D1B0-7CED-4081-8A4D-461A6A1F06B3}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00393058707491045"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0117917612247316"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.957178752368017"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.1632299399095"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="348220615"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{D0E4D1B0-7CED-4081-8A4D-461A6A1F06B3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Water_4" ID="{AB9B8DEA-D40D-4E04-B793-EBA4724B04AF}" ShortID="770184052">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{C30976A9-C6CC-47C1-B78A-6EADA91E9922}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00649683814034763"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00974525721052188"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.69799764879273"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.83757808814035"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="8121666"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{C30976A9-C6CC-47C1-B78A-6EADA91E9922}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Water_5" ID="{6352EB94-7F93-4B73-9EF3-ADD3506CF7ED}" ShortID="314703259">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{E056C593-4501-48D8-91D7-722D6D20EB91}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00714652195438292"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00550094363700815"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.88075262026691"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.08476135620915"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="762911541"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{E056C593-4501-48D8-91D7-722D6D20EB91}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Water_6" ID="{F538A284-309D-4E61-8D23-9EBCDF446270}" ShortID="1069966970">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Water, Splash, Rock Thrown In Puddle SND30264" ID="{1CB08238-9674-4C9B-9676-C1FEAB438DA0}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0595915032679739"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.286039215686275"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Water, Splash, Rock Thrown In Puddle SND30264.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="537832675"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Water, Splash, Rock Thrown In Puddle SND30264 1" ID="{900BDC70-C78C-4AA5-914A-5E27B98CFCB5}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0204339869281046"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0217111111111111"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00255424836601307"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.264364705882353"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Water, Splash, Rock Thrown In Puddle SND30264 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="239170451"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Footsteps, Human, Walking Through Icy Puddle, Woods SND17439" ID="{CD3E37F6-DBF1-4F16-BC75-93E11BC7B641}">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Walking Through Icy Puddle, Woods SND17439.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="800484528"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Footsteps, Human, Walking, Puddle, Forest, Boots SND17456" ID="{B59C1E3C-C5C0-4983-9C19-88674D940203}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00843956443416633"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.025318693302499"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.511459026153586"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.744592924491491"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Walking, Puddle, Forest, Boots SND17456.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="384430572"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Walking, Puddle, Forest, Boots SND17456" ID="{B59C1E3C-C5C0-4983-9C19-88674D940203}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Footsteps_Grass" ID="{2EF4A64D-8C5F-4FCE-9724-C5FF7EE629EA}" ShortID="714271952">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E70F5518-55FF-4B43-8CB0-26310EF4D915}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="784"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Footsteps_Grass_1" ID="{AEF5C797-095A-4E5D-8734-63514518BA40}" ShortID="898418938">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{93A29321-20A0-4300-B844-2E79EA5A6CD6}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00564661707733127"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0060520125906611"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.162651179084969"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="592245145"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{93A29321-20A0-4300-B844-2E79EA5A6CD6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Grass_2" ID="{F4090DDB-84E2-44C8-B191-FD49A129470F}" ShortID="541316195">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B4B0ADEA-BB31-42E8-AE80-B9D08F2FF1D1}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0187891183248198"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.26098556249816"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.475258496732028"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="588652881"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B4B0ADEA-BB31-42E8-AE80-B9D08F2FF1D1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Grass_3" ID="{BD22AC90-EF6F-44B5-8D43-5D8B6C7F37A6}" ShortID="213816769">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{11CE7401-67E6-49E0-ACF4-E6CADAF8D9B0}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0116665642093621"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0116665642093622"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.559422119764918"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.80213427274257"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="725348334"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{11CE7401-67E6-49E0-ACF4-E6CADAF8D9B0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Grass_4" ID="{06C816F8-26C9-4054-8EFA-9A2983E5E39B}" ShortID="332334480">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{5A4845C0-F2F2-4204-9CA8-CB35C7395FEB}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00350610494646486"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0140244197858597"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.849614719093358"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.10356633986928"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="647409730"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{5A4845C0-F2F2-4204-9CA8-CB35C7395FEB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Grass_5" ID="{11E4A1C9-A445-4CFF-A6A4-4F50CF9B1E60}" ShortID="277114457">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B35F11AB-B670-40C4-B683-45ACC73EB09A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0173552194850015"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0115701463233342"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.71542192761425"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.98964150326797"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="392359634"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B35F11AB-B670-40C4-B683-45ACC73EB09A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Grass_6" ID="{1A4C8AF1-63D1-4914-82F0-8C698EAA0EB1}" ShortID="356805376">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B82BB31B-606A-4E44-876C-C0DF4D77F760}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.015399864756358"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0923991885381477"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.06620596120365"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.34663821275351"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="717201257"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B82BB31B-606A-4E44-876C-C0DF4D77F760}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Footsteps_Grass_7" ID="{A94FDEB1-4F89-4D24-9E71-46EE0CD5CAC2}" ShortID="460065102">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{D4E543C2-2FA6-4599-9E9D-EB4EA6CD5AAC}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0256664412605971"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0699993852561729"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.38479317717184"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.64889223882859"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="730147860"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{D4E543C2-2FA6-4599-9E9D-EB4EA6CD5AAC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Footsteps_Rock" ID="{1961EFBB-B223-4002-B48A-34A7431BC9BD}" ShortID="827529822">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Footsteps_Water" ID="{884D692A-D4AC-4418-99EE-B42118FEA02E}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Footsteps_Grass" ID="{2EF4A64D-8C5F-4FCE-9724-C5FF7EE629EA}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Footsteps_Rock" ID="{1961EFBB-B223-4002-B48A-34A7431BC9BD}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Rock" ID="{86E0D440-CDD5-4DB0-8230-C1D22B7A4C14}"/>
+								<ItemList>
+									<ItemRef Name="Footsteps_Rock" ID="{1961EFBB-B223-4002-B48A-34A7431BC9BD}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Grass" ID="{54640D42-BA97-45F1-830E-18E30E1813CD}"/>
+								<ItemList>
+									<ItemRef Name="Footsteps_Grass" ID="{2EF4A64D-8C5F-4FCE-9724-C5FF7EE629EA}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Water" ID="{5935718E-DAFB-4CFC-8AFE-34AE6EFBBC25}"/>
+								<ItemList>
+									<ItemRef Name="Footsteps_Water" ID="{884D692A-D4AC-4418-99EE-B42118FEA02E}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

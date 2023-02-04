@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<WorkUnit Name="PlayerChar" ID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}" PersistMode="Reference"/>
 				<WorkUnit Name="World" ID="{DCFC86AC-2A37-42CA-BABF-3C6DB0C50DD0}" PersistMode="Reference"/>
+				<WorkUnit Name="UI" ID="{979D0678-9FFB-49ED-8A04-39934FE69919}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

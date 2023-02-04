@@ -1,0 +1,27 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1602358412	Play_Footstep			\Default Work Unit\PlayerChar\Play_Footstep	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2720040714	Player_Surface			\Default Work Unit\Player_Surface	
+
+Switch	ID	Name	Switch Group			Notes
+	2144363834	Rock	Player_Surface			
+	2195636714	Dirt	Player_Surface			
+	2654748154	Water	Player_Surface			
+	4248645337	Grass	Player_Surface			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	8121666	Footsteps_Water_4	Y:\Documents\GitHub\Froot\Froot_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Water, Ice, Puddle, Deep SND51723_DB583C0D.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerChar\Footsteps\Footsteps_Water\Footsteps_Water_4		13494
+	348220615	Footsteps_Water_3	Y:\Documents\GitHub\Froot\Froot_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Water, Ice, Puddle, Deep SND51723_B1175918.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerChar\Footsteps\Footsteps_Water\Footsteps_Water_3		19876
+	384430572	Footsteps_Water_6	Y:\Documents\GitHub\Froot\Froot_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Walking, Puddle, Forest, Boots SND17456_F0081714.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerChar\Footsteps\Footsteps_Water\Footsteps_Water_6		22476
+	392359634	Footsteps_Grass_5	Y:\Documents\GitHub\Froot\Froot_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_AF9F25C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerChar\Footsteps\Footsteps_Grass\Footsteps_Grass_5		26420
+	551084772	Footsteps_Water_1	Y:\Documents\GitHub\Froot\Froot_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Walking, Puddle, Forest, Boots SND17456_E6326C29.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerChar\Footsteps\Footsteps_Water\Footsteps_Water_1		22214
+	588652881	Footsteps_Grass_2	Y:\Documents\GitHub\Froot\Froot_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_944ACFD9.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerChar\Footsteps\Footsteps_Grass\Footsteps_Grass_2		20666
+	592245145	Footsteps_Grass_1	Y:\Documents\GitHub\Froot\Froot_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_684CB475.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerChar\Footsteps\Footsteps_Grass\Footsteps_Grass_1		15710
+	647409730	Footsteps_Grass_4	Y:\Documents\GitHub\Froot\Froot_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_13CF74BC.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerChar\Footsteps\Footsteps_Grass\Footsteps_Grass_4		24474
+	667377362	Footsteps_Water_2	Y:\Documents\GitHub\Froot\Froot_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Water, Ice, Puddle, Deep SND51723_C4A0CBCB.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerChar\Footsteps\Footsteps_Water\Footsteps_Water_2		22388
+	717201257	Footsteps_Grass_6	Y:\Documents\GitHub\Froot\Froot_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_C441F1CD.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerChar\Footsteps\Footsteps_Grass\Footsteps_Grass_6		27016
+	725348334	Footsteps_Grass_3	Y:\Documents\GitHub\Froot\Froot_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_2972EA5D.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerChar\Footsteps\Footsteps_Grass\Footsteps_Grass_3		23396
+	730147860	Footsteps_Grass_7	Y:\Documents\GitHub\Froot\Froot_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529_1588402B.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerChar\Footsteps\Footsteps_Grass\Footsteps_Grass_7		25450
+	762911541	Footsteps_Water_5	Y:\Documents\GitHub\Froot\Froot_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Water, Ice, Puddle, Deep SND51723_FF4E6EAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerChar\Footsteps\Footsteps_Water\Footsteps_Water_5		19680
+

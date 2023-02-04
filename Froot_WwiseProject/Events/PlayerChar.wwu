@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}" SchemaVersion="110" RootDocumentID="{AF928363-8B16-4792-9D31-3F787D48EA42}" ParentDocumentID="{AF928363-8B16-4792-9D31-3F787D48EA42}">
+	<Events>
+		<WorkUnit Name="PlayerChar" ID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}" OwnerID="{AF928363-8B16-4792-9D31-3F787D48EA42}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Play_Footstep" ID="{36A1E7E1-6217-48B8-8211-9BDC422ECE50}">
+					<ChildrenList>
+						<Action Name="" ID="{DE0CB2D9-BBDD-45A1-B2B7-AE17A7A81033}" ShortID="560373142">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{A7A3B4BB-656C-41D9-9226-AAB6E598A945}" WorkUnitID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
