@@ -3,7 +3,7 @@
     <CreateWwiseGlobal>true</CreateWwiseGlobal>
     <CreateWwiseListener>true</CreateWwiseListener>
     <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
-    <WwiseProjectPath>../Froot_WwiseProject/Froot_WwiseProject.wproj</WwiseProjectPath>
+    <WwiseProjectPath>../../Froot/Froot_WwiseProject/Froot_WwiseProject.wproj</WwiseProjectPath>
     <WwiseInstallationPathWindows></WwiseInstallationPathWindows>
     <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise 2022.1.1.8100/Wwise.app</WwiseInstallationPathMac>
 </WwiseSettings>
