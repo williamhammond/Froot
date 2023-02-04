@@ -66,11 +66,11 @@ crashlytics-build.properties
 ## ---------------- ##
 
 # project stuff
-WWiseProject/.cache/
-WWiseProject/*.prof
-WwiseProject/*_WwiseProject.*.validationcache
-WwiseProject/*_WwiseProject.*.wsettings
-WwiseProject/**/*.akd
+Froot_WwiseProject/.cache/
+Froot_WwiseProject/*.prof
+Froot_WwiseProject/*_WwiseProject.*.validationcache
+Froot_WwiseProject/*_WwiseProject.*.wsettings
+Froot_WwiseProject/**/*.akd
 
 # build stuff (unsure?)
 # Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
@@ -80,7 +80,7 @@ WwiseProject/**/*.akd
 # >> Do not keep AkWwiseProjectData.asset under version control! 
 # >> This is a temporary cache file for the Wwise project data, 
 # >> so as to avoid having the Wwise Picker continuously parse the Work Unit files.
-Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
+Assets/Wwise.plugin/Editor/ProjectData/AkWwiseProjectData.asset*
 
 # notes:
 # 1) if any other files go in Assets/Wwise/Editor/ProjectData/ besides AkWwiseProjectData.asset*,
