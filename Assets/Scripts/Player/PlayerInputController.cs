@@ -1,32 +1,27 @@
-using System;
-using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Vector2=UnityEngine.Vector2;
-using Vector3=UnityEngine.Vector3;
 
-public class PlayerInputController : MonoBehaviour {
-    private int _moveSpeed = 10;
-    private CharacterController _controller;
-    // This method handles input for simple player movement
-
-    public void Awake () {
-        _controller = gameObject.AddComponent<CharacterController>();
-    }
-    
-    public void OnMove (InputValue input) {
-        Vector2 inputVector = input.Get<Vector2>();
-        var move = new Vector3(inputVector.x , 0, inputVector.y);
-        _controller.Move(move * Time.deltaTime * _moveSpeed);
-    }
-    void Start()
-    {
+namespace Player {
+    public class PlayerInputController : MonoBehaviour {
+        private const int MoveSpeed = 10;
+        private CharacterController _controller;
         
-    }
+        private PlayerInput _playerInput;
+        private InputAction _playerMove;
 
-    // Update is called once per frame
-    void Update()
-    {
+        public void Awake () {
+            _controller = gameObject.AddComponent<CharacterController>();
+            
+            _playerInput = gameObject.GetComponent<PlayerInput>();
+            _playerMove = _playerInput.actions["Move"];
+        }
         
+        void Update() {
+            var move = _playerMove.ReadValue<Vector2>();
+            Debug.Log(move);
+            _controller.Move(move * (Time.deltaTime * MoveSpeed));
+        }
     }
 }
+
