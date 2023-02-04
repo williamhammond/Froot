@@ -18,8 +18,12 @@ namespace Player {
         }
         
         void Update() {
-            var move = _playerMove.ReadValue<Vector2>();
-            Debug.Log(move);
+            HandleMovement();
+        }
+
+        private void HandleMovement () {
+            var input = _playerMove.ReadValue<Vector2>();
+            var move = new Vector3(input.x, 0, input.y);
             _controller.Move(move * (Time.deltaTime * MoveSpeed));
         }
     }
