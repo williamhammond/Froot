@@ -67,15 +67,6 @@ public class Tile : MonoBehaviour
     Tile testTile;
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.L))
-        {
-            Debug.Log("got space");
-            if (testTile != null)
-            {
-                Debug.Log("Searching for tile " + testTile);
-                Debug.Log("Found tile? " + IsConnected(testTile));
-            }
-        }
     }
 
     public bool IsConnected(Tile targetTile)
@@ -97,14 +88,14 @@ public class Tile : MonoBehaviour
 
     public void Select()
     {
-        Debug.Log("selecting");
+        //Debug.Log("selecting");
         indicator.SetActive(true);
         onSelected?.Invoke();
     }
 
     public void Deselect()
     {
-        Debug.Log("deselecting");
+        //Debug.Log("deselecting");
         indicator.SetActive(false);
         onDeselected?.Invoke();
     }

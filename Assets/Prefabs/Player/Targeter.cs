@@ -14,14 +14,14 @@ public class Targeter : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("new trigger hit");
+        //Debug.Log("new trigger hit");
         var hitTile = collider.GetComponent<Tile>();
         if (hitTile!=null)
         {
-            Debug.Log("hit a tile");
+            //Debug.Log("hit a tile");
             if (!targeted.Contains(hitTile))
             {
-                Debug.Log("new tile");
+                //Debug.Log("new tile");
                 targeted.Add(hitTile);
                 ResetTarget();
             }
