@@ -18,7 +18,7 @@ namespace Player {
         Plane originPlane;
 
         public void Awake () {
-            originPlane = new(Vector3.up, Vector3.zero);
+            originPlane = new Plane(Vector3.up, Vector3.zero);
 
             _controller = gameObject.AddComponent<CharacterController>();
 
@@ -70,7 +70,9 @@ namespace Player {
             transform.Translate(move.normalized * MoveSpeed * Time.deltaTime, Space.World);
 
             //Rotation
-            Quaternion toRotation = Quaternion.LookRotation(mousePos - transform.position, Vector3.up);
+            Vector3 mouseFlattened = new Vector3(mousePos.x, 0, mousePos.z);
+            Vector3 positionFlattened = new Vector3(transform.position.x, 0, transform.position.z);
+            Quaternion toRotation = Quaternion.LookRotation(mouseFlattened - positionFlattened, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 360 * Time.deltaTime);     
         }
     }

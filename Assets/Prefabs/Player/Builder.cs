@@ -24,7 +24,7 @@ public class Builder : MonoBehaviour
             Build();
         }
     }
-    void Build()
+    public void Build()
     {
         Tile targetTile = gameObject.GetComponentInChildren<Targeter>().target;
         Build(targetTile, buildable);
