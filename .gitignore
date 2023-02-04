@@ -66,8 +66,8 @@ crashlytics-build.properties
 ## ---------------- ##
 
 # project stuff
-Froot_WwiseProjectW/.cache/
-Froot_WwiseProjectW/*.prof
+Froot_WwiseProject/.cache/
+Froot_WwiseProject/*.prof
 Froot_WwiseProject/*_WwiseProject.*.validationcache
 Froot_WwiseProject/*_WwiseProject.*.wsettings
 Froot_WwiseProject/**/*.akd
