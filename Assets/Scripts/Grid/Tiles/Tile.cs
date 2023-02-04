@@ -59,16 +59,16 @@ public class Tile : MonoBehaviour
         }
     }
     [SerializeField]
-    Tile targetTile;
+    Tile testTile;
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.L))
         {
             Debug.Log("got space");
-            if (targetTile != null)
+            if (testTile != null)
             {
-                Debug.Log("Searching for tile " + targetTile);
-                Debug.Log("Found tile? " + IsConnected(targetTile));
+                Debug.Log("Searching for tile " + testTile);
+                Debug.Log("Found tile? " + IsConnected(testTile));
             }
         }
     }
@@ -89,4 +89,6 @@ public class Tile : MonoBehaviour
         //for use in A*
         return (Vector3.Distance(transform.position, targetTile.transform.position));
     }
+
+
 }

@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class OxygenTank : MonoBehaviour
 {
     [SerializeField]
-    public float oxygenReal { get; private set; }
+    public float oxygenReal = 100f;
 
     [SerializeField]
     public int oxygenRounded
@@ -22,24 +22,26 @@ public class OxygenTank : MonoBehaviour
     float drainRate = 1f;
 
     [SerializeField]
-    public Dictionary<OxygenSource, float> activeSources { get; private set; }
+    public List<OxygenSource> activeSources;
 
     private void Awake()
     {
-        activeSources = new Dictionary<OxygenSource, float>();
+        activeSources = new List<OxygenSource>();
     }
 
-    public void AddSource(OxygenSource source, float rate)
+    public void AddSource(OxygenSource source)
     {
-        if (!activeSources.ContainsKey(source))
+        Debug.Log("Entering source");
+        if (!activeSources.Contains(source))
         {
-            activeSources.Add(source, rate);
+            activeSources.Add(source);
         }
     }
 
     public void LeaveSource(OxygenSource source)
     {
-        if (activeSources.ContainsKey(source))
+        Debug.Log("Exiting source");
+        if (activeSources.Contains(source))
         {
             activeSources.Remove(source);
         }
@@ -47,6 +49,7 @@ public class OxygenTank : MonoBehaviour
 
     private void Update()
     {
+        //Debug.Log("Oxygen: " + oxygenRounded);
         Check();
     }
 
@@ -66,6 +69,10 @@ public class OxygenTank : MonoBehaviour
         if (activeSources.Count > 0)
         {
             Refill();
+        }
+        else
+        {
+
             Drain();
         }
         UpdateScale();
@@ -75,24 +82,11 @@ public class OxygenTank : MonoBehaviour
     {//Animate tank here
     }
 
-    float GetMaxRate()
-    {
-        float max = 0;
-        foreach (float value in activeSources.Values)
-        {
-            if (value > max)
-            {
-                max = value;
-            }
-        }
-        return max;
-
-    }
 
     UnityEvent tankFilled;
     void Refill()
     {
-        var rate = GetMaxRate();
+        var rate = drainRate * 5;
         oxygenReal += Time.deltaTime * rate;
         if(oxygenReal>maxOxygen)
         {

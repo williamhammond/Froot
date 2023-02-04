@@ -11,10 +11,10 @@ public class OxygenSource : MonoBehaviour
     public UnityEvent<Vector3> exitedOxygen;
     private void OnTriggerEnter(Collider other)
     {
-        var tank = other.GetComponentInChildren<OxygenTank>();
+        var tank = other.GetComponent<OxygenTank>();
         if (tank!=null)
         {
-            tank.AddSource(this, refillRate);
+            tank.AddSource(this);
             Vector3 point = other.ClosestPointOnBounds(transform.position);
             enteredOxygen?.Invoke(point);
         }
@@ -22,7 +22,7 @@ public class OxygenSource : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        var tank = other.GetComponentInChildren<OxygenTank>();
+        var tank = other.GetComponent<OxygenTank>();
         if (tank != null)
         {
             tank.LeaveSource(this);
