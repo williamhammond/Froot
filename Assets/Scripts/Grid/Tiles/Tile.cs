@@ -16,21 +16,26 @@ public class Tile : MonoBehaviour
     List<Tile> neighbors;
 
     [SerializeField]
-    Buildable myBuildable;
+    public Buildable occupant;
 
     public UnityEvent onOccupy;
     public UnityEvent onVacate;
 
+    [SerializeField]
+    GameObject indicator;
+
+    public UnityEvent onSelected;
+    public UnityEvent onDeselected;
     public void Vacate()
     {
-        myBuildable = null;
+        occupant = null;
         onVacate?.Invoke();
     }
     public bool Occupy(Buildable newOccupant)
     {
-        if(myBuildable==null)
+        if(occupant == null)
         {
-            myBuildable = newOccupant;
+            occupant = newOccupant;
             onOccupy?.Invoke();
             return true;
         }
@@ -90,5 +95,18 @@ public class Tile : MonoBehaviour
         return (Vector3.Distance(transform.position, targetTile.transform.position));
     }
 
+    public void Select()
+    {
+        Debug.Log("selecting");
+        indicator.SetActive(true);
+        onSelected?.Invoke();
+    }
+
+    public void Deselect()
+    {
+        Debug.Log("deselecting");
+        indicator.SetActive(false);
+        onDeselected?.Invoke();
+    }
 
 }

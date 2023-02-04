@@ -83,6 +83,36 @@ MonoBehaviour:
         guid: ad62c692924ac44d9bf00ef1fd0b017a
       Path: SoundBanks\Default Work Unit\Main
   EventWwu:
+  - PhysicalPath: Events\Ambience.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Ambience
+      ObjectType: 12
+      guid: 28ecc8d2cf80aa45aaa3dc02ff0a8855
+    ParentPath: Events\Ambience
+    guid: 28ecc8d2cf80aa45aaa3dc02ff0a8855
+    GuidInternal: 
+    m_lastTime: -8585260670999308572
+    List:
+    - name: Play_Wind
+      guid: 9d507bcc7a9f5144a32cea9fc1a2f320
+      id: 1020223172
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Ambience
+        ObjectType: 12
+        guid: 28ecc8d2cf80aa45aaa3dc02ff0a8855
+      - ElementName: Play_Wind
+        ObjectType: 3
+        guid: 9d507bcc7a9f5144a32cea9fc1a2f320
+      Path: Events\Ambience\Play_Wind
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
@@ -110,7 +140,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit\PlayerChar
     guid: e1e6d87c06b1c443b90afb93aa523186
     GuidInternal: 
-    m_lastTime: -8585260730366696517
+    m_lastTime: -8585260670999225545
     List:
     - name: Play_Footstep
       guid: e1e7a1361762b84882119bdc422ece50
@@ -188,7 +218,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 2cab396cfcf0874c97543b7b7254f6d6
     GuidInternal: 
-    m_lastTime: -8585260730362862626
+    m_lastTime: -8585260670998358764
     List:
     - name: Player_Surface
       guid: 67c6cf541d2e9d40bf8bb3901fdd9a21
@@ -269,6 +299,56 @@ MonoBehaviour:
         - ElementName: Water
           ObjectType: 10
           guid: 8e713559fbdafc4c8afe34ae6efbbc25
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Player_Surface_2
+      guid: 44d506c72d4b2b4683350d71f9fa6ce1
+      id: 2898681345
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2cab396cfcf0874c97543b7b7254f6d6
+      - ElementName: Player_Surface_2
+        ObjectType: 11
+        guid: 44d506c72d4b2b4683350d71f9fa6ce1
+      Path: Switches\Default Work Unit\Player_Surface_2
+      values:
+      - name: Dirt
+        guid: 681140c26c018e41ae83da2503d7a452
+        id: 2195636714
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 2cab396cfcf0874c97543b7b7254f6d6
+        - ElementName: Player_Surface_2
+          ObjectType: 11
+          guid: 44d506c72d4b2b4683350d71f9fa6ce1
+        - ElementName: Dirt
+          ObjectType: 10
+          guid: 681140c26c018e41ae83da2503d7a452
+      - name: Water
+        guid: c98c3ddde80f734996855afa1d78f4e7
+        id: 2654748154
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 2cab396cfcf0874c97543b7b7254f6d6
+        - ElementName: Player_Surface_2
+          ObjectType: 11
+          guid: 44d506c72d4b2b4683350d71f9fa6ce1
+        - ElementName: Water
+          ObjectType: 10
+          guid: c98c3ddde80f734996855afa1d78f4e7
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []

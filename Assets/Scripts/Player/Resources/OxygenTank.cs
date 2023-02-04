@@ -31,7 +31,7 @@ public class OxygenTank : MonoBehaviour
 
     public void AddSource(OxygenSource source)
     {
-        Debug.Log("Entering source");
+        //Debug.Log("Entering source");
         if (!activeSources.Contains(source))
         {
             activeSources.Add(source);
@@ -40,7 +40,7 @@ public class OxygenTank : MonoBehaviour
 
     public void LeaveSource(OxygenSource source)
     {
-        Debug.Log("Exiting source");
+       // Debug.Log("Exiting source");
         if (activeSources.Contains(source))
         {
             activeSources.Remove(source);
@@ -57,7 +57,7 @@ public class OxygenTank : MonoBehaviour
     void Die()
     {
         tankDepleted?.Invoke();
-        Debug.LogError("Player has died of oxygen loss");
+        //Debug.LogError("Player has died of oxygen loss");
     }
     void Check()
     {

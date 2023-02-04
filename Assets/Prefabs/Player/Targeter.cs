@@ -6,32 +6,37 @@ using UnityEngine.Events;
 public class Targeter : MonoBehaviour
 {
     List<Tile> targeted;
-    Tile target;
+    
+    public Tile target;
     private void Awake()
     {
         targeted = new List<Tile>();
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        var hitTile = collision.collider.GetComponentInParent<Tile>();
+        Debug.Log("new trigger hit");
+        var hitTile = collider.GetComponent<Tile>();
         if (hitTile!=null)
         {
+            Debug.Log("hit a tile");
             if (!targeted.Contains(hitTile))
             {
+                Debug.Log("new tile");
                 targeted.Add(hitTile);
                 ResetTarget();
             }
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider collider)
     {
-        var hitTile = collision.collider.GetComponentInParent<Tile>();
+        var hitTile = collider.GetComponent<Tile>();
         if (hitTile != null)
         {
             if (targeted.Contains(hitTile))
             {
                 targeted.Remove(hitTile);
+                hitTile.Deselect();
                 ResetTarget();
             }
         }
@@ -57,7 +62,12 @@ public class Targeter : MonoBehaviour
             }
             if(tile==null || tile!=target)
             {
+                if(target!=null)
+                {
+                    target.Deselect();
+                }
                 target = tile;
+                target.Select();
                 newTarget?.Invoke(target);
             }
         }
