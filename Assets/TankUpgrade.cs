@@ -16,7 +16,7 @@ public class TankUpgrade : Pickupable
         {
             //Debug.Log("Found tank");
             tank.UpdateMax(tankSize);
-            //AkSoundEngine.PostEvent(SoundManager.CollectSoil, gameObject);
+            AkSoundEngine.PostEvent(SoundManager.CollectSoil, gameObject);
         }
         base.Pickup(picker);
         Destroy(gameObject);
