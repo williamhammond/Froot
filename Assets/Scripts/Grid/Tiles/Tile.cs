@@ -31,7 +31,7 @@ public class Tile : MonoBehaviour
     [SerializeField]
     GameObject indicator;
 
-    [SerializeField] MeshRenderer baseMesh;
+    [SerializeField]public MeshRenderer baseMesh;
     
     [SerializeField, ColorUsage(true,true)] Color selectedColor = Color.green;
     Color borderOriginalCol;
@@ -156,10 +156,10 @@ public class Tile : MonoBehaviour
 
 
         MaterialPropertyBlock block = new MaterialPropertyBlock();
-        baseMesh.GetPropertyBlock(block,1);
+        baseMesh.GetPropertyBlock(block);
 
         block.SetColor("_BaseColor", Color.green);
-        baseMesh.SetPropertyBlock(block,1);
+        baseMesh.SetPropertyBlock(block);
     }
     public void MakeUnAreable()
     {
@@ -167,10 +167,10 @@ public class Tile : MonoBehaviour
         onUnAreate?.Invoke(this);
 
         MaterialPropertyBlock block = new MaterialPropertyBlock();
-        baseMesh.GetPropertyBlock(block,0);
+        baseMesh.GetPropertyBlock(block);
 
         block.SetColor("_BaseColor", Color.grey);
-        baseMesh.SetPropertyBlock(block,0);
+        baseMesh.SetPropertyBlock(block);
     }
 
 
