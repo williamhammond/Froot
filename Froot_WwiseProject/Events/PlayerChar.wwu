@@ -8,7 +8,7 @@
 						<Action Name="" ID="{DE0CB2D9-BBDD-45A1-B2B7-AE17A7A81033}" ShortID="560373142">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Footsteps" ID="{3BA8AA18-AFC2-4AF1-BA8C-727BDAAB9FFA}" WorkUnitID="{FC98E2FF-41D5-4404-8A8D-DEE80C1F8D04}"/>
+									<ObjectRef Name="Footsteps" ID="{9DEA12D7-FED2-415C-8C26-010F8745F90C}" WorkUnitID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -19,28 +19,7 @@
 						<Action Name="" ID="{93297C89-84E8-448B-9CCA-7812D32C8AD9}" ShortID="507902919">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Oxygen" ID="{4E8B4DAA-58BE-4182-A0B7-852B384C6D10}" WorkUnitID="{FC98E2FF-41D5-4404-8A8D-DEE80C1F8D04}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Death" ID="{6A82A84F-9934-4624-8E68-D4F0CFD8DBA2}">
-					<ChildrenList>
-						<Action Name="" ID="{2CCE1079-5A13-4CF3-9C0B-2E7A60A3B87B}" ShortID="22736047">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Death gasps" ID="{010D3BC9-F082-4DD0-9884-9A645A21E45B}" WorkUnitID="{FC98E2FF-41D5-4404-8A8D-DEE80C1F8D04}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{00BB1A70-0940-4736-94D7-7BC8238A1D68}" ShortID="703523661">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Oxygen" ID="{4E8B4DAA-58BE-4182-A0B7-852B384C6D10}" WorkUnitID="{FC98E2FF-41D5-4404-8A8D-DEE80C1F8D04}"/>
+									<ObjectRef Name="Oxygen" ID="{4E8B4DAA-58BE-4182-A0B7-852B384C6D10}" WorkUnitID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

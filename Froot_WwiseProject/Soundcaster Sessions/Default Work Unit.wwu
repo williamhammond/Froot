@@ -6,86 +6,27 @@
 				<SoundcasterSession Name="Test" ID="{4AA2327F-A31C-4210-B230-37064B8EDFC4}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="CollectWater" ID="{C1EA5012-B4C8-47BD-AE4A-EEFB41EF57B4}" WorkUnitID="{D246DAED-4CA1-457C-86D6-474A1407CB53}"/>
+							<ObjectRef Name="Breath" ID="{D93F811E-3362-414D-90FA-87F230223D4B}" WorkUnitID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}"/>
 							<Position X="0" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="CollectSoil" ID="{63DF422E-FB7A-4DF8-9DB2-3F2877869EF4}" WorkUnitID="{D246DAED-4CA1-457C-86D6-474A1407CB53}"/>
-							<Position X="0" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="CollectAirCan" ID="{9412E3B9-E901-44AF-AC12-41DFCF4A5176}" WorkUnitID="{D246DAED-4CA1-457C-86D6-474A1407CB53}"/>
-							<Position X="0" Y="2"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="UseAirCan" ID="{0F8A2D81-5CD8-4BBA-9E4A-10B6A73BB838}" WorkUnitID="{D246DAED-4CA1-457C-86D6-474A1407CB53}"/>
-							<Position X="0" Y="3"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="HitRock" ID="{8C00F355-41B8-49E1-8FE2-B0E0C667B3A6}" WorkUnitID="{D246DAED-4CA1-457C-86D6-474A1407CB53}"/>
-							<Position X="0" Y="6"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="PlayFootstep" ID="{36A1E7E1-6217-48B8-8211-9BDC422ECE50}" WorkUnitID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="EnterBubble" ID="{B0563C0A-244D-4B2B-940C-4CA81DC87970}" WorkUnitID="{D246DAED-4CA1-457C-86D6-474A1407CB53}"/>
-							<Position X="1" Y="4"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="BreakRock" ID="{510C388E-738C-4F3D-9FDF-5135BEE66CAC}" WorkUnitID="{D246DAED-4CA1-457C-86D6-474A1407CB53}"/>
-							<Position X="1" Y="6"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Breath" ID="{D93F811E-3362-414D-90FA-87F230223D4B}" WorkUnitID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}"/>
-							<Position X="2" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Death" ID="{6A82A84F-9934-4624-8E68-D4F0CFD8DBA2}" WorkUnitID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}"/>
-							<Position X="2" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="GrowTile" ID="{C0D1EA60-3B5E-4233-8232-8B2827D7CE58}" WorkUnitID="{1A6B3835-2BB4-4F15-918D-E282D3D88D03}"/>
-							<Position X="2" Y="3"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="PlayWind" ID="{CC7B509D-9F7A-4451-A32C-EA9FC1A2F320}" WorkUnitID="{D2C8EC28-80CF-45AA-AAA3-DC02FF0A8855}"/>
 							<Position X="3" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="LeavesRustle" ID="{52665054-AA2E-415A-97CE-D9ED563ADB32}" WorkUnitID="{D2C8EC28-80CF-45AA-AAA3-DC02FF0A8855}"/>
-							<Position X="3" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="PlayMusic" ID="{3230DFE6-1198-42F0-94D3-845FD381CB60}" WorkUnitID="{9B679FB2-18E2-49DD-91E6-DE025BA450FD}"/>
-							<Position X="3" Y="2"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Pause" ID="{8DBA1F74-E52E-498E-8C61-EC96D686F022}" WorkUnitID="{D973B2A6-BBB1-41A0-A3C6-F52BD0B5AD9A}"/>
-							<Position X="4" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play" ID="{547D6549-0B17-4F70-BE04-FA059006DB03}" WorkUnitID="{D973B2A6-BBB1-41A0-A3C6-F52BD0B5AD9A}"/>
-							<Position X="4" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Oxygen" ID="{CE208EC0-8892-434D-8C91-B6DD00CCC3C1}"/>
-							<Value>100</Value>
-						</RTPCValue>
-						<RTPCValue>
-							<GameParameterRef Name="DistanceFromTile" ID="{8019D27B-A013-4E7C-B1B3-EDEB6779D5FD}"/>
-							<Value>0</Value>
+							<Value>2.19072164948454</Value>
 						</RTPCValue>
 					</RTPCValueList>
-					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Alive" ID="{4E3253B1-255B-4095-B6C1-7FC3AF2B0EC5}"/>
-					</CurrentStateList>
+					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Dirt" ID="{AA435702-BBE5-4084-A7D7-ECDD7B628F7F}"/>
-						<CurrentSwitchRef Name="NearBase" ID="{BD5383A6-3846-4B37-A425-CAB650A9268E}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

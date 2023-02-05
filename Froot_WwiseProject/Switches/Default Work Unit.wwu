@@ -14,15 +14,6 @@
 						<Switch Name="Water" ID="{5935718E-DAFB-4CFC-8AFE-34AE6EFBBC25}"/>
 					</ChildrenList>
 				</SwitchGroup>
-				<SwitchGroup Name="MusicMood" ID="{E1F336A9-82C4-4D29-853B-65EDF3466EEB}">
-					<PropertyList>
-						<Property Name="UseGameParameter" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<Switch Name="NearBase" ID="{BD5383A6-3846-4B37-A425-CAB650A9268E}"/>
-						<Switch Name="FarBase" ID="{8467BBBE-3E05-4BC4-9D7A-1F45300050B9}"/>
-					</ChildrenList>
-				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

@@ -35,6 +35,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="LoseTile" ID="{66EC97D5-5BAD-475B-8B59-AF567EF6BBFF}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
