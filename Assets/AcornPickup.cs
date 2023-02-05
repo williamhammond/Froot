@@ -10,7 +10,7 @@ public class AcornPickup : Pickupable
         if (backpack!=null)
         {
             backpack.SetSeeds(1);
-            //AkSoundEngine.PostEvent(SoundManager.CollectSoil, gameObject);
+            AkSoundEngine.PostEvent(SoundManager.CollectSoil, gameObject);
         }
         base.Pickup(picker);
         Destroy(gameObject);
