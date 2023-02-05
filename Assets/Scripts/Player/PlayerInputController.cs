@@ -18,10 +18,7 @@ namespace Player {
         Plane originPlane;
 
         public void Awake () {
-<<<<<<< HEAD
             originPlane = new Plane(Vector3.up, Vector3.zero);
-=======
->>>>>>> 1138a86... Roots/Areable tiles, tile manager
 
             _controller = gameObject.AddComponent<CharacterController>();
 
