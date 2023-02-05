@@ -124,7 +124,7 @@ public class Tile : MonoBehaviour
     public void Select()
     {
         //Debug.Log("selecting");
-        //indicator.SetActive(true);
+        indicator.SetActive(true);
 
         var block = new MaterialPropertyBlock();
         baseMesh.GetPropertyBlock(block,0); //This is some dumb shit cause i dunno what the final mesh will look like
@@ -137,7 +137,7 @@ public class Tile : MonoBehaviour
     public void Deselect()
     {
         //Debug.Log("deselecting");
-        //indicator.SetActive(false);
+        indicator.SetActive(false);
 
         var block = new MaterialPropertyBlock();
         baseMesh.GetPropertyBlock(block, 0); //This is some dumb shit cause i dunno what the final mesh will look like
