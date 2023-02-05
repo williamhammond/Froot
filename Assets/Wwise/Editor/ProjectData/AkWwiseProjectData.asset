@@ -38,8 +38,28 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: e5a63fcd14661c4389274ef81f5e2f8b
     GuidInternal: 
-    m_lastTime: -8585260771147874426
+    m_lastTime: -8585260302229070317
     List:
+    - name: Breath
+      guid: 0a457506f7f48644b35988d32de65950
+      id: 1326786195
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e5a63fcd14661c4389274ef81f5e2f8b
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Player
+        ObjectType: 2
+        guid: 80e914c68d28bd4db92dfe2d4b6e481e
+      - ElementName: Breath
+        ObjectType: 2
+        guid: 0a457506f7f48644b35988d32de65950
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Player\Breath
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -54,6 +74,40 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: OutdoorReverb
+      guid: b369ffa4e707bd4c869c71c96490e5ad
+      id: 3250445679
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e5a63fcd14661c4389274ef81f5e2f8b
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: OutdoorReverb
+        ObjectType: 1
+        guid: b369ffa4e707bd4c869c71c96490e5ad
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\OutdoorReverb
+    - name: Player
+      guid: 80e914c68d28bd4db92dfe2d4b6e481e
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e5a63fcd14661c4389274ef81f5e2f8b
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Player
+        ObjectType: 2
+        guid: 80e914c68d28bd4db92dfe2d4b6e481e
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Player
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,7 +120,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0cc93d9c419f0b4ea1803ab4e33fd88a
     GuidInternal: 
-    m_lastTime: -8585260736479195946
+    m_lastTime: -8585260349747080518
     List:
     - name: Main
       guid: ad62c692924ac44d9bf00ef1fd0b017a
@@ -94,11 +148,11 @@ MonoBehaviour:
     ParentPath: Events\Ambience
     guid: 28ecc8d2cf80aa45aaa3dc02ff0a8855
     GuidInternal: 
-    m_lastTime: -8585260678870506640
+    m_lastTime: -8585260349751808777
     List:
-    - name: Play_Wind
+    - name: PlayWind
       guid: 9d507bcc7a9f5144a32cea9fc1a2f320
-      id: 1020223172
+      id: 1592727253
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -106,10 +160,10 @@ MonoBehaviour:
       - ElementName: Ambience
         ObjectType: 12
         guid: 28ecc8d2cf80aa45aaa3dc02ff0a8855
-      - ElementName: Play_Wind
+      - ElementName: PlayWind
         ObjectType: 3
         guid: 9d507bcc7a9f5144a32cea9fc1a2f320
-      Path: Events\Ambience\Play_Wind
+      Path: Events\Ambience\PlayWind
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -124,41 +178,231 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 638392af168b92479d313f787d48ea42
     GuidInternal: 
-    m_lastTime: -8585260736480409554
+    m_lastTime: -8585260349751808777
     List: []
+  - PhysicalPath: Events\Items.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Items
+      ObjectType: 12
+      guid: edda46d2a14c7c4586d6474a1407cb53
+    ParentPath: Events\Items
+    guid: edda46d2a14c7c4586d6474a1407cb53
+    GuidInternal: 
+    m_lastTime: -8585260349751808777
+    List:
+    - name: BreakRock
+      guid: 8e380c518c733d4f9fdf5135bee66cac
+      id: 3614189553
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Items
+        ObjectType: 12
+        guid: edda46d2a14c7c4586d6474a1407cb53
+      - ElementName: BreakRock
+        ObjectType: 3
+        guid: 8e380c518c733d4f9fdf5135bee66cac
+      Path: Events\Items\BreakRock
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: CollectAirCan
+      guid: b9e3129401e9af44ac1241dfcf4a5176
+      id: 416902311
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Items
+        ObjectType: 12
+        guid: edda46d2a14c7c4586d6474a1407cb53
+      - ElementName: CollectAirCan
+        ObjectType: 3
+        guid: b9e3129401e9af44ac1241dfcf4a5176
+      Path: Events\Items\CollectAirCan
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: CollectSoil
+      guid: 2e42df637afbf84d9db23f2877869ef4
+      id: 717635272
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Items
+        ObjectType: 12
+        guid: edda46d2a14c7c4586d6474a1407cb53
+      - ElementName: CollectSoil
+        ObjectType: 3
+        guid: 2e42df637afbf84d9db23f2877869ef4
+      Path: Events\Items\CollectSoil
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: CollectWater
+      guid: 1250eac1c8b4bd47ae4aeefb41ef57b4
+      id: 1695098014
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Items
+        ObjectType: 12
+        guid: edda46d2a14c7c4586d6474a1407cb53
+      - ElementName: CollectWater
+        ObjectType: 3
+        guid: 1250eac1c8b4bd47ae4aeefb41ef57b4
+      Path: Events\Items\CollectWater
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: HitRock
+      guid: 55f3008cb841e1498fe2b0e0c667b3a6
+      id: 3660205123
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Items
+        ObjectType: 12
+        guid: edda46d2a14c7c4586d6474a1407cb53
+      - ElementName: HitRock
+        ObjectType: 3
+        guid: 55f3008cb841e1498fe2b0e0c667b3a6
+      Path: Events\Items\HitRock
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UseAirCan
+      guid: 812d8a0fd85cba4b9e4a10b6a73bb838
+      id: 3282522952
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Items
+        ObjectType: 12
+        guid: edda46d2a14c7c4586d6474a1407cb53
+      - ElementName: UseAirCan
+        ObjectType: 3
+        guid: 812d8a0fd85cba4b9e4a10b6a73bb838
+      Path: Events\Items\UseAirCan
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UseOxygen
+      guid: 46d63390cec45a41b2a2534630c1de59
+      id: 4290731854
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Items
+        ObjectType: 12
+        guid: edda46d2a14c7c4586d6474a1407cb53
+      - ElementName: UseOxygen
+        ObjectType: 3
+        guid: 46d63390cec45a41b2a2534630c1de59
+      Path: Events\Items\UseOxygen
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\PlayerChar.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
       guid: 00000000000000000000000000000000
-    - ElementName: Default Work Unit
-      ObjectType: 12
-      guid: 638392af168b92479d313f787d48ea42
     - ElementName: PlayerChar
       ObjectType: 12
       guid: e1e6d87c06b1c443b90afb93aa523186
-    ParentPath: Events\Default Work Unit\PlayerChar
+    ParentPath: Events\PlayerChar
     guid: e1e6d87c06b1c443b90afb93aa523186
     GuidInternal: 
-    m_lastTime: -8585260678870496568
+    m_lastTime: -8585260302229081297
     List:
-    - name: Play_Footstep
-      guid: e1e7a1361762b84882119bdc422ece50
-      id: 1602358412
+    - name: Breath
+      guid: 1e813fd962334d4190fa87f230223d4b
+      id: 1326786195
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 638392af168b92479d313f787d48ea42
       - ElementName: PlayerChar
         ObjectType: 12
         guid: e1e6d87c06b1c443b90afb93aa523186
-      - ElementName: Play_Footstep
+      - ElementName: Breath
+        ObjectType: 3
+        guid: 1e813fd962334d4190fa87f230223d4b
+      Path: Events\PlayerChar\Breath
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: PlayFootstep
+      guid: e1e7a1361762b84882119bdc422ece50
+      id: 1712852617
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: PlayerChar
+        ObjectType: 12
+        guid: e1e6d87c06b1c443b90afb93aa523186
+      - ElementName: PlayFootstep
         ObjectType: 3
         guid: e1e7a1361762b84882119bdc422ece50
-      Path: Events\Default Work Unit\PlayerChar\Play_Footstep
+      Path: Events\PlayerChar\PlayFootstep
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\Tiles.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Tiles
+      ObjectType: 12
+      guid: 35386b1ab42b154f918de282d3d88d03
+    ParentPath: Events\Tiles
+    guid: 35386b1ab42b154f918de282d3d88d03
+    GuidInternal: 
+    m_lastTime: -8585260349751793711
+    List:
+    - name: GrowTile
+      guid: 60ead1c05e3b334282328b2827d7ce58
+      id: 1913626152
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tiles
+        ObjectType: 12
+        guid: 35386b1ab42b154f918de282d3d88d03
+      - ElementName: GrowTile
+        ObjectType: 3
+        guid: 60ead1c05e3b334282328b2827d7ce58
+      Path: Events\Tiles\GrowTile
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: LoseTile
+      guid: d597ec66ad5b5b478b59af567ef6bbff
+      id: 213112866
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tiles
+        ObjectType: 12
+        guid: 35386b1ab42b154f918de282d3d88d03
+      - ElementName: LoseTile
+        ObjectType: 3
+        guid: d597ec66ad5b5b478b59af567ef6bbff
+      Path: Events\Tiles\LoseTile
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -167,16 +411,13 @@ MonoBehaviour:
     - ElementName: Events
       ObjectType: 5
       guid: 00000000000000000000000000000000
-    - ElementName: Default Work Unit
-      ObjectType: 12
-      guid: 638392af168b92479d313f787d48ea42
     - ElementName: World
       ObjectType: 12
       guid: edda46d2a14c7c4586d6474a1407cb53
-    ParentPath: Events\Default Work Unit\World
+    ParentPath: Events\World
     guid: edda46d2a14c7c4586d6474a1407cb53
     GuidInternal: 
-    m_lastTime: -8585260736480399477
+    m_lastTime: -8585260349751793711
     List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
@@ -190,8 +431,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: bb6d43cd354b5e42a70a5d95332dc322
     GuidInternal: 
-    m_lastTime: -8585260771147874426
-    List: []
+    m_lastTime: -8585260302229070317
+    List:
+    - name: Oxygen
+      guid: c08e20ce92884d438c91b6dd00ccc3c1
+      id: 3660512661
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bb6d43cd354b5e42a70a5d95332dc322
+      - ElementName: Oxygen
+        ObjectType: 13
+        guid: c08e20ce92884d438c91b6dd00ccc3c1
+      Path: Game Parameters\Default Work Unit\Oxygen
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -204,8 +459,74 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 55bd0b2c6d58e244865bcb5242dff5a3
     GuidInternal: 
-    m_lastTime: -8585260771147774080
-    List: []
+    m_lastTime: -8585260349747070544
+    List:
+    - name: PlayerLife
+      guid: 76cceda83b9208438a9b84bc2e30663e
+      id: 444815956
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 55bd0b2c6d58e244865bcb5242dff5a3
+      - ElementName: PlayerLife
+        ObjectType: 9
+        guid: 76cceda83b9208438a9b84bc2e30663e
+      Path: States\Default Work Unit\PlayerLife
+      values:
+      - name: Alive
+        guid: b153324e5b259540b6c17fc3af2b0ec5
+        id: 655265632
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 55bd0b2c6d58e244865bcb5242dff5a3
+        - ElementName: PlayerLife
+          ObjectType: 9
+          guid: 76cceda83b9208438a9b84bc2e30663e
+        - ElementName: Alive
+          ObjectType: 8
+          guid: b153324e5b259540b6c17fc3af2b0ec5
+      - name: Dead
+        guid: d944c8288b6a004baf90fa06ec2d4c09
+        id: 2044049779
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 55bd0b2c6d58e244865bcb5242dff5a3
+        - ElementName: PlayerLife
+          ObjectType: 9
+          guid: 76cceda83b9208438a9b84bc2e30663e
+        - ElementName: Dead
+          ObjectType: 8
+          guid: d944c8288b6a004baf90fa06ec2d4c09
+      - name: None
+        guid: 73d01f82b6bbd945b9b22b664d3eec86
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 55bd0b2c6d58e244865bcb5242dff5a3
+        - ElementName: PlayerLife
+          ObjectType: 9
+          guid: 76cceda83b9208438a9b84bc2e30663e
+        - ElementName: None
+          ObjectType: 8
+          guid: 73d01f82b6bbd945b9b22b664d3eec86
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -218,7 +539,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 2cab396cfcf0874c97543b7b7254f6d6
     GuidInternal: 
-    m_lastTime: -8585260678870353261
+    m_lastTime: -8585260349747070544
     List:
     - name: Player_Surface
       guid: 67c6cf541d2e9d40bf8bb3901fdd9a21
@@ -299,56 +620,6 @@ MonoBehaviour:
         - ElementName: Water
           ObjectType: 10
           guid: 8e713559fbdafc4c8afe34ae6efbbc25
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
-    - name: Player_Surface_2
-      guid: 44d506c72d4b2b4683350d71f9fa6ce1
-      id: 2898681345
-      PathAndIcons:
-      - ElementName: Switches
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 2cab396cfcf0874c97543b7b7254f6d6
-      - ElementName: Player_Surface_2
-        ObjectType: 11
-        guid: 44d506c72d4b2b4683350d71f9fa6ce1
-      Path: Switches\Default Work Unit\Player_Surface_2
-      values:
-      - name: Dirt
-        guid: 681140c26c018e41ae83da2503d7a452
-        id: 2195636714
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 2cab396cfcf0874c97543b7b7254f6d6
-        - ElementName: Player_Surface_2
-          ObjectType: 11
-          guid: 44d506c72d4b2b4683350d71f9fa6ce1
-        - ElementName: Dirt
-          ObjectType: 10
-          guid: 681140c26c018e41ae83da2503d7a452
-      - name: Water
-        guid: c98c3ddde80f734996855afa1d78f4e7
-        id: 2654748154
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 2cab396cfcf0874c97543b7b7254f6d6
-        - ElementName: Player_Surface_2
-          ObjectType: 11
-          guid: 44d506c72d4b2b4683350d71f9fa6ce1
-        - ElementName: Water
-          ObjectType: 10
-          guid: c98c3ddde80f734996855afa1d78f4e7
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
