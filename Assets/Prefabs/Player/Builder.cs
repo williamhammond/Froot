@@ -38,6 +38,10 @@ public class Builder : MonoBehaviour
         {
             var newBuild = GameObject.Instantiate(buildable);
             newBuild.Place(target);
+
+            //This is arbatrary, maybe the type of buildable should have an energy amount
+            int energyGranted = 4;
+            target.MakeAreable(energyGranted);
         }
     }
 }
