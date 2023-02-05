@@ -929,6 +929,11 @@
 								<Value>4</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>580</Value>
+							</ValueList>
+						</Property>
 						<Property Name="UseMaxSoundPerInstance" Type="bool">
 							<ValueList>
 								<Value>True</Value>
@@ -1815,6 +1820,35 @@
 						</BlendTrack>
 					</BlendTrackList>
 				</BlendContainer>
+				<Sound Name="Death gasps" ID="{010D3BC9-F082-4DD0-9884-9A645A21E45B}" ShortID="69621691">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>580</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Death gasps" ID="{F01D4C80-6FC0-4CE0-A6AE-A9A8F1CA0D4D}">
+							<Language>SFX</Language>
+							<AudioFile>Death gasps.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1065239075"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Death gasps" ID="{F01D4C80-6FC0-4CE0-A6AE-A9A8F1CA0D4D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
