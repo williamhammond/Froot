@@ -8,72 +8,65 @@ public class Targeter : MonoBehaviour
     List<Tile> targeted;
     
     public Tile target;
+
+    [SerializeField]float distanceInfront = 1.5f;
+    [SerializeField]float distanceUp = 1f;
+    [SerializeField]LayerMask environmentLayer;
     private void Awake()
     {
         targeted = new List<Tile>();
     }
-    private void OnTriggerEnter(Collider collider)
+
+    private void Update()
     {
-        //Debug.Log("new trigger hit");
-        var hitTile = collider.GetComponent<Tile>();
-        if (hitTile!=null)
+        if(Physics.Raycast(transform.parent.position + transform.parent.forward * distanceInfront + Vector3.up * distanceUp,Vector3.down,
+            out RaycastHit hit, 10f,environmentLayer))
         {
-            //Debug.Log("hit a tile");
-            if (!targeted.Contains(hitTile))
+           if(hit.collider.transform.parent.gameObject.TryGetComponent<Tile>(out Tile t))
             {
-                //Debug.Log("new tile");
-                targeted.Add(hitTile);
-                ResetTarget();
+                if(target != t)
+                {
+                    if(target != null)
+                        target.Deselect();
+                    target = t;
+                    target.Select();
+
+                    newTarget?.Invoke(target);
+
+                }
+                return;
+
             }
+        }
+
+        if(target != null)
+        {
+            target.Deselect();
+            target = null;
         }
     }
 
-    private void OnTriggerExit(Collider collider)
+    private void OnDrawGizmosSelected()
     {
-        var hitTile = collider.GetComponent<Tile>();
-        if (hitTile != null)
+        Gizmos.color = Color.blue;
+
+        var rayStart = transform.parent.position + transform.parent.forward * distanceInfront + Vector3.up * distanceUp;
+
+        Gizmos.DrawSphere(rayStart, .2f);
+        if (Physics.Raycast(transform.parent.position + transform.parent.forward * distanceInfront + Vector3.up * distanceUp, Vector3.down,
+           out RaycastHit hit, 10f, environmentLayer))
         {
-            if (targeted.Contains(hitTile))
-            {
-                targeted.Remove(hitTile);
-                hitTile.Deselect();
-                ResetTarget();
-            }
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(hit.point, .2f);
         }
+
+        Gizmos.color = Color.white;
+
     }
+
 
 
     public UnityEvent lostTarget;
     public UnityEvent<Tile> newTarget;
-    void ResetTarget()
-    {
-        if (targeted != null && targeted.Count!=00)
-        {
-            float closest = 10000;
-            Tile tile = null;
-            foreach (Tile t in targeted)
-            {
-                var distance = Vector3.Distance(t.transform.position, transform.position);
-                if (distance < closest)
-                {
-                    closest = distance;
-                    tile = t;
-                }
-            }
-            if(tile==null || tile!=target)
-            {
-                if(target!=null)
-                {
-                    target.Deselect();
-                }
-                target = tile;
-                target.Select();
-                newTarget?.Invoke(target);
-            }
-        }
-        else
-        {
-            target = null;
-        }
-    }
+
 }

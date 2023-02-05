@@ -21,8 +21,11 @@ public class OxygenTank : MonoBehaviour
     [SerializeField]
     float drainRate = 1f;
 
+    public float OxygenPercent =>  oxygenReal/ maxOxygen;
+
     [SerializeField]
     public List<OxygenSource> activeSources;
+
 
     private void Awake()
     {
