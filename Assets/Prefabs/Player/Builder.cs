@@ -1,16 +1,23 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Builder : MonoBehaviour
-{
+public class Builder : MonoBehaviour {
+    private Backpack _backpack;
+    private void Awake()
+    {
+        _backpack = GetComponent<Backpack>();
+    }
     bool TryBuild(Tile target)
     {
+        if (_backpack.seeds <= 0) {
+            Debug.Log("Out of seeds!");
+            return false;
+        }
+
         //Put cost logic here
         if (target.occupant == null) 
         { 
+            _backpack.seeds--;
             return true;
         }
         return false;
@@ -38,6 +45,10 @@ public class Builder : MonoBehaviour
         {
             var newBuild = GameObject.Instantiate(buildable);
             newBuild.Place(target);
+
+            //This is arbatrary, maybe the type of buildable should have an energy amount
+            int energyGranted = 4;
+            target.MakeAreable(energyGranted);
         }
     }
 }

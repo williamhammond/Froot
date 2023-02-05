@@ -40,6 +40,7 @@ namespace Player {
             var ray = new Ray(transform.position, transform.forward);
             Debug.DrawLine(ray.origin, ray.direction * 2 , Color.red);
 
+            originPlane = new(Vector3.up, transform.position);
             var mouseRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());
             if (originPlane.Raycast(mouseRay, out float hit))
             {
@@ -69,11 +70,18 @@ namespace Player {
             _controller.Move(move * (Time.deltaTime * MoveSpeed));
             transform.Translate(move.normalized * MoveSpeed * Time.deltaTime, Space.World);
 
+
+
             //Rotation
             Vector3 mouseFlattened = new Vector3(mousePos.x, 0, mousePos.z);
             Vector3 positionFlattened = new Vector3(transform.position.x, 0, transform.position.z);
             Quaternion toRotation = Quaternion.LookRotation(mouseFlattened - positionFlattened, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 360 * Time.deltaTime);     
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(mousePos, .2f);
         }
     }
 }

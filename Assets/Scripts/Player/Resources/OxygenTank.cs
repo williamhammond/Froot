@@ -72,7 +72,6 @@ public class OxygenTank : MonoBehaviour
         }
         else
         {
-
             Drain();
         }
         UpdateScale();
@@ -97,8 +96,7 @@ public class OxygenTank : MonoBehaviour
             tankFilled?.Invoke();
         }
     }
-    void Drain()
-    {
-        oxygenReal -= Time.deltaTime * drainRate;
+    void Drain() {
+        oxygenReal -= Mathf.Max(Time.deltaTime * drainRate, 0);
     }
 }
