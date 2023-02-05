@@ -21,8 +21,7 @@ namespace Player {
         public void Awake () {
             originPlane = new Plane(Vector3.up, Vector3.zero);
 
-            _controller = gameObject.AddComponent<CharacterController>();
-
+            _controller = GetComponent<CharacterController>();
             _playerInput = gameObject.GetComponent<PlayerInput>();
             _playerMove = _playerInput.actions["Move"];
         }
