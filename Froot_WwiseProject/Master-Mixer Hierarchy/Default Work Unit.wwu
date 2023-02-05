@@ -10,22 +10,6 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="Player" ID="{C614E980-288D-4DBD-B92D-FE2D4B6E481E}">
-							<ReferenceList>
-								<Reference Name="UserAuxSend0">
-									<ObjectRef Name="OutdoorReverb" ID="{A4FF69B3-07E7-4CBD-869C-71C96490E5AD}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Bus Name="Breath" ID="{0675450A-F4F7-4486-B359-88D32DE65950}">
-									<ReferenceList>
-										<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
-											<ObjectRef Name="Dialog_Leveler_Soft" ID="{9C1D0FCF-896E-4739-A8E8-B1E908F51CE6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-										</Reference>
-									</ReferenceList>
-								</Bus>
-							</ChildrenList>
-						</Bus>
 						<AuxBus Name="OutdoorReverb" ID="{A4FF69B3-07E7-4CBD-869C-71C96490E5AD}">
 							<ReferenceList>
 								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
@@ -37,6 +21,10 @@
 							<PropertyList>
 								<Property Name="RecoveryTime" Type="Real64" Value="1.5"/>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="GameMusic" ID="{3499A94F-FB72-4E53-A451-894A6C6D8C5E}"/>
+								<Bus Name="PauseMusic" ID="{FCB444AD-FBE0-4206-B645-711CBFD8A74E}"/>
+							</ChildrenList>
 							<DuckingList>
 								<DuckItem>
 									<BusRef Name="2D World" ID="{1C5084CC-558F-4B7D-9BB5-85BFA606E65C}"/>
@@ -50,16 +38,154 @@
 								</DuckItem>
 							</DuckingList>
 						</Bus>
-						<Bus Name="UI" ID="{F916C9E7-B857-4266-AF98-1CE2D36CE6C6}"/>
-						<Bus Name="2D World" ID="{1C5084CC-558F-4B7D-9BB5-85BFA606E65C}"/>
-						<Bus Name="3D World" ID="{D67FDFBB-9995-408F-A3FE-5F1E72D13701}">
-							<ReferenceList>
-								<Reference Name="UserAuxSend0">
-									<ObjectRef Name="OutdoorReverb" ID="{A4FF69B3-07E7-4CBD-869C-71C96490E5AD}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
-								</Reference>
-							</ReferenceList>
+						<Bus Name="SFX" ID="{E371AE85-BFE8-4555-9563-92D7DBB72C56}">
+							<ChildrenList>
+								<Bus Name="Player" ID="{C614E980-288D-4DBD-B92D-FE2D4B6E481E}">
+									<ReferenceList>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="OutdoorReverb" ID="{A4FF69B3-07E7-4CBD-869C-71C96490E5AD}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Bus Name="Breath" ID="{0675450A-F4F7-4486-B359-88D32DE65950}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+													<ObjectRef Name="Dialog_Leveler_Soft" ID="{9C1D0FCF-896E-4739-A8E8-B1E908F51CE6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
+											</ReferenceList>
+										</Bus>
+									</ChildrenList>
+								</Bus>
+								<Bus Name="UI" ID="{F916C9E7-B857-4266-AF98-1CE2D36CE6C6}"/>
+								<Bus Name="2D World" ID="{1C5084CC-558F-4B7D-9BB5-85BFA606E65C}"/>
+								<Bus Name="3D World" ID="{D67FDFBB-9995-408F-A3FE-5F1E72D13701}">
+									<ReferenceList>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="OutdoorReverb" ID="{A4FF69B3-07E7-4CBD-869C-71C96490E5AD}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+								</Bus>
+							</ChildrenList>
 						</Bus>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{EAE32F73-5AFA-4C2C-807D-0E11B6F65382}" ShortID="864241027">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Highpass"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="Oxygen" ID="{CE208EC0-8892-434D-8C91-B6DD00CCC3C1}" WorkUnitID="{CD436DBB-4B35-425E-A70A-5D95332DC322}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{0E3A9F5C-2D48-43CB-A479-9F928B33C345}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-100</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>0.32906</XPos>
+																<YPos>-2</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>9.92836</XPos>
+																<YPos>-32</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Exp2</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>10.0307062436029</XPos>
+																<YPos>-32</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log2</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>28.35209</XPos>
+																<YPos>-100</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-100</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{9DD44CC5-E7DA-49A6-888C-FA996ED9A0D9}" ShortID="997848394">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="Oxygen" ID="{CE208EC0-8892-434D-8C91-B6DD00CCC3C1}" WorkUnitID="{CD436DBB-4B35-425E-A70A-5D95332DC322}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{E5EE232A-AAD6-43FE-9622-A3CE29CF605B}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-100</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>0.50754</XPos>
+																<YPos>46</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>23.74615</XPos>
+																<YPos>26</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>35.41453</XPos>
+																<YPos>-100</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-100</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

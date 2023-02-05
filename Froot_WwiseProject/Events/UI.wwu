@@ -7,22 +7,13 @@
 					<ChildrenList>
 						<Action Name="" ID="{80C363E7-BDC6-42E9-88F5-1FED6B40A7E4}" ShortID="596830497">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="ActionType" Type="int16" Value="26"/>
 								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Lowpass" Type="int16" Value="73"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="GameMusic" ID="{0217A4A1-57EF-4154-B8AF-45847E2CFBB5}" WorkUnitID="{ADDD6DDC-7D38-435A-84DD-F1C2C00CA1A8}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{F40D5D0D-D459-4665-A2F1-37E0BF4DDAAE}" ShortID="681891071">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="7"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+									<ObjectRef Name="GameMusic" ID="{3499A94F-FB72-4E53-A451-894A6C6D8C5E}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -32,7 +23,17 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="pause music" ID="{A1A468B6-9A64-4513-97A7-7C6B23FA7879}" WorkUnitID="{ADDD6DDC-7D38-435A-84DD-F1C2C00CA1A8}"/>
+									<ObjectRef Name="PauseMusic2" ID="{D70483A7-DE8E-4EC6-B3DF-CC36D7FEBCE9}" WorkUnitID="{ADDD6DDC-7D38-435A-84DD-F1C2C00CA1A8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F40D5D0D-D459-4665-A2F1-37E0BF4DDAAE}" ShortID="681891071">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX" ID="{E371AE85-BFE8-4555-9563-92D7DBB72C56}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -40,6 +41,17 @@
 				</Event>
 				<Event Name="Play" ID="{547D6549-0B17-4F70-BE04-FA059006DB03}">
 					<ChildrenList>
+						<Action Name="" ID="{2725006B-77D3-424D-90BE-179BA0718BE2}" ShortID="653874693">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="27"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameMusic" ID="{3499A94F-FB72-4E53-A451-894A6C6D8C5E}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{ECFF4FF3-72B8-40F5-A6A7-7C3F9BFDE2CF}" ShortID="686749201">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
@@ -47,7 +59,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="pause music" ID="{A1A468B6-9A64-4513-97A7-7C6B23FA7879}" WorkUnitID="{ADDD6DDC-7D38-435A-84DD-F1C2C00CA1A8}"/>
+									<ObjectRef Name="PauseMusic2" ID="{D70483A7-DE8E-4EC6-B3DF-CC36D7FEBCE9}" WorkUnitID="{ADDD6DDC-7D38-435A-84DD-F1C2C00CA1A8}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -57,18 +69,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{C60B6FE3-874D-4675-8C96-194CDDEDC12F}" ShortID="55205436">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="9"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="GameMusic" ID="{0217A4A1-57EF-4154-B8AF-45847E2CFBB5}" WorkUnitID="{ADDD6DDC-7D38-435A-84DD-F1C2C00CA1A8}"/>
+									<ObjectRef Name="SFX" ID="{E371AE85-BFE8-4555-9563-92D7DBB72C56}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
