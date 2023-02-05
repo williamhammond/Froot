@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{CD436DBB-4B35-425E-A70A-5D95332DC322}" SchemaVersion="110">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{CD436DBB-4B35-425E-A70A-5D95332DC322}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{CD436DBB-4B35-425E-A70A-5D95332DC322}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Oxygen" ID="{C940638D-3480-400F-9BA0-F4E32800D19A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

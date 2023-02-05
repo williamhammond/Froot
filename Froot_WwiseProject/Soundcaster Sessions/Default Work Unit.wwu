@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B1F9A5A7-C84E-463C-9430-C9DDD00EC73D}" SchemaVersion="110">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{B1F9A5A7-C84E-463C-9430-C9DDD00EC73D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B1F9A5A7-C84E-463C-9430-C9DDD00EC73D}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Test" ID="{4AA2327F-A31C-4210-B230-37064B8EDFC4}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Breath" ID="{D93F811E-3362-414D-90FA-87F230223D4B}" WorkUnitID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PlayFootstep" ID="{36A1E7E1-6217-48B8-8211-9BDC422ECE50}" WorkUnitID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PlayWind" ID="{CC7B509D-9F7A-4451-A32C-EA9FC1A2F320}" WorkUnitID="{D2C8EC28-80CF-45AA-AAA3-DC02FF0A8855}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Oxygen" ID="{CE208EC0-8892-434D-8C91-B6DD00CCC3C1}"/>
+							<Value>2.19072164948454</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Dirt" ID="{AA435702-BBE5-4084-A7D7-ECDD7B628F7F}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}" SchemaVersion="110" RootDocumentID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}" ParentDocumentID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}">
+<WwiseDocument Type="WorkUnit" ID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}" SchemaVersion="110">
 	<AudioObjects>
-		<WorkUnit Name="PlayerChar" ID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}" OwnerID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}" PersistMode="Nested">
+		<WorkUnit Name="PlayerChar" ID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}" PersistMode="Standalone">
 			<ChildrenList>
 				<SwitchContainer Name="Footsteps" ID="{9DEA12D7-FED2-415C-8C26-010F8745F90C}" ShortID="806143782">
 					<ReferenceList>
@@ -12,7 +12,7 @@
 							<ObjectRef Name="Dirt" ID="{AA435702-BBE5-4084-A7D7-ECDD7B628F7F}" WorkUnitID="{6C39AB2C-F0FC-4C87-9754-3B7B7254F6D6}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+							<ObjectRef Name="Player" ID="{C614E980-288D-4DBD-B92D-FE2D4B6E481E}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
 						</Reference>
 						<Reference Name="SwitchGroupOrStateGroup">
 							<ObjectRef Name="Player_Surface" ID="{54CFC667-2E1D-409D-BF8B-B3901FDD9A21}" WorkUnitID="{6C39AB2C-F0FC-4C87-9754-3B7B7254F6D6}"/>
@@ -921,6 +921,909 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<BlendContainer Name="Oxygen" ID="{4E8B4DAA-58BE-4182-A0B7-852B384C6D10}" ShortID="368263357">
+					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				<BlendContainer Name="Oxygen" ID="{81247BEB-8FAA-471A-87F7-B9B1C16AE90E}" ShortID="983532545">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Breath" ID="{0675450A-F4F7-4486-B359-88D32DE65950}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="HighIntBreath" ID="{1DAB59BD-EEFA-451F-9403-756516759142}" ShortID="912412056">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="High intensity breath" ID="{4B3C0AD8-82B2-4135-9004-E7A7B28A0979}" ShortID="929756311">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="High intensity breath" ID="{775501BD-DB49-4334-BCC9-B0DDC3159DA3}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0401325839653305"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.502765283828699"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.19059999097147"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>High intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="538186697"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="High intensity breath" ID="{775501BD-DB49-4334-BCC9-B0DDC3159DA3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="High intensity breath_01" ID="{EC7DDD8A-08CA-4541-AFBD-CF8592FBBA9C}" ShortID="152753104">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="High intensity breath" ID="{EBDA9FF7-7313-47E0-8A0A-8372C5DC7360}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0668876399422174"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.53575545514587"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.32437527085591"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.62190824098717"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>High intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="877849885"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="High intensity breath" ID="{EBDA9FF7-7313-47E0-8A0A-8372C5DC7360}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="High intensity breath_02" ID="{7B29CF27-3DC7-43F0-85EC-24E6EA9454E7}" ShortID="1001572998">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="High intensity breath" ID="{1DE97B76-1BA3-42A9-A268-E4C1DFB76C61}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.120397751895992"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.402285531878563"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.56848537378115"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.82597300469484"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>High intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="962728614"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="High intensity breath" ID="{1DE97B76-1BA3-42A9-A268-E4C1DFB76C61}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="High intensity breath_03" ID="{CF46D60A-A42D-420F-9275-86E6BDF2C50C}" ShortID="106767138">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="High intensity breath" ID="{47400C44-B346-4487-8C06-3D8173BDC7E6}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.456013755701713"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.871851305064221"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.86610558866016"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.23104966722016"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>High intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="174628941"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="High intensity breath" ID="{47400C44-B346-4487-8C06-3D8173BDC7E6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="High intensity breath_04" ID="{CD1F8CE2-6D24-439A-80CE-AB434EDF030F}" ShortID="313590012">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="High intensity breath" ID="{F11618A2-8B9A-406F-9A29-FD56A3D41D2B}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.241275349904612"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.563295713852513"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="5.05670557963164"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.11353029071867"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>High intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="381506412"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="High intensity breath" ID="{F11618A2-8B9A-406F-9A29-FD56A3D41D2B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="High intensity breath_05" ID="{11E09EDE-5B15-4A5A-9901-6F5044364E60}" ShortID="535087641">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="High intensity breath" ID="{5895B371-72B5-4668-9795-855B355F756D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.590181636951026"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.804658308504876"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="6.16704040267245"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.39777297760924"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>High intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="865923242"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="High intensity breath" ID="{5895B371-72B5-4668-9795-855B355F756D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="High intensity breath_06" ID="{E7B0E4D8-4ECA-4957-833B-5890701905E1}" ShortID="738418544">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="High intensity breath" ID="{7F34A1D8-EF30-43D4-8E77-1A9044EA0FE3}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.228028689037794"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.710404899351516"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="7.42452803358612"/>
+												<Property Name="TrimEnd" Type="Real64" Value="8.61556424829637"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>High intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="228266388"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="High intensity breath" ID="{7F34A1D8-EF30-43D4-8E77-1A9044EA0FE3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="High intensity breath_07" ID="{77176B3D-95C0-49BB-814B-008B0162BB61}" ShortID="143618477">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="High intensity breath" ID="{FE02D4A1-1FA3-44A4-BA29-6847D8EFF335}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.495753738302166"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.789274151318164"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="8.44122016070782"/>
+												<Property Name="TrimEnd" Type="Real64" Value="9.67195273564464"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>High intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="654440483"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="High intensity breath" ID="{FE02D4A1-1FA3-44A4-BA29-6847D8EFF335}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="High intensity breath_08" ID="{FFFDF27A-2DC1-4214-9A3E-2F834CE5616B}" ShortID="1028673697">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="High intensity breath" ID="{5E2D7121-7F6F-4026-8AEA-425543559E32}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.44254898296552"/>
+												<Property Name="FadeInShape" Type="int16" Value="4"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.749010700231208"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="9.67195273564462"/>
+												<Property Name="TrimEnd" Type="Real64" Value="10.9963280065005"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>High intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="466296186"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="High intensity breath" ID="{5E2D7121-7F6F-4026-8AEA-425543559E32}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="High intensity breath_09" ID="{5FC17E89-911D-4C96-B271-ED22DA3D3E00}" ShortID="848460246">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="High intensity breath" ID="{B6AA1282-5B64-477C-9563-FFB290EA6507}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.630445088037983"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.00462327034953"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="10.9294403665583"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>High intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="793218960"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="High intensity breath" ID="{B6AA1282-5B64-477C-9563-FFB290EA6507}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="MedIntBreath" ID="{BD8DBBCE-AD85-439F-A4D4-F53726892035}" ShortID="824627786">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Med intensity breath" ID="{EA90CB6A-A6E0-4865-86A3-5C832F56642D}" ShortID="688648119">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Med intensity breath" ID="{B3390DAA-5F2D-4AFA-ADD3-8F08CC26FD1B}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.522561728395061"/>
+												<Property Name="FadeInShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.94061111111111"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="10.477362654321"/>
+												<Property Name="TrimEnd" Type="Real64" Value="12.593737654321"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Med intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="498971622"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Med intensity breath" ID="{B3390DAA-5F2D-4AFA-ADD3-8F08CC26FD1B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Med intensity breath_01" ID="{A92A8E8B-7957-40F9-A01B-B829B1A6FB38}" ShortID="684471778">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Med intensity breath" ID="{D58B4D90-0D7E-47CD-B27A-B70952398AF8}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.522561728395061"/>
+												<Property Name="FadeInShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.94061111111111"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="12.1756882716049"/>
+												<Property Name="TrimEnd" Type="Real64" Value="14.396575617284"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Med intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="806302502"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Med intensity breath" ID="{D58B4D90-0D7E-47CD-B27A-B70952398AF8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Med intensity breath_02" ID="{EBD8FC82-AAF5-4BDF-81CB-9D56A67357B0}" ShortID="522690299">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Med intensity breath" ID="{DD50920C-3279-46E9-B9E1-91A77828B073}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.522561728395061"/>
+												<Property Name="FadeInShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.94061111111111"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="14.1352947530864"/>
+												<Property Name="TrimEnd" Type="Real64" Value="16.3039259259259"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Med intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="726954079"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Med intensity breath" ID="{DD50920C-3279-46E9-B9E1-91A77828B073}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Med intensity breath_03" ID="{33EC8B11-E7FE-4A4A-8A91-5FC1B057C5A9}" ShortID="32618180">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Med intensity breath" ID="{8471F7B9-EF73-4B4A-A670-DA6EA746B021}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.522561728395061"/>
+												<Property Name="FadeInShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.94061111111111"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="18.0806358024691"/>
+												<Property Name="TrimEnd" Type="Real64" Value="19.7528333333333"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Med intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="136708364"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Med intensity breath" ID="{8471F7B9-EF73-4B4A-A670-DA6EA746B021}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Med intensity breath_04" ID="{6B466312-EED7-442A-878F-091934D1B322}" ShortID="1027808388">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Med intensity breath" ID="{1259FD56-3359-4D06-93D4-21447B0123B8}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.470305555555555"/>
+												<Property Name="FadeInShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.836098765432098"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="19.4392962962963"/>
+												<Property Name="TrimEnd" Type="Real64" Value="21.0853657407407"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Med intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="373212268"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Med intensity breath" ID="{1259FD56-3359-4D06-93D4-21447B0123B8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Med intensity breath_05" ID="{80F9D9DE-FB58-49A0-8A47-41FD799B3096}" ShortID="862530020">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Med intensity breath" ID="{5267763B-CF53-4F56-A62F-7D7AF43AB217}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.705458333333333"/>
+												<Property Name="FadeInShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.01899537037037"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="20.8763410493827"/>
+												<Property Name="TrimEnd" Type="Real64" Value="22.5746666666667"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Med intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="808603451"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Med intensity breath" ID="{5267763B-CF53-4F56-A62F-7D7AF43AB217}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Med intensity breath_06" ID="{EEAA34C1-036D-4D13-B846-81BA20424596}" ShortID="236533330">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Med intensity breath" ID="{E9C8D1D5-5C57-4918-82D3-06B62390E755}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.705458333333333"/>
+												<Property Name="FadeInShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.01899537037037"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="22.3917700617284"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Med intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="345519740"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Med intensity breath" ID="{E9C8D1D5-5C57-4918-82D3-06B62390E755}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="LowIntBreath" ID="{2202F9D5-3609-4002-9372-12BE186DB621}" ShortID="755185948">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismResetPlaylistEachPlay" Type="bool" Value="False"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="LowIntIn3" ID="{2B437D24-B697-464B-8EEC-769F69F2C861}" ShortID="408980288">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Breath" ID="{0675450A-F4F7-4486-B359-88D32DE65950}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="low intensity breath" ID="{E7E25AF3-5327-41C5-8A73-987F4BC9E9EF}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.40686410675381"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.11827659767611"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="7.07039397240378"/>
+												<Property Name="TrimEnd" Type="Real64" Value="10.7498847131445"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>low intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="364721004"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="low intensity breath" ID="{E7E25AF3-5327-41C5-8A73-987F4BC9E9EF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="LowIntIn1" ID="{3F7039B3-D6E3-4E02-B8E9-79D53BDCCD10}" ShortID="810663740">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Breath" ID="{0675450A-F4F7-4486-B359-88D32DE65950}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="low intensity breath" ID="{ABD5DC1D-753D-4720-97B9-A14FAE2811FB}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.40686410675381"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.55115786129267"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.36488607480029"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>low intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="830059164"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="low intensity breath" ID="{ABD5DC1D-753D-4720-97B9-A14FAE2811FB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="LowIntIn4" ID="{C8738C45-49C4-491C-977A-D399AB6E7E52}" ShortID="263859406">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Breath" ID="{0675450A-F4F7-4486-B359-88D32DE65950}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="low intensity breath" ID="{E264D5C0-CB86-4603-9034-A22FDE5B9B04}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.40686410675381"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.721468772694263"/>
+												<Property Name="FadeOutShape" Type="int16" Value="4"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="10.2809300108932"/>
+												<Property Name="TrimEnd" Type="Real64" Value="14.6458160856935"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>low intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="961389808"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="low intensity breath" ID="{E264D5C0-CB86-4603-9034-A22FDE5B9B04}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="LowIntIn2" ID="{ED93A6E7-C51D-4B19-8425-BA1A3819868D}" ShortID="482016996">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Breath" ID="{0675450A-F4F7-4486-B359-88D32DE65950}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="low intensity breath" ID="{739A5DB9-5B2D-4B0A-AD8E-1575C63FE552}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.40686410675381"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.55115786129267"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.75163761801017"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.57542211328976"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>low intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="48531302"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="low intensity breath" ID="{739A5DB9-5B2D-4B0A-AD8E-1575C63FE552}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="LowIntIn5" ID="{5A2AF009-D651-4C39-9879-E42C859745B8}" ShortID="328698309">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Breath" ID="{0675450A-F4F7-4486-B359-88D32DE65950}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="low intensity breath" ID="{6374DE9F-A8E5-4A53-81BB-5CC3F8108C83}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.40686410675381"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.46895470225127"/>
+												<Property Name="FadeOutShape" Type="int16" Value="4"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="13.960420751634"/>
+												<Property Name="TrimEnd" Type="Real64" Value="17.2070302287582"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>low intensity breath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="551451345"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="low intensity breath" ID="{6374DE9F-A8E5-4A53-81BB-5CC3F8108C83}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="LowIntIn1" ID="{3F7039B3-D6E3-4E02-B8E9-79D53BDCCD10}"/>
+								<ItemRef Name="LowIntIn2" ID="{ED93A6E7-C51D-4B19-8425-BA1A3819868D}"/>
+								<ItemRef Name="LowIntIn3" ID="{2B437D24-B697-464B-8EEC-769F69F2C861}"/>
+								<ItemRef Name="LowIntIn4" ID="{C8738C45-49C4-491C-977A-D399AB6E7E52}"/>
+								<ItemRef Name="LowIntIn5" ID="{5A2AF009-D651-4C39-9879-E42C859745B8}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<BlendTrackList>
+						<BlendTrack Name="OxygenBreath" ID="{F9CFC868-B76F-4D7B-8EA2-D18EDBAEDD23}" ShortID="3755449">
+							<PropertyList>
+								<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="LayerCrossFadeControlInput">
+									<ObjectRef Name="Oxygen" ID="{CE208EC0-8892-434D-8C91-B6DD00CCC3C1}" WorkUnitID="{CD436DBB-4B35-425E-A70A-5D95332DC322}"/>
+								</Reference>
+							</ReferenceList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{189461E6-37A8-4409-AD9F-0C199C8B27A7}" ShortID="236657516">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Oxygen" ID="{CE208EC0-8892-434D-8C91-B6DD00CCC3C1}" WorkUnitID="{CD436DBB-4B35-425E-A70A-5D95332DC322}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{9EA9BDA0-821E-4F4A-8EEF-368E1E716336}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>3.19402</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Exp2</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>19.20103</XPos>
+																		<YPos>-3.69049</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>51.54639</XPos>
+																		<YPos>-13.33571</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<BlendTrackAssocList>
+								<BlendTrackAssoc>
+									<ItemRef Name="HighIntBreath" ID="{1DAB59BD-EEFA-451F-9403-756516759142}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>0</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>10.6443298969072</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+								<BlendTrackAssoc>
+									<ItemRef Name="MedIntBreath" ID="{BD8DBBCE-AD85-439F-A4D4-F53726892035}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>8.45360824742269</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>25.3983969203997</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+								<BlendTrackAssoc>
+									<ItemRef Name="LowIntBreath" ID="{2202F9D5-3609-4002-9372-12BE186DB621}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>22.4226804123711</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>51.5463917525773</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+							</BlendTrackAssocList>
+						</BlendTrack>
+						<BlendTrack Name="OxygenFilter" ID="{654CAB95-6745-4ED8-AF54-040A14381847}" ShortID="52308440">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+						</Reference>
+					</ReferenceList>
+					<BlendTrackList>
+						<BlendTrack Name="Breath" ID="{914A8812-7490-47F6-AADD-CDF017C32FB2}" ShortID="829564036">
+							<PropertyList>
+								<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="LayerCrossFadeControlInput">
+									<ObjectRef Name="Oxygen" ID="{CE208EC0-8892-434D-8C91-B6DD00CCC3C1}" WorkUnitID="{CD436DBB-4B35-425E-A70A-5D95332DC322}"/>
+								</Reference>
+							</ReferenceList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{4EE9CF09-3D0F-4178-B070-9EFC788863F2}" ShortID="22668578">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Oxygen" ID="{CE208EC0-8892-434D-8C91-B6DD00CCC3C1}" WorkUnitID="{CD436DBB-4B35-425E-A70A-5D95332DC322}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{5BAACC56-69E9-4FD3-BC5A-B7EB59C11790}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>77</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>27.6037</XPos>
+																		<YPos>-100</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-100</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+									<ObjectRef Name="Oxygen" ID="{C940638D-3480-400F-9BA0-F4E32800D19A}" WorkUnitID="{CD436DBB-4B35-425E-A70A-5D95332DC322}"/>
+								</Reference>
+							</ReferenceList>
+						</BlendTrack>
+					</BlendTrackList>
+				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

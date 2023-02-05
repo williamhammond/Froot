@@ -32,6 +32,10 @@ public class Tile : MonoBehaviour
     GameObject indicator;
 
     [SerializeField] MeshRenderer baseMesh;
+    
+    [SerializeField, ColorUsage(true,true)] Color selectedColor = Color.green;
+    Color borderOriginalCol;
+
     [SerializeField]
     bool isAreable;
 
@@ -95,6 +99,9 @@ public class Tile : MonoBehaviour
         }
 
         TileManager.Instance.RegisterTile(this);
+
+        borderOriginalCol = baseMesh.materials[0].color;
+
     }
 
     public bool IsConnected(Tile targetTile)
@@ -118,6 +125,12 @@ public class Tile : MonoBehaviour
     {
         //Debug.Log("selecting");
         indicator.SetActive(true);
+
+        var block = new MaterialPropertyBlock();
+        baseMesh.GetPropertyBlock(block,0); //This is some dumb shit cause i dunno what the final mesh will look like
+        block.SetColor("_BaseColor", selectedColor);
+        baseMesh.SetPropertyBlock(block,0);
+
         onSelected?.Invoke();
     }
 
@@ -125,6 +138,12 @@ public class Tile : MonoBehaviour
     {
         //Debug.Log("deselecting");
         indicator.SetActive(false);
+
+        var block = new MaterialPropertyBlock();
+        baseMesh.GetPropertyBlock(block, 0); //This is some dumb shit cause i dunno what the final mesh will look like
+        block.SetColor("_BaseColor", borderOriginalCol);
+        baseMesh.SetPropertyBlock(block,0);
+
         onDeselected?.Invoke();
     }
 
@@ -135,20 +154,23 @@ public class Tile : MonoBehaviour
         isAreable = true;
         onAreate?.Invoke(this);
 
-        MaterialPropertyBlock block = new MaterialPropertyBlock();
-        baseMesh.GetPropertyBlock(block);
+
+        MaterialPropertyBlock block = new();
+        baseMesh.GetPropertyBlock(block,1);
+
         block.SetColor("_BaseColor", Color.green);
-        baseMesh.SetPropertyBlock(block);
+        baseMesh.SetPropertyBlock(block,1);
     }
     public void MakeUnAreable()
     {
         isAreable = false;
         onUnAreate?.Invoke(this);
 
-        MaterialPropertyBlock block = new MaterialPropertyBlock();
-        baseMesh.GetPropertyBlock(block);
+        MaterialPropertyBlock block = new();
+        baseMesh.GetPropertyBlock(block,0);
+
         block.SetColor("_BaseColor", Color.grey);
-        baseMesh.SetPropertyBlock(block);
+        baseMesh.SetPropertyBlock(block,0);
     }
 
 

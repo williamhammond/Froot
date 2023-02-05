@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AF928363-8B16-4792-9D31-3F787D48EA42}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{AF928363-8B16-4792-9D31-3F787D48EA42}" PersistMode="Standalone">
-			<ChildrenList>
-				<WorkUnit Name="PlayerChar" ID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}" PersistMode="Reference"/>
-				<WorkUnit Name="World" ID="{D246DAED-4CA1-457C-86D6-474A1407CB53}" PersistMode="Reference"/>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{AF928363-8B16-4792-9D31-3F787D48EA42}" PersistMode="Standalone"/>
 	</Events>
 </WwiseDocument>

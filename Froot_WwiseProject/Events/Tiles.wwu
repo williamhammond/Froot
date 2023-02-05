@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1A6B3835-2BB4-4F15-918D-E282D3D88D03}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Tiles" ID="{1A6B3835-2BB4-4F15-918D-E282D3D88D03}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="GrowTile" ID="{C0D1EA60-3B5E-4233-8232-8B2827D7CE58}">
+					<ChildrenList>
+						<Action Name="" ID="{CFE7C8B9-F42F-423A-B3E2-46212A151B5C}" ShortID="424035305">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GrowTileMagic" ID="{BAECE173-98C8-4A62-84F5-1962DAB0C10C}" WorkUnitID="{6682B37A-46CB-4089-BCA5-61528C6AE24C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{038A461C-0103-44B3-BE88-7F76EEB3E862}" ShortID="93200278">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GrowTilePops" ID="{3752A38E-2CD0-447E-AE17-39E712A38644}" WorkUnitID="{6682B37A-46CB-4089-BCA5-61528C6AE24C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3311C36B-AD00-41EC-B53B-EF7A20BD3DA4}" ShortID="120030945">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GrowTileRocks" ID="{1E4DFF7E-2DD6-4426-B906-A0207BFBF1EF}" WorkUnitID="{6682B37A-46CB-4089-BCA5-61528C6AE24C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D46AA3E7-DF54-4566-BAE2-51EE667E190C}" ShortID="735000729">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GrowTileVeg" ID="{43B1059C-387F-460E-B54A-086EB489A401}" WorkUnitID="{6682B37A-46CB-4089-BCA5-61528C6AE24C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="LoseTile" ID="{66EC97D5-5BAD-475B-8B59-AF567EF6BBFF}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
