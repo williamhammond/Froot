@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3883649367340181725
 MonoBehaviour:
@@ -75,9 +75,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rockMeshes:
-  - {fileID: 919132149155446097, guid: 469bb2047a12ee240a41d2113a2da38f, type: 3}
-  - {fileID: 919132149155446097, guid: bed51917658333b4c9850b9e2ed6eb80, type: 3}
-  - {fileID: 919132149155446097, guid: f957085f3ceb5d846ae305b9c3c11c0c, type: 3}
+  - {fileID: 8123614456030336166, guid: bca4955f7098d3042bbcfdec1b6413ee, type: 3}
+  - {fileID: 4396567166310489546, guid: 04835db0014416449b1b9540f0ba1a76, type: 3}
+  - {fileID: 3153576645391848928, guid: 7c136a3657612b14aa88faa534f6b2b3, type: 3}
 --- !u!136 &3883649367340181723
 CapsuleCollider:
   m_ObjectHideFlags: 0

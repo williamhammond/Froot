@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class Rock : MonoBehaviour
 {
+
     public List<GameObject> rockMeshes;
 
+    private void Start()
+    {
 
+        if(transform.parent.TryGetComponent<Tile>(out Tile t))
+        {
+            GetComponent<Buildable>().Place(t);
+        }
+    }
 
     public void Init()
     {
