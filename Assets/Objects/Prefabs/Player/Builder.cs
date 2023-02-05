@@ -11,9 +11,11 @@ public class Builder : MonoBehaviour {
     {
         _backpack = GetComponent<Backpack>();
     }
+    [SerializeField]
+    int buildcost = 1;
     bool TryBuild(Tile target)
     {
-        if (_backpack.seeds <= 0) {
+        if (!_backpack.HasSeeds(buildcost)) {
             Debug.Log("Out of seeds!");
             onFailBuildSeeds?.Invoke();
 
@@ -30,8 +32,8 @@ public class Builder : MonoBehaviour {
         //Put cost logic here
         if (target.occupant == null) 
         { 
-            AkSoundEngine.PostEvent(SoundManager.CollectSoil, gameObject);
-            _backpack.seeds--;
+            //AkSoundEngine.PostEvent(SoundManager.CollectSoil, gameObject);
+            _backpack.SetSeeds(-1);
             onBuildSuceed?.Invoke();
             return true;
         }

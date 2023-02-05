@@ -90,9 +90,19 @@ public class OxygenTank : MonoBehaviour
     }
 
 
+    [SerializeField]
     UnityEvent tankFilled;
+
+    bool refilling = false;
+    [SerializeField]
+    UnityEvent startedFilling;
     void Refill()
     {
+        if(refilling==false)
+        {
+            startedFilling?.Invoke();
+        }
+        refilling = true;
         var rate = drainRate * 5;
         oxygenReal += Time.deltaTime * rate;
         if(oxygenReal>maxOxygen)
@@ -101,7 +111,25 @@ public class OxygenTank : MonoBehaviour
             tankFilled?.Invoke();
         }
     }
-    void Drain() {
+
+    public void FillMax()
+    {
+        //Debug.Log("Maxing Tank: " + oxygenReal +" " + maxOxygen);
+        startedFilling?.Invoke();
+        oxygenReal = maxOxygen;
+        tankFilled?.Invoke();
+        UpdateScale();
+    }
+
+    public void UpdateMax(int additive)
+    {
+        maxOxygen += additive;
+       // Debug.Log("New max " + maxOxygen);
+        FillMax();
+    }
+    void Drain()
+    {
+        refilling = false;
         oxygenReal -= Mathf.Max(Time.deltaTime * drainRate, 0);
     }
 }
