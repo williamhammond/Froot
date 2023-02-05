@@ -8,8 +8,7 @@ public class FollowCam : MonoBehaviour
     public GameObject target;
     [SerializeField]
     float speed = 1f;
-    private void Update()
-    {
+    private void Update() {
          transform.position = Vector3.Lerp(transform.position, target.transform.position , speed * Time.deltaTime);
     }
 }
