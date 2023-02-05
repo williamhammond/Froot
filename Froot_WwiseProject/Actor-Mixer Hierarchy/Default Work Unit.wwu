@@ -3,9 +3,72 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}" PersistMode="Standalone">
 			<ChildrenList>
-				<WorkUnit Name="PlayerChar" ID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}" PersistMode="Reference"/>
-				<WorkUnit Name="World" ID="{DCFC86AC-2A37-42CA-BABF-3C6DB0C50DD0}" PersistMode="Reference"/>
-				<WorkUnit Name="UI" ID="{979D0678-9FFB-49ED-8A04-39934FE69919}" PersistMode="Reference"/>
+				<Sound Name="low intensity breath" ID="{74F4940D-CA6F-4258-9210-6D12E8AD6B22}" ShortID="325946997">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="low intensity breath" ID="{9F23A7A3-6290-4DDB-A035-63E6F3A250B3}">
+							<Language>SFX</Language>
+							<AudioFile>low intensity breath.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="541480637"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="low intensity breath" ID="{9F23A7A3-6290-4DDB-A035-63E6F3A250B3}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Med intensity breath" ID="{78509A5B-715B-46E9-9E2B-D84DEA8B2C87}" ShortID="866696632">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Med intensity breath" ID="{2F8F49D6-EF7C-4742-83C8-82A47DAC818F}">
+							<Language>SFX</Language>
+							<AudioFile>Med intensity breath.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="473402702"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Med intensity breath" ID="{2F8F49D6-EF7C-4742-83C8-82A47DAC818F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Death gasps" ID="{010D3BC9-F082-4DD0-9884-9A645A21E45B}" ShortID="69621691">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Death gasps" ID="{F01D4C80-6FC0-4CE0-A6AE-A9A8F1CA0D4D}">
+							<Language>SFX</Language>
+							<AudioFile>Death gasps.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1065239075"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Death gasps" ID="{F01D4C80-6FC0-4CE0-A6AE-A9A8F1CA0D4D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

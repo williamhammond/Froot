@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}" SchemaVersion="110" RootDocumentID="{AF928363-8B16-4792-9D31-3F787D48EA42}" ParentDocumentID="{AF928363-8B16-4792-9D31-3F787D48EA42}">
+<WwiseDocument Type="WorkUnit" ID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="PlayerChar" ID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}" OwnerID="{AF928363-8B16-4792-9D31-3F787D48EA42}" PersistMode="Nested">
+		<WorkUnit Name="PlayerChar" ID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_Footstep" ID="{36A1E7E1-6217-48B8-8211-9BDC422ECE50}">
+				<Event Name="PlayFootstep" ID="{36A1E7E1-6217-48B8-8211-9BDC422ECE50}">
 					<ChildrenList>
 						<Action Name="" ID="{DE0CB2D9-BBDD-45A1-B2B7-AE17A7A81033}" ShortID="560373142">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Footsteps" ID="{9DEA12D7-FED2-415C-8C26-010F8745F90C}" WorkUnitID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Breath" ID="{D93F811E-3362-414D-90FA-87F230223D4B}">
+					<ChildrenList>
+						<Action Name="" ID="{93297C89-84E8-448B-9CCA-7812D32C8AD9}" ShortID="507902919">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Oxygen" ID="{4E8B4DAA-58BE-4182-A0B7-852B384C6D10}" WorkUnitID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

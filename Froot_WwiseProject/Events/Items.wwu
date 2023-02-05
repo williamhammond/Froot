@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D246DAED-4CA1-457C-86D6-474A1407CB53}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Items" ID="{D246DAED-4CA1-457C-86D6-474A1407CB53}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="UseOxygen" ID="{9033D646-C4CE-415A-B2A2-534630C1DE59}">
+					<ChildrenList>
+						<Action Name="" ID="{2960CC31-4F47-4A82-B541-988E0A2809FD}" ShortID="339725338">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Oxygen tank refill" ID="{AA24D066-7C2A-4557-BAD1-F0FA40191434}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="CollectAirCan" ID="{9412E3B9-E901-44AF-AC12-41DFCF4A5176}">
+					<ChildrenList>
+						<Action Name="" ID="{0364CE24-9806-40A6-8498-8F1BF547196E}" ShortID="927825607">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Collect air canister" ID="{24EA666A-937C-4FDD-96B2-D3663F228B17}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="CollectSoil" ID="{63DF422E-FB7A-4DF8-9DB2-3F2877869EF4}">
+					<ChildrenList>
+						<Action Name="" ID="{E96B6D57-E496-4C27-9788-45A640791E1B}" ShortID="987018444">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Collect soil bag" ID="{B2C95423-BC1D-46D2-82C6-674B1655E32B}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="CollectWater" ID="{C1EA5012-B4C8-47BD-AE4A-EEFB41EF57B4}">
+					<ChildrenList>
+						<Action Name="" ID="{25F59661-C990-4585-B557-49BC6A8BD6D8}" ShortID="794219624">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Collect water bottle" ID="{EA7EFABF-7C79-4DDE-82DC-CB800F815138}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UseAirCan" ID="{0F8A2D81-5CD8-4BBA-9E4A-10B6A73BB838}">
+					<ChildrenList>
+						<Action Name="" ID="{36005AE8-7C49-4CDA-8278-A57C234524D8}" ShortID="314389376">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Use air canister" ID="{B558D7F3-1EA6-41A9-9F36-66CAC33F5286}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BreakRock" ID="{510C388E-738C-4F3D-9FDF-5135BEE66CAC}">
+					<ChildrenList>
+						<Action Name="" ID="{8532638E-6D74-4B7C-B37F-EDA7A2367D9B}" ShortID="1001049931">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Club impact" ID="{40345199-16D3-4492-9ADF-A0CF2B170CCD}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AD8CF0B8-5AB5-4190-B89A-EFDCC2B5B4ED}" ShortID="983290010">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RockCrumble" ID="{8D824CD7-20A4-43ED-AECC-E76A71A658D8}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C590EA44-842D-446B-BD91-83700A79EA70}" ShortID="145687640">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="satisfying woodwinds" ID="{9465DC83-B884-48BC-8F2B-CAB701C276F0}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="HitRock" ID="{8C00F355-41B8-49E1-8FE2-B0E0C667B3A6}">
+					<ChildrenList>
+						<Action Name="" ID="{F056693F-AB32-4761-9480-E142C7867A5A}" ShortID="415175895">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Club impact" ID="{40345199-16D3-4492-9ADF-A0CF2B170CCD}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{128D9C27-46E4-4AB8-B6D2-40D03C57EE4B}" ShortID="658350798">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RockImpact" ID="{7D00BCFF-5CC0-4E00-8A60-EC72496E8DEB}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
