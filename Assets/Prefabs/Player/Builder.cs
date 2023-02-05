@@ -45,9 +45,11 @@ public class Builder : MonoBehaviour {
             Build();
         }
     }
+    [SerializeField]
+    Targeter targeter;
     public void Build()
     {
-        Tile targetTile = gameObject.GetComponentInChildren<Targeter>().target;
+        Tile targetTile = targeter.target;
         Build(targetTile, buildable);
     }
 

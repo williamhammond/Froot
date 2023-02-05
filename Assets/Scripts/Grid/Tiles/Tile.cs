@@ -84,7 +84,7 @@ public class Tile : MonoBehaviour
 
     private void OnEnable()
     {
-        neighbors = new();
+        neighbors = new List<Tile>();
         foreach (var col in Physics.OverlapSphere(transform.position, transform.localScale.x * 1.3f))
         {
             if (col.gameObject == gameObject) continue;
@@ -135,7 +135,7 @@ public class Tile : MonoBehaviour
         isAreable = true;
         onAreate?.Invoke(this);
 
-        MaterialPropertyBlock block = new();
+        MaterialPropertyBlock block = new MaterialPropertyBlock();
         baseMesh.GetPropertyBlock(block);
         block.SetColor("_BaseColor", Color.green);
         baseMesh.SetPropertyBlock(block);
@@ -145,7 +145,7 @@ public class Tile : MonoBehaviour
         isAreable = false;
         onUnAreate?.Invoke(this);
 
-        MaterialPropertyBlock block = new();
+        MaterialPropertyBlock block = new MaterialPropertyBlock();
         baseMesh.GetPropertyBlock(block);
         block.SetColor("_BaseColor", Color.grey);
         baseMesh.SetPropertyBlock(block);
