@@ -3,11 +3,7 @@
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{CD436DBB-4B35-425E-A70A-5D95332DC322}" PersistMode="Standalone">
 			<ChildrenList>
-<<<<<<< Updated upstream
-				<GameParameter Name="Oxygen" ID="{CE208EC0-8892-434D-8C91-B6DD00CCC3C1}">
-=======
 				<GameParameter Name="Oxygen" ID="{C940638D-3480-400F-9BA0-F4E32800D19A}">
->>>>>>> Stashed changes
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="100"/>
 					</PropertyList>

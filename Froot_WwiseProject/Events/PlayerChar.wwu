@@ -3,11 +3,7 @@
 	<Events>
 		<WorkUnit Name="PlayerChar" ID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}" PersistMode="Standalone">
 			<ChildrenList>
-<<<<<<< Updated upstream
-				<Event Name="PlayFootstep" ID="{36A1E7E1-6217-48B8-8211-9BDC422ECE50}">
-=======
 				<Event Name="PlayerFootstep" ID="{36A1E7E1-6217-48B8-8211-9BDC422ECE50}">
->>>>>>> Stashed changes
 					<ChildrenList>
 						<Action Name="" ID="{DE0CB2D9-BBDD-45A1-B2B7-AE17A7A81033}" ShortID="560373142">
 							<ReferenceList>
@@ -18,7 +14,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-<<<<<<< Updated upstream
 				<Event Name="Breath" ID="{D93F811E-3362-414D-90FA-87F230223D4B}">
 					<ChildrenList>
 						<Action Name="" ID="{93297C89-84E8-448B-9CCA-7812D32C8AD9}" ShortID="507902919">
@@ -30,10 +25,8 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-=======
 				<Event Name="AirCanister" ID="{DBEF93B0-90A4-458F-A73C-95431D1DFE14}"/>
 				<Event Name="PlantTile" ID="{3F34DDF9-55A9-48F4-825B-3D85671769B8}"/>
->>>>>>> Stashed changes
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

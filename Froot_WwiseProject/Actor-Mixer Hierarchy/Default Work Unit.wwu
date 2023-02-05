@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}" SchemaVersion="110">
 	<AudioObjects>
-<<<<<<< Updated upstream
 		<WorkUnit Name="Default Work Unit" ID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="low intensity breath" ID="{74F4940D-CA6F-4258-9210-6D12E8AD6B22}" ShortID="325946997">
@@ -72,8 +71,6 @@
 				</Sound>
 			</ChildrenList>
 		</WorkUnit>
-=======
 		<WorkUnit Name="Default Work Unit" ID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}" PersistMode="Standalone"/>
->>>>>>> Stashed changes
 	</AudioObjects>
 </WwiseDocument>
