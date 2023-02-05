@@ -22,7 +22,7 @@ public class Targeter : MonoBehaviour
         if(Physics.Raycast(transform.parent.position + transform.parent.forward * distanceInfront + Vector3.up * distanceUp,Vector3.down,
             out RaycastHit hit, 10f,environmentLayer))
         {
-           if(hit.collider.transform.parent.gameObject.TryGetComponent<Tile>(out Tile t))
+           if(hit.collider.transform.parent.parent.gameObject.TryGetComponent<Tile>(out Tile t))
             {
                 if(target != t)
                 {

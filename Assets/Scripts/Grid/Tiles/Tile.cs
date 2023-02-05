@@ -31,7 +31,7 @@ public class Tile : MonoBehaviour
     [SerializeField]
     GameObject indicator;
 
-    [SerializeField]public MeshRenderer baseMesh;
+    [SerializeField]public MeshRenderer baseMesh, ringMesh;
     
     [SerializeField, ColorUsage(true,true)] Color selectedColor = Color.green;
     Color borderOriginalCol;
@@ -100,7 +100,7 @@ public class Tile : MonoBehaviour
 
         TileManager.Instance.RegisterTile(this);
 
-        borderOriginalCol = baseMesh.materials[0].color;
+        borderOriginalCol = ringMesh.materials[0].color;
 
     }
 
@@ -127,9 +127,9 @@ public class Tile : MonoBehaviour
         indicator.SetActive(true);
 
         var block = new MaterialPropertyBlock();
-        baseMesh.GetPropertyBlock(block,0); //This is some dumb shit cause i dunno what the final mesh will look like
+        ringMesh.GetPropertyBlock(block); //This is some dumb shit cause i dunno what the final mesh will look like
         block.SetColor("_BaseColor", selectedColor);
-        baseMesh.SetPropertyBlock(block,0);
+        ringMesh.SetPropertyBlock(block);
 
         onSelected?.Invoke();
     }
@@ -140,9 +140,9 @@ public class Tile : MonoBehaviour
         indicator.SetActive(false);
 
         var block = new MaterialPropertyBlock();
-        baseMesh.GetPropertyBlock(block, 0); //This is some dumb shit cause i dunno what the final mesh will look like
+        ringMesh.GetPropertyBlock(block); //This is some dumb shit cause i dunno what the final mesh will look like
         block.SetColor("_BaseColor", borderOriginalCol);
-        baseMesh.SetPropertyBlock(block,0);
+        ringMesh.SetPropertyBlock(block);
 
         onDeselected?.Invoke();
     }
