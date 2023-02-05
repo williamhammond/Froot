@@ -11,6 +11,7 @@ public class Pickup : MonoBehaviour {
     private void OnTriggerEnter (Collider other) {
         if (other.gameObject.layer == LayerMask.NameToLayer("Seeds")) {
             Debug.Log("Picked up seed!");
+            AkSoundEngine.PostEvent(SoundManager.CollectSoil, gameObject);
             _backpack.seeds++;
             Destroy(other.gameObject);
         }

@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,6 +9,12 @@ public class PlayerWalk : MonoBehaviour
 {
     [SerializeField]
     AnimationCurve walkPattern, heightCurve,durationCurve;
+    
+    [SerializeField]
+    float previousSpeed = 0f;
+    
+    private bool isMoving = false;
+    
     [SerializeField]
     float speed = 0f;
 
@@ -18,8 +25,6 @@ public class PlayerWalk : MonoBehaviour
     Tween myTween;
     Vector3 lastPos;
 
-
-
     private void Start()
     {
         StartSkip();
@@ -28,11 +33,22 @@ public class PlayerWalk : MonoBehaviour
     {
         return new Vector3(input.x, 0, input.z);
     }
+
     private void Update()
     {
-        if(lastPos!=null)
-        {
+        if(lastPos!=null) {
+            previousSpeed = speed;
             speed = Vector3.Distance(FlattenVector(transform.position), lastPos)/Time.deltaTime;
+            if (speed > 0 && previousSpeed == 0)
+            {
+                isMoving = true;
+                Skip();
+            } else if (speed == 0 && previousSpeed > 0)
+            {
+                isMoving = false;
+                myTween.Kill();
+                myTween = null;
+            }
         }
         lastPos = FlattenVector(transform.position);
         if(controller!=null)
@@ -49,25 +65,22 @@ public class PlayerWalk : MonoBehaviour
     float stepLength = .4f;
 
     public UnityEvent stepLand;
-    void StartSkip()
+    void Skip()
     {
-        if(myTween!=null)
-        { myTween.Complete(); }
-        if(true)//speed>=threshold)
-        {
-            var skipIntensity = Mathf.InverseLerp(0, maxDistance, speed);
-
-            myTween = view.DOLocalMoveY((skipHeight * heightCurve.Evaluate(skipIntensity)), durationCurve.Evaluate(skipIntensity));
-            myTween.SetEase(walkPattern);
-            myTween.Play();
-            myTween.OnComplete(() => stepLand?.Invoke()) ;
-            myTween.OnComplete(() => StartSkip());
-            //myTween.SetSpeedBased();
-
-
-            anim.SetTrigger("Jump");
+        if (myTween != null && !myTween.IsComplete()) {
+            return;
         }
+        anim.SetTrigger("Jump");
+        var skipIntensity = Mathf.InverseLerp(0, maxDistance, speed);
+        myTween = view.DOLocalMoveY((skipHeight * heightCurve.Evaluate(skipIntensity)), durationCurve.Evaluate(skipIntensity))
+            .SetEase(walkPattern)
+            .OnComplete(
+                () => {
+                    stepLand?.Invoke();
+                    Skip();
+                });
     }
+    
     [SerializeField]
     GameObject controller;
     void Walk()
@@ -77,6 +90,10 @@ public class PlayerWalk : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, flatTarget, maxDistance*Time.deltaTime);
         //transform.position = Vector3.Lerp(transform.position, flatTarget, lerpSpeed * Time.deltaTime);
         
+    }
+
+    public void PlayStepSound () {
+        AkSoundEngine.PostEvent(SoundManager.PlayFootstep, gameObject);
     }
 
     [SerializeField]
