@@ -2092,6 +2092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileTop: {fileID: 1191021315832375756}
+  seed: {fileID: 8383805401513448203, guid: 1c811a2bb0ee0ff459dac0bd05d8f922, type: 3}
   occupant: {fileID: 0}
   onOccupy:
     m_PersistentCalls:
@@ -2115,7 +2116,6 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  testTile: {fileID: 0}
 --- !u!54 &4551744839785874717
 Rigidbody:
   m_ObjectHideFlags: 0

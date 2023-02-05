@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Random=UnityEngine.Random;
 
 public class TileManager : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class TileManager : MonoBehaviour
 
     [SerializeField] float tileTickTime = 5f;
     float timer;
+
+    [SerializeField]
+    private int seedSpawnPerTick = 1;
 
     private void Awake()
     {
@@ -50,15 +54,27 @@ public class TileManager : MonoBehaviour
         }
     }
 
-    private void UpdateTiles()
-    {
+    private void UpdateTiles() {
+        HashSet<int> usedTiles = new HashSet<int>();
+        int i = seedSpawnPerTick;
+        while (i > 0)
+        {
+            var tile = Random.Range(0, tiles.Count);
+            if (usedTiles.Contains(tile)) {
+                continue;
+            }
+            usedTiles.Add(tile);
+            tiles[tile].SpawnSeed();
+            i--;
+        }
+        
         foreach (var tile in tiles.Where(t => t.IsAreable))
         {
             //Root logic
             tile.GrowRoots();
         }
     }
-
+    
 
     [ContextMenu("FetchTiles")]
     public void ParentAllTiles()

@@ -15,6 +15,10 @@ public class Tile : MonoBehaviour
     [SerializeField]
     public Transform tileTop;
 
+    [SerializeField]
+    public GameObject seed;
+    
+
     List<Tile> neighbors;
 
 
@@ -68,6 +72,13 @@ public class Tile : MonoBehaviour
         var randoNeighbor = neighbors[UnityEngine.Random.Range(0, neighbors.Count)];
         energy--;
         randoNeighbor.MakeAreable(energy);
+    }
+
+    public void SpawnSeed () {
+        var seedPosition = transform.position + Vector3.up * 0.5f; 
+       var blah = Instantiate(seed, seedPosition, Quaternion.identity);
+       blah.gameObject.SetActive(true);
+
     }
 
 
