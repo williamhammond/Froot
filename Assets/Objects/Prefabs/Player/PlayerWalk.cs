@@ -67,10 +67,10 @@ public class PlayerWalk : MonoBehaviour
     public UnityEvent stepLand;
     void Skip()
     {
-        anim.SetTrigger("Jump");
         if (myTween != null && !myTween.IsComplete()) {
             return;
         }
+        anim.SetTrigger("Jump");
         var skipIntensity = Mathf.InverseLerp(0, maxDistance, speed);
         myTween = view.DOLocalMoveY((skipHeight * heightCurve.Evaluate(skipIntensity)), durationCurve.Evaluate(skipIntensity))
             .SetEase(walkPattern)
