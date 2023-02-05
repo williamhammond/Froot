@@ -83,10 +83,10 @@ public class OxygenTank : MonoBehaviour
     }
 
     [SerializeField]
-    UnityEvent<string> changedOxygen;
+    UnityEvent<int, int> changedOxygen;
     void UpdateScale()
     {//Animate tank here
-        changedOxygen?.Invoke(oxygenRounded.ToString());
+        changedOxygen?.Invoke(oxygenRounded,Mathf.RoundToInt(maxOxygen));
     }
 
 
