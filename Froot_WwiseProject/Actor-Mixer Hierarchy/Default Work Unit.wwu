@@ -71,6 +71,5 @@
 				</Sound>
 			</ChildrenList>
 		</WorkUnit>
-		<WorkUnit Name="Default Work Unit" ID="{177ABCE1-A3BE-4197-84EA-E5BE851250DF}" PersistMode="Standalone"/>
 	</AudioObjects>
 </WwiseDocument>
