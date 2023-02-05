@@ -3,7 +3,14 @@
 	<AudioObjects>
 		<WorkUnit Name="Ambience" ID="{58BC939A-E22A-487F-A5DF-B84E41EBFC32}" PersistMode="Standalone">
 			<ChildrenList>
-				<ActorMixer Name="Wind" ID="{B5B55440-DB1C-4A85-9AC6-1067966B2A20}" ShortID="805860407">
+				<ActorMixer Name="Ambiance" ID="{B9131E28-F105-47A3-9A39-6B104B955B47}" ShortID="444070686">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
@@ -15,13 +22,8 @@
 					<ChildrenList>
 						<Sound Name="Wind_Loop" ID="{E5CE42EC-26F7-4DBB-85A1-62D294E0B477}" ShortID="122896993">
 							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="OverrideEffect" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>6</Value>
-									</ValueList>
-								</Property>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
