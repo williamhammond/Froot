@@ -6,7 +6,7 @@ using UnityEngine;
 public class Buildable : MonoBehaviour
 {
     public Tile myTile { get; private set; }
-
+    public int rootEnergy;
     public void Place(Tile targetTile)
     {
         if(targetTile.Occupy(this))
@@ -17,6 +17,8 @@ public class Buildable : MonoBehaviour
             }
             myTile = targetTile;
             transform.position = targetTile.tileTop.position;
+            targetTile.MakeAreable(rootEnergy);
+
         }
         else
         {

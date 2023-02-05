@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Builder : MonoBehaviour {
     private Backpack _backpack;
+
+    UnityEvent onFailBuildSeeds, onFailBuildInvalidSpace, onBuildSuceed;
+
     private void Awake()
     {
         _backpack = GetComponent<Backpack>();
@@ -11,6 +15,15 @@ public class Builder : MonoBehaviour {
     {
         if (_backpack.seeds <= 0) {
             Debug.Log("Out of seeds!");
+            onFailBuildSeeds?.Invoke();
+
+            return false;
+        }
+
+        if (!target.IsAreable)
+        {
+            Debug.Log("Not areable land!");
+            onFailBuildInvalidSpace?.Invoke();
             return false;
         }
 
@@ -18,6 +31,7 @@ public class Builder : MonoBehaviour {
         if (target.occupant == null) 
         { 
             _backpack.seeds--;
+            onBuildSuceed?.Invoke();
             return true;
         }
         return false;
@@ -46,9 +60,6 @@ public class Builder : MonoBehaviour {
             var newBuild = GameObject.Instantiate(buildable);
             newBuild.Place(target);
 
-            //This is arbatrary, maybe the type of buildable should have an energy amount
-            int energyGranted = 4;
-            target.MakeAreable(energyGranted);
         }
     }
 }
