@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Buildable : MonoBehaviour
 {
     public Tile myTile { get; private set; }
     public int rootEnergy;
+    public UnityEvent OnBuilt;
+
     public void Place(Tile targetTile)
     {
         if(targetTile.Occupy(this))
@@ -17,14 +20,19 @@ public class Buildable : MonoBehaviour
             }
             myTile = targetTile;
             transform.position = targetTile.tileTop.position;
-            targetTile.MakeAreable(rootEnergy);
 
+            if(rootEnergy > 0)
+            {
+                targetTile.MakeAreable(rootEnergy);
+            }
+            OnBuilt?.Invoke();
         }
         else
         {
             Debug.LogWarning("Failed to occupy desired tile!");
         }    
     }
+
 
     private void OnDestroy()
     {

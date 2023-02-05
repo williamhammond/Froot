@@ -12,9 +12,13 @@ public class PlayerWalk : MonoBehaviour
     float speed = 0f;
 
     [SerializeField] Transform view;
+    [SerializeField] Animator anim;
+
 
     Tween myTween;
     Vector3 lastPos;
+
+
 
     private void Start()
     {
@@ -59,6 +63,9 @@ public class PlayerWalk : MonoBehaviour
             myTween.OnComplete(() => stepLand?.Invoke()) ;
             myTween.OnComplete(() => StartSkip());
             //myTween.SetSpeedBased();
+
+
+            anim.SetTrigger("Jump");
         }
     }
     [SerializeField]
