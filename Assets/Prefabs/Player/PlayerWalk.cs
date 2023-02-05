@@ -76,10 +76,6 @@ public class PlayerWalk : MonoBehaviour
     float lerpSpeed = 1f;
     void Look()
     {
-
-        transform.rotation = controller.transform.rotation;
-        return;
-
         Vector3 flatTarget = new Vector3(controller.transform.position.x, transform.position.y, controller.transform.position.z);
 
         /*
