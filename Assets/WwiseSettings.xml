@@ -12,7 +12,7 @@
   <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise 2022.1.1.8100/Wwise.app</WwiseInstallationPathMac>
   <WwiseInstallationPathWindows />
   <WwiseProjectPath>../Froot_WwiseProject/Froot_WwiseProject.wproj</WwiseProjectPath>
-  <UseWaapi>true</UseWaapi>
+  <UseWaapi>false</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>
   <XMLTranslatorTimeout>10</XMLTranslatorTimeout>
