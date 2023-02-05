@@ -32,7 +32,7 @@ public class Builder : MonoBehaviour {
         //Put cost logic here
         if (target.occupant == null) 
         { 
-            AkSoundEngine.PostEvent(SoundManager.CollectSoil, gameObject);
+            //AkSoundEngine.PostEvent(SoundManager.CollectSoil, gameObject);
             _backpack.SetSeeds(-1);
             onBuildSuceed?.Invoke();
             return true;
