@@ -10,6 +10,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
+<<<<<<< Updated upstream
 						<Bus Name="Player" ID="{C614E980-288D-4DBD-B92D-FE2D4B6E481E}">
 							<ReferenceList>
 								<Reference Name="UserAuxSend0">
@@ -33,6 +34,12 @@
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
+=======
+						<Bus Name="2DWorld" ID="{3A1CE7DA-95F9-4ACF-8BC5-17438142516E}"/>
+						<Bus Name="3DWorld" ID="{B8AA2D4F-AC51-4EC0-89A1-F6C064950A7E}"/>
+						<Bus Name="Player" ID="{1885089C-A9B8-4CF1-B84C-F070D06E9F6A}"/>
+						<Bus Name="UI" ID="{09869849-F97B-44F3-9552-D8B309A88C9F}"/>
+>>>>>>> Stashed changes
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>
