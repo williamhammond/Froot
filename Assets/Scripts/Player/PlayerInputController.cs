@@ -70,8 +70,6 @@ namespace Player {
             _controller.Move(move * (Time.deltaTime * MoveSpeed));
             transform.Translate(move.normalized * MoveSpeed * Time.deltaTime, Space.World);
 
-
-
             //Rotation
             Vector3 mouseFlattened = new Vector3(mousePos.x, 0, mousePos.z);
             Vector3 positionFlattened = new Vector3(transform.position.x, 0, transform.position.z);
