@@ -10,8 +10,9 @@ public class Pickup : MonoBehaviour {
 
     private void OnTriggerEnter (Collider other) {
         if (other.gameObject.layer == LayerMask.NameToLayer("Seeds")) {
+            Debug.Log("Picked up seed!");
             _backpack.seeds++;
-            Destroy(other);
+            Destroy(other.gameObject);
         }
     }
 }
