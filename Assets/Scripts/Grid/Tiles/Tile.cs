@@ -15,6 +15,10 @@ public class Tile : MonoBehaviour
     [SerializeField]
     public Transform tileTop;
 
+    [SerializeField]
+    public GameObject seed;
+    
+
     List<Tile> neighbors;
 
 
@@ -74,10 +78,17 @@ public class Tile : MonoBehaviour
         randoNeighbor.MakeAreable(energy);
     }
 
+    public void SpawnSeed () {
+        var seedPosition = transform.position + Vector3.up * 0.5f; 
+       var blah = Instantiate(seed, seedPosition, Quaternion.identity);
+       blah.gameObject.SetActive(true);
+
+    }
+
 
     private void OnEnable()
     {
-        neighbors = new();
+        neighbors = new List<Tile>();
         foreach (var col in Physics.OverlapSphere(transform.position, transform.localScale.x * 1.3f))
         {
             if (col.gameObject == gameObject) continue;
@@ -143,8 +154,10 @@ public class Tile : MonoBehaviour
         isAreable = true;
         onAreate?.Invoke(this);
 
+
         MaterialPropertyBlock block = new();
         baseMesh.GetPropertyBlock(block,1);
+
         block.SetColor("_BaseColor", Color.green);
         baseMesh.SetPropertyBlock(block,1);
     }
@@ -155,6 +168,7 @@ public class Tile : MonoBehaviour
 
         MaterialPropertyBlock block = new();
         baseMesh.GetPropertyBlock(block,0);
+
         block.SetColor("_BaseColor", Color.grey);
         baseMesh.SetPropertyBlock(block,0);
     }

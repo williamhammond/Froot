@@ -6,7 +6,10 @@
 				<SoundBank Name="Main" ID="{92C662AD-4A92-4DC4-9BF0-0EF1FD0B017A}">
 					<ObjectInclusionList>
 						<ObjectRef Name="PlayerChar" ID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}" WorkUnitID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="World" ID="{D246DAED-4CA1-457C-86D6-474A1407CB53}" WorkUnitID="{D246DAED-4CA1-457C-86D6-474A1407CB53}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Items" ID="{D246DAED-4CA1-457C-86D6-474A1407CB53}" WorkUnitID="{D246DAED-4CA1-457C-86D6-474A1407CB53}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ambience" ID="{D2C8EC28-80CF-45AA-AAA3-DC02FF0A8855}" WorkUnitID="{D2C8EC28-80CF-45AA-AAA3-DC02FF0A8855}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{AF928363-8B16-4792-9D31-3F787D48EA42}" WorkUnitID="{AF928363-8B16-4792-9D31-3F787D48EA42}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Tiles" ID="{1A6B3835-2BB4-4F15-918D-E282D3D88D03}" WorkUnitID="{1A6B3835-2BB4-4F15-918D-E282D3D88D03}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

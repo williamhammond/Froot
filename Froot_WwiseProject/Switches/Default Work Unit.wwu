@@ -14,12 +14,6 @@
 						<Switch Name="Water" ID="{5935718E-DAFB-4CFC-8AFE-34AE6EFBBC25}"/>
 					</ChildrenList>
 				</SwitchGroup>
-				<SwitchGroup Name="Player_Surface_2" ID="{C706D544-4B2D-462B-8335-0D71F9FA6CE1}">
-					<ChildrenList>
-						<Switch Name="Dirt" ID="{C2401168-016C-418E-AE83-DA2503D7A452}"/>
-						<Switch Name="Water" ID="{DD3D8CC9-0FE8-4973-9685-5AFA1D78F4E7}"/>
-					</ChildrenList>
-				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

@@ -40,7 +40,7 @@ namespace Player {
             var ray = new Ray(transform.position, transform.forward);
             Debug.DrawLine(ray.origin, ray.direction * 2 , Color.red);
 
-            originPlane = new(Vector3.up, transform.position);
+            originPlane = new Plane(Vector3.up, transform.position);
             var mouseRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());
             if (originPlane.Raycast(mouseRay, out float hit))
             {
