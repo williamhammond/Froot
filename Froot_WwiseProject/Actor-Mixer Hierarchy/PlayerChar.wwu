@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}" SchemaVersion="110">
+<WwiseDocument Type="WorkUnit" ID="{FC98E2FF-41D5-4404-8A8D-DEE80C1F8D04}" SchemaVersion="110">
 	<AudioObjects>
-		<WorkUnit Name="PlayerChar" ID="{FC7EA262-DB7C-40EE-B51C-01766E72ADDF}" PersistMode="Standalone">
+		<WorkUnit Name="PlayerChar" ID="{FC98E2FF-41D5-4404-8A8D-DEE80C1F8D04}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchContainer Name="Footsteps" ID="{9DEA12D7-FED2-415C-8C26-010F8745F90C}" ShortID="806143782">
+				<SwitchContainer Name="Footsteps" ID="{3BA8AA18-AFC2-4AF1-BA8C-727BDAAB9FFA}" ShortID="806143783">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
@@ -19,13 +19,13 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<RandomSequenceContainer Name="Footsteps_Water" ID="{884D692A-D4AC-4418-99EE-B42118FEA02E}" ShortID="598519246">
+						<RandomSequenceContainer Name="Footsteps_Water" ID="{96904D0A-9802-488C-B893-D7CC0386FFFC}" ShortID="598519247">
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{E5740245-9888-4390-B3D9-6668F997479C}">
+											<Modifier Name="" ID="{59744A30-F5F7-44BE-98E6-0E7F7CBBA59C}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="329"/>
@@ -45,7 +45,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Footsteps_Water_1" ID="{12056DFC-3A9E-47CA-B336-9F01BB5E0283}" ShortID="705462307">
+								<Sound Name="Footsteps_Water_1" ID="{74B8F0FB-551D-4E22-853B-418A22C99408}" ShortID="705462308">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -62,7 +62,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Water, Splash, Rock Thrown In Puddle SND30264" ID="{7E69C3E6-BA62-4AD4-92CB-1E1A34D3DCFA}">
+										<AudioFileSource Name="Water, Splash, Rock Thrown In Puddle SND30264" ID="{76F6C9F8-81AC-40F3-9ED3-C3F0B8EE5B8A}">
 											<PropertyList>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0595915032679739"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
@@ -74,7 +74,7 @@
 												<MediaID ID="537832675"/>
 											</MediaIDList>
 										</AudioFileSource>
-										<AudioFileSource Name="Water, Splash, Rock Thrown In Puddle SND30264 1" ID="{498CD7FC-F474-472C-B9A2-A1B983A800D9}">
+										<AudioFileSource Name="Water, Splash, Rock Thrown In Puddle SND30264 1" ID="{8098A36F-FE7A-406E-AF43-3541FD3BEA41}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0204339869281046"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0217111111111111"/>
@@ -88,14 +88,14 @@
 												<MediaID ID="239170451"/>
 											</MediaIDList>
 										</AudioFileSource>
-										<AudioFileSource Name="Footsteps, Human, Walking Through Icy Puddle, Woods SND17439" ID="{00375841-7DE5-47E1-BA9C-5C2DDC7A50AB}">
+										<AudioFileSource Name="Footsteps, Human, Walking Through Icy Puddle, Woods SND17439" ID="{AC0F7E8E-1666-4650-B3CB-7C1E44DC44DF}">
 											<Language>SFX</Language>
 											<AudioFile>Footsteps, Human, Walking Through Icy Puddle, Woods SND17439.wav</AudioFile>
 											<MediaIDList>
 												<MediaID ID="800484528"/>
 											</MediaIDList>
 										</AudioFileSource>
-										<AudioFileSource Name="Footsteps, Human, Walking, Puddle, Forest, Boots SND17456" ID="{7B9C42E4-D3E5-45E7-9C14-A9D085D50E90}">
+										<AudioFileSource Name="Footsteps, Human, Walking, Puddle, Forest, Boots SND17456" ID="{C152F854-80C7-465A-A32D-A0F1D671F2FE}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00843956443416633"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.025318693302499"/>
@@ -111,10 +111,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Walking, Puddle, Forest, Boots SND17456" ID="{7B9C42E4-D3E5-45E7-9C14-A9D085D50E90}" Platform="Linked"/>
+										<ActiveSource Name="Water, Splash, Rock Thrown In Puddle SND30264" ID="{76F6C9F8-81AC-40F3-9ED3-C3F0B8EE5B8A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Water_2" ID="{DEF53517-99A0-45FB-BE5C-405A9410FDE8}" ShortID="383126784">
+								<Sound Name="Footsteps_Water_2" ID="{6ECA901E-9792-4547-99C7-C77DBE9D0703}" ShortID="383126785">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -131,7 +131,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{B01680FE-1E99-44CD-8240-3890B78DFE62}">
+										<AudioFileSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{E0697C42-CA24-48E8-802E-3F1106DAD2E2}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00134232192982395"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.00939625350876766"/>
@@ -147,10 +147,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{B01680FE-1E99-44CD-8240-3890B78DFE62}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{E0697C42-CA24-48E8-802E-3F1106DAD2E2}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Water_3" ID="{9DF106E2-82EA-4303-9596-A83C073CB717}" ShortID="291525239">
+								<Sound Name="Footsteps_Water_3" ID="{8BE16127-AC50-4F60-B79B-ED2D989088A2}" ShortID="291525240">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -167,7 +167,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{D0E4D1B0-7CED-4081-8A4D-461A6A1F06B3}">
+										<AudioFileSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{1E46CFB4-607E-4271-A3B9-1D5FB8826E09}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00393058707491045"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0117917612247316"/>
@@ -183,10 +183,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{D0E4D1B0-7CED-4081-8A4D-461A6A1F06B3}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{1E46CFB4-607E-4271-A3B9-1D5FB8826E09}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Water_4" ID="{AB9B8DEA-D40D-4E04-B793-EBA4724B04AF}" ShortID="770184052">
+								<Sound Name="Footsteps_Water_4" ID="{F791ED8B-F175-4BF0-9610-4DC2ACE9D572}" ShortID="770184053">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -203,7 +203,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{C30976A9-C6CC-47C1-B78A-6EADA91E9922}">
+										<AudioFileSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{0C5E1988-3A2B-45A9-B620-BDAB15D5B530}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00649683814034763"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.00974525721052188"/>
@@ -219,10 +219,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{C30976A9-C6CC-47C1-B78A-6EADA91E9922}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{0C5E1988-3A2B-45A9-B620-BDAB15D5B530}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Water_5" ID="{6352EB94-7F93-4B73-9EF3-ADD3506CF7ED}" ShortID="314703259">
+								<Sound Name="Footsteps_Water_5" ID="{5B71030F-D720-417E-80EE-51E1A27BB09E}" ShortID="314703260">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -239,7 +239,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{E056C593-4501-48D8-91D7-722D6D20EB91}">
+										<AudioFileSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{58381E7E-818B-4F20-9840-CF18C03CCBA5}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00714652195438292"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.00550094363700815"/>
@@ -255,10 +255,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{E056C593-4501-48D8-91D7-722D6D20EB91}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Water, Ice, Puddle, Deep SND51723" ID="{58381E7E-818B-4F20-9840-CF18C03CCBA5}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Water_6" ID="{F538A284-309D-4E61-8D23-9EBCDF446270}" ShortID="1069966970">
+								<Sound Name="Footsteps_Water_6" ID="{EA26F0F4-BC5A-4050-946E-38DDB397B71F}" ShortID="1069966971">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -275,7 +275,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Water, Splash, Rock Thrown In Puddle SND30264" ID="{1CB08238-9674-4C9B-9676-C1FEAB438DA0}">
+										<AudioFileSource Name="Water, Splash, Rock Thrown In Puddle SND30264" ID="{925479C0-20D3-475A-810D-81B414F8B235}">
 											<PropertyList>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0595915032679739"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
@@ -287,7 +287,7 @@
 												<MediaID ID="537832675"/>
 											</MediaIDList>
 										</AudioFileSource>
-										<AudioFileSource Name="Water, Splash, Rock Thrown In Puddle SND30264 1" ID="{900BDC70-C78C-4AA5-914A-5E27B98CFCB5}">
+										<AudioFileSource Name="Water, Splash, Rock Thrown In Puddle SND30264 1" ID="{A5ED1788-E3A1-44F8-BACA-77B464AF8CA1}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0204339869281046"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0217111111111111"/>
@@ -301,14 +301,14 @@
 												<MediaID ID="239170451"/>
 											</MediaIDList>
 										</AudioFileSource>
-										<AudioFileSource Name="Footsteps, Human, Walking Through Icy Puddle, Woods SND17439" ID="{CD3E37F6-DBF1-4F16-BC75-93E11BC7B641}">
+										<AudioFileSource Name="Footsteps, Human, Walking Through Icy Puddle, Woods SND17439" ID="{B7AA1E22-C44E-4A14-8618-C539BBE2DD5E}">
 											<Language>SFX</Language>
 											<AudioFile>Footsteps, Human, Walking Through Icy Puddle, Woods SND17439.wav</AudioFile>
 											<MediaIDList>
 												<MediaID ID="800484528"/>
 											</MediaIDList>
 										</AudioFileSource>
-										<AudioFileSource Name="Footsteps, Human, Walking, Puddle, Forest, Boots SND17456" ID="{B59C1E3C-C5C0-4983-9C19-88674D940203}">
+										<AudioFileSource Name="Footsteps, Human, Walking, Puddle, Forest, Boots SND17456" ID="{B9CD14C9-EA34-4899-9834-881327867C58}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00843956443416633"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.025318693302499"/>
@@ -324,18 +324,18 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Walking, Puddle, Forest, Boots SND17456" ID="{B59C1E3C-C5C0-4983-9C19-88674D940203}" Platform="Linked"/>
+										<ActiveSource Name="Water, Splash, Rock Thrown In Puddle SND30264" ID="{925479C0-20D3-475A-810D-81B414F8B235}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="Footsteps_Grass" ID="{2EF4A64D-8C5F-4FCE-9724-C5FF7EE629EA}" ShortID="714271952">
+						<RandomSequenceContainer Name="Footsteps_Grass" ID="{780FB66F-B633-4F11-984B-A20B2FC6E8C2}" ShortID="714271953">
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{E70F5518-55FF-4B43-8CB0-26310EF4D915}">
+											<Modifier Name="" ID="{26EF1C92-AE6E-4ED6-9313-0E4EB6D9FCCC}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="784"/>
@@ -355,7 +355,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Footsteps_Grass_1" ID="{AEF5C797-095A-4E5D-8734-63514518BA40}" ShortID="898418938">
+								<Sound Name="Footsteps_Grass_1" ID="{9397F084-53E5-4D3D-AE06-D071A7321D2A}" ShortID="898418939">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
@@ -365,7 +365,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{93A29321-20A0-4300-B844-2E79EA5A6CD6}">
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{AB4CBADC-2584-4146-90C8-7952363B4850}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00564661707733127"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0060520125906611"/>
@@ -380,10 +380,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{93A29321-20A0-4300-B844-2E79EA5A6CD6}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{AB4CBADC-2584-4146-90C8-7952363B4850}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Grass_2" ID="{F4090DDB-84E2-44C8-B191-FD49A129470F}" ShortID="541316195">
+								<Sound Name="Footsteps_Grass_2" ID="{A54AFFB9-499B-46EE-9C38-27FBB4096C07}" ShortID="541316196">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -400,7 +400,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B4B0ADEA-BB31-42E8-AE80-B9D08F2FF1D1}">
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{48511FDF-D42F-4894-AA93-2C3A3AC342A5}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0187891183248198"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
@@ -415,10 +415,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B4B0ADEA-BB31-42E8-AE80-B9D08F2FF1D1}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{48511FDF-D42F-4894-AA93-2C3A3AC342A5}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Grass_3" ID="{BD22AC90-EF6F-44B5-8D43-5D8B6C7F37A6}" ShortID="213816769">
+								<Sound Name="Footsteps_Grass_3" ID="{FDC1986E-4E32-4037-9478-13628872C0CA}" ShortID="213816770">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -435,7 +435,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{11CE7401-67E6-49E0-ACF4-E6CADAF8D9B0}">
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{C2BA4B91-EE70-4A05-9CFA-096B7B82668D}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0116665642093621"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0116665642093622"/>
@@ -451,10 +451,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{11CE7401-67E6-49E0-ACF4-E6CADAF8D9B0}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{C2BA4B91-EE70-4A05-9CFA-096B7B82668D}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Grass_4" ID="{06C816F8-26C9-4054-8EFA-9A2983E5E39B}" ShortID="332334480">
+								<Sound Name="Footsteps_Grass_4" ID="{1661CF68-F1B8-495A-BB9D-C46E801F77F9}" ShortID="332334481">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -471,7 +471,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{5A4845C0-F2F2-4204-9CA8-CB35C7395FEB}">
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B3269894-29B5-49DE-BE68-ABC40528D8B8}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00350610494646486"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0140244197858597"/>
@@ -487,10 +487,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{5A4845C0-F2F2-4204-9CA8-CB35C7395FEB}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B3269894-29B5-49DE-BE68-ABC40528D8B8}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Grass_5" ID="{11E4A1C9-A445-4CFF-A6A4-4F50CF9B1E60}" ShortID="277114457">
+								<Sound Name="Footsteps_Grass_5" ID="{696915A0-489B-4DFE-BAEA-E4FD5EA26543}" ShortID="277114458">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -507,7 +507,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B35F11AB-B670-40C4-B683-45ACC73EB09A}">
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{325331B9-0239-4F31-87AA-A5822F14B811}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0173552194850015"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0115701463233342"/>
@@ -523,10 +523,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B35F11AB-B670-40C4-B683-45ACC73EB09A}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{325331B9-0239-4F31-87AA-A5822F14B811}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Grass_6" ID="{1A4C8AF1-63D1-4914-82F0-8C698EAA0EB1}" ShortID="356805376">
+								<Sound Name="Footsteps_Grass_6" ID="{6D9C0A76-FC60-43D7-9B49-D81527C3F0A5}" ShortID="356805377">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
@@ -536,7 +536,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B82BB31B-606A-4E44-876C-C0DF4D77F760}">
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{2A4B3D81-DAD7-46CF-A4ED-A8CF42107859}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.015399864756358"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0923991885381477"/>
@@ -552,10 +552,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{B82BB31B-606A-4E44-876C-C0DF4D77F760}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{2A4B3D81-DAD7-46CF-A4ED-A8CF42107859}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Grass_7" ID="{A94FDEB1-4F89-4D24-9E71-46EE0CD5CAC2}" ShortID="460065102">
+								<Sound Name="Footsteps_Grass_7" ID="{FD2107CC-A8DA-472D-9BAF-BDF6B3E433E7}" ShortID="460065103">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -572,7 +572,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{D4E543C2-2FA6-4599-9E9D-EB4EA6CD5AAC}">
+										<AudioFileSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{EFF6E44B-F12F-4F01-9C60-C857F84A09F8}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0256664412605971"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0699993852561729"/>
@@ -588,18 +588,18 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{D4E543C2-2FA6-4599-9E9D-EB4EA6CD5AAC}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529" ID="{EFF6E44B-F12F-4F01-9C60-C857F84A09F8}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="Footsteps_Dirt" ID="{6C4C26A1-9FA8-4740-9C64-0588EEE7318F}" ShortID="726905601">
+						<RandomSequenceContainer Name="Footsteps_Dirt" ID="{9D25F5F3-F1B0-4799-B7B4-7313CD166CDA}" ShortID="726905602">
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{371E64EF-A1EE-4530-A8EE-3BBD1F67B626}">
+											<Modifier Name="" ID="{CA200AA6-8EB7-49D4-9610-95E8B0C47393}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="355"/>
@@ -619,7 +619,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Footsteps_Dirt_1" ID="{09A0CF4A-0309-4BB4-A4CB-43D22B6FB220}" ShortID="744640504">
+								<Sound Name="Footsteps_Dirt_1" ID="{1F119131-DB60-483B-A475-98EDB8C696AA}" ShortID="744640505">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -636,7 +636,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{51416754-407A-45DE-94E8-96486D92C05F}">
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{E39BE42F-FAE7-4C67-9CFD-08C61E0854BA}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00268260214305638"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.046945537503488"/>
@@ -652,10 +652,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{51416754-407A-45DE-94E8-96486D92C05F}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{E39BE42F-FAE7-4C67-9CFD-08C61E0854BA}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Dirt_2" ID="{46D80313-1D45-410E-9F13-BD258053B6C2}" ShortID="121113765">
+								<Sound Name="Footsteps_Dirt_2" ID="{0B78117E-E24E-426A-B186-6F29DE37CE89}" ShortID="121113766">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
@@ -665,7 +665,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{0386FE2B-292C-46F6-93BA-DFFB0AB8CBA7}">
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{BEACE6C8-010C-4B72-B406-1C300A240411}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.011176191894655"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0308365116344338"/>
@@ -681,10 +681,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{0386FE2B-292C-46F6-93BA-DFFB0AB8CBA7}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{BEACE6C8-010C-4B72-B406-1C300A240411}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Dirt_3" ID="{81D23D13-2BE6-4754-9521-405A2FAA4C45}" ShortID="431059177">
+								<Sound Name="Footsteps_Dirt_3" ID="{387AE013-615E-40E0-A991-4B470F671AB7}" ShortID="431059178">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
@@ -694,7 +694,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{EC82A672-4EE4-41A6-B316-2C5744EDC7D4}">
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{7F0675F6-1350-42AC-90A2-5CF3A994FB80}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.005005814791609"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.045052333124481"/>
@@ -710,10 +710,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{EC82A672-4EE4-41A6-B316-2C5744EDC7D4}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{7F0675F6-1350-42AC-90A2-5CF3A994FB80}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Dirt_4" ID="{824812F2-79CF-4D41-B6D3-C991244BAE42}" ShortID="511967630">
+								<Sound Name="Footsteps_Dirt_4" ID="{E8CDE5B2-071A-4443-9C9E-14AEEA8559A2}" ShortID="511967631">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
@@ -723,7 +723,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{D77CB846-4982-4745-82F4-E719ADA3782D}">
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{4C16B565-7A53-43D3-8160-B3828E745020}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00242050066477262"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0145736531310945"/>
@@ -739,10 +739,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{D77CB846-4982-4745-82F4-E719ADA3782D}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{4C16B565-7A53-43D3-8160-B3828E745020}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Dirt_5" ID="{613D871A-9152-4099-8308-9A87FF64C76E}" ShortID="676850740">
+								<Sound Name="Footsteps_Dirt_5" ID="{FBA0149D-46CB-432C-B5E9-B44FCE872BAE}" ShortID="676850741">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
@@ -752,7 +752,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{505905E0-3764-4C16-9CDB-36A7AB47405E}">
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{1548E38F-DE71-4DA0-BE17-1B72A9912D42}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00233315276535961"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0167066671457476"/>
@@ -768,10 +768,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{505905E0-3764-4C16-9CDB-36A7AB47405E}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{1548E38F-DE71-4DA0-BE17-1B72A9912D42}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Dirt_6" ID="{19D508F3-03E1-45A3-BF9D-92E81E040DF0}" ShortID="200928001">
+								<Sound Name="Footsteps_Dirt_6" ID="{7F72784B-94F7-4018-BC7B-D65CB9DFA08E}" ShortID="200928002">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -788,7 +788,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{A1909D64-953D-41F7-89BE-BF478D824491}">
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{08EB8AC8-8288-41E2-A87E-FF31BC24980A}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00320101368452086"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0353206493567626"/>
@@ -804,10 +804,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{A1909D64-953D-41F7-89BE-BF478D824491}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{08EB8AC8-8288-41E2-A87E-FF31BC24980A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Dirt_7" ID="{F3DB2528-E94B-42F2-B0F7-CDF25CE5098A}" ShortID="3645792">
+								<Sound Name="Footsteps_Dirt_7" ID="{7A7812E7-418A-437F-8B29-F27E3743EAC4}" ShortID="3645793">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
@@ -817,7 +817,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{15B120E2-1DA7-4D69-BA1F-654A1334A989}">
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{64ED0CAE-E7DE-4594-8F56-B820B70BBBB4}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00302851794892334"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0696559128252421"/>
@@ -833,10 +833,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{15B120E2-1DA7-4D69-BA1F-654A1334A989}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{64ED0CAE-E7DE-4594-8F56-B820B70BBBB4}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps_Dirt_8" ID="{CD3A13E8-DF33-4008-82DD-A92664030E8D}" ShortID="279236898">
+								<Sound Name="Footsteps_Dirt_8" ID="{AF269B1B-1F88-48A1-ABB4-533571BB1ED7}" ShortID="279236899">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
@@ -846,7 +846,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{F8DF28BF-A801-4C92-B3FD-939E3FD87500}">
+										<AudioFileSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{30A47ABB-40AA-4896-8132-E2A82AB01178}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0139159581640015"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0556638326560059"/>
@@ -862,12 +862,12 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{F8DF28BF-A801-4C92-B3FD-939E3FD87500}" Platform="Linked"/>
+										<ActiveSource Name="Footsteps, Human, Dirty Ground, Walk SND62078" ID="{30A47ABB-40AA-4896-8132-E2A82AB01178}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="Footsteps_Rock" ID="{1961EFBB-B223-4002-B48A-34A7431BC9BD}" ShortID="827529822">
+						<RandomSequenceContainer Name="Footsteps_Rock" ID="{AB6EFAC1-5131-4893-AFF4-FA5392118F58}" ShortID="827529823">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
@@ -881,46 +881,87 @@
 					<GroupingInfo>
 						<GroupingBehaviorList>
 							<GroupingBehavior>
-								<ItemRef Name="Footsteps_Water" ID="{884D692A-D4AC-4418-99EE-B42118FEA02E}"/>
+								<ItemRef Name="Footsteps_Water" ID="{96904D0A-9802-488C-B893-D7CC0386FFFC}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="Footsteps_Grass" ID="{2EF4A64D-8C5F-4FCE-9724-C5FF7EE629EA}"/>
+								<ItemRef Name="Footsteps_Grass" ID="{780FB66F-B633-4F11-984B-A20B2FC6E8C2}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="Footsteps_Dirt" ID="{6C4C26A1-9FA8-4740-9C64-0588EEE7318F}"/>
+								<ItemRef Name="Footsteps_Rock" ID="{AB6EFAC1-5131-4893-AFF4-FA5392118F58}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="Footsteps_Rock" ID="{1961EFBB-B223-4002-B48A-34A7431BC9BD}"/>
+								<ItemRef Name="Footsteps_Dirt" ID="{9D25F5F3-F1B0-4799-B7B4-7313CD166CDA}"/>
 							</GroupingBehavior>
 						</GroupingBehaviorList>
 						<GroupingList>
 							<Grouping>
 								<SwitchRef Name="Dirt" ID="{AA435702-BBE5-4084-A7D7-ECDD7B628F7F}"/>
 								<ItemList>
-									<ItemRef Name="Footsteps_Dirt" ID="{6C4C26A1-9FA8-4740-9C64-0588EEE7318F}"/>
+									<ItemRef Name="Footsteps_Dirt" ID="{9D25F5F3-F1B0-4799-B7B4-7313CD166CDA}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
 								<SwitchRef Name="Rock" ID="{86E0D440-CDD5-4DB0-8230-C1D22B7A4C14}"/>
 								<ItemList>
-									<ItemRef Name="Footsteps_Rock" ID="{1961EFBB-B223-4002-B48A-34A7431BC9BD}"/>
+									<ItemRef Name="Footsteps_Rock" ID="{AB6EFAC1-5131-4893-AFF4-FA5392118F58}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
 								<SwitchRef Name="Grass" ID="{54640D42-BA97-45F1-830E-18E30E1813CD}"/>
 								<ItemList>
-									<ItemRef Name="Footsteps_Grass" ID="{2EF4A64D-8C5F-4FCE-9724-C5FF7EE629EA}"/>
+									<ItemRef Name="Footsteps_Grass" ID="{780FB66F-B633-4F11-984B-A20B2FC6E8C2}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
 								<SwitchRef Name="Water" ID="{5935718E-DAFB-4CFC-8AFE-34AE6EFBBC25}"/>
 								<ItemList>
-									<ItemRef Name="Footsteps_Water" ID="{884D692A-D4AC-4418-99EE-B42118FEA02E}"/>
+									<ItemRef Name="Footsteps_Water" ID="{96904D0A-9802-488C-B893-D7CC0386FFFC}"/>
 								</ItemList>
 							</Grouping>
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<ActorMixer Name="DeathGasp" ID="{DA57B73A-2F47-4F2D-9BD1-3D4F3E7BFBF4}" ShortID="251056593">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>580</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Breath" ID="{0675450A-F4F7-4486-B359-88D32DE65950}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Death gasps" ID="{010D3BC9-F082-4DD0-9884-9A645A21E45B}" ShortID="69621691">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Death gasps" ID="{F01D4C80-6FC0-4CE0-A6AE-A9A8F1CA0D4D}">
+									<Language>SFX</Language>
+									<AudioFile>Death gasps.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1065239075"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Death gasps" ID="{F01D4C80-6FC0-4CE0-A6AE-A9A8F1CA0D4D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
 				<BlendContainer Name="Oxygen" ID="{4E8B4DAA-58BE-4182-A0B7-852B384C6D10}" ShortID="368263357">
 					<PropertyList>
 						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
@@ -1700,18 +1741,18 @@
 																<PointList>
 																	<Point>
 																		<XPos>0</XPos>
-																		<YPos>3.19402</YPos>
+																		<YPos>9.81389</YPos>
 																		<Flags>5</Flags>
 																		<SegmentShape>Exp2</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>19.20103</XPos>
-																		<YPos>-3.69049</YPos>
+																		<XPos>21.83261</XPos>
+																		<YPos>5.2537</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>51.54639</XPos>
-																		<YPos>-13.33571</YPos>
+																		<XPos>51.8234</XPos>
+																		<YPos>1.9382</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>

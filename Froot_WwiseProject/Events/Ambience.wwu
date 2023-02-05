@@ -8,7 +8,18 @@
 						<Action Name="" ID="{EBF99DE6-737A-4BD2-AF8E-4862D43434C4}" ShortID="380702712">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Wind_Loop" ID="{E5CE42EC-26F7-4DBB-85A1-62D294E0B477}" WorkUnitID="{58BC939A-E22A-487F-A5DF-B84E41EBFC32}"/>
+									<ObjectRef Name="whistly wind loop" ID="{DB487867-070A-432E-AFFE-38AC8066B8B9}" WorkUnitID="{58BC939A-E22A-487F-A5DF-B84E41EBFC32}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="LeavesRustle" ID="{52665054-AA2E-415A-97CE-D9ED563ADB32}">
+					<ChildrenList>
+						<Action Name="" ID="{C1E50C65-2F9A-4618-92B3-F21ADD45B904}" ShortID="342275594">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="leaves rustling" ID="{AE5F1CCB-739D-44CA-85DB-605183E61171}" WorkUnitID="{58BC939A-E22A-487F-A5DF-B84E41EBFC32}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

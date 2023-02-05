@@ -18,17 +18,45 @@ namespace AK
         static const AkUniqueID COLLECTAIRCAN = 416902311U;
         static const AkUniqueID COLLECTSOIL = 717635272U;
         static const AkUniqueID COLLECTWATER = 1695098014U;
+        static const AkUniqueID DEATH = 779278001U;
+        static const AkUniqueID ENTERBUBBLE = 1956601267U;
         static const AkUniqueID GROWTILE = 1913626152U;
         static const AkUniqueID HITROCK = 3660205123U;
-        static const AkUniqueID LOSETILE = 213112866U;
+        static const AkUniqueID LEAVESRUSTLE = 3272521878U;
         static const AkUniqueID PLAYFOOTSTEP = 1712852617U;
         static const AkUniqueID PLAYWIND = 1592727253U;
         static const AkUniqueID USEAIRCAN = 3282522952U;
-        static const AkUniqueID USEOXYGEN = 4290731854U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace PLAYERLIFE
+        {
+            static const AkUniqueID GROUP = 444815956U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ALIVE = 655265632U;
+                static const AkUniqueID DEAD = 2044049779U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace PLAYERLIFE
+
+    } // namespace STATES
 
     namespace SWITCHES
     {
+        namespace MUSICMOOD
+        {
+            static const AkUniqueID GROUP = 339754815U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID FARBASE = 1406768315U;
+                static const AkUniqueID NEARBASE = 1869510436U;
+            } // namespace SWITCH
+        } // namespace MUSICMOOD
+
         namespace PLAYER_SURFACE
         {
             static const AkUniqueID GROUP = 2720040714U;
@@ -46,6 +74,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID DISTANCEFROMTILE = 761609972U;
         static const AkUniqueID OXYGEN = 3660512661U;
     } // namespace GAME_PARAMETERS
 
@@ -57,9 +86,13 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID _2D_WORLD = 2309860507U;
+        static const AkUniqueID _3D_WORLD = 1807657452U;
         static const AkUniqueID BREATH = 1326786195U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PLAYER = 1069431850U;
+        static const AkUniqueID UI = 1551306167U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES

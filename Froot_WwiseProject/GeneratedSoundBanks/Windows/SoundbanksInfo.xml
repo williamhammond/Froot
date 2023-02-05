@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{84AC2124-B681-6857-4C81-1AA83996E2CC}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{44B286D8-93AE-6690-AE8E-822FCEC63F1B}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -35,7 +35,15 @@
 						</ShareSets>
 					</PluginRefs>
 				</Bus>
+				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="1807657452" Name="3D World">
+					<AuxBusRefs>
+						<AuxBusRef Id="3250445679" Name="OutdoorReverb"/>
+					</AuxBusRefs>
+				</Bus>
+				<Bus Id="2309860507" Name="2D World"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<AuxBusses>
 				<AuxBus Id="3250445679" Name="OutdoorReverb">
@@ -47,9 +55,25 @@
 				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
+				<GameParameter Id="761609972" Name="DistanceFromTile"/>
 				<GameParameter Id="3660512661" Name="Oxygen"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="444815956" Name="PlayerLife">
+					<States>
+						<State Id="655265632" Name="Alive"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2044049779" Name="Dead"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 			<SwitchGroups>
+				<SwitchGroup Id="339754815" Name="MusicMood">
+					<Switches>
+						<Switch Id="1406768315" Name="FarBase"/>
+						<Switch Id="1869510436" Name="NearBase"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="2720040714" Name="Player_Surface">
 					<Switches>
 						<Switch Id="2144363834" Name="Rock"/>
@@ -60,7 +84,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D85EBA95-B7DC-97A3-2196-9084E7E4E336}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4427045B-80E0-3CD3-6F3C-BD7E1530D519}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -74,7 +98,7 @@
 				</File>
 				<File Id="48531302" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>low intensity breath.wav</ShortName>
-					<CachePath>SFX/low intensity breath_C459AF66.wem</CachePath>
+					<CachePath>SFX/low intensity breath_F19138F3.wem</CachePath>
 				</File>
 				<File Id="91455883" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GrowTileRock2.wav</ShortName>
@@ -82,7 +106,7 @@
 				</File>
 				<File Id="136708364" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Med intensity breath.wav</ShortName>
-					<CachePath>SFX/Med intensity breath_C18E3B1B.wem</CachePath>
+					<CachePath>SFX/Med intensity breath_A80E01F4.wem</CachePath>
 				</File>
 				<File Id="139176933" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Collect air canister.wav</ShortName>
@@ -95,6 +119,10 @@
 				<File Id="174628941" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>High intensity breath.wav</ShortName>
 					<CachePath>SFX/High intensity breath_BE2CB3EE.wem</CachePath>
+				</File>
+				<File Id="200148865" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Oxygen tank refill 2.wav</ShortName>
+					<CachePath>SFX/Oxygen tank refill 2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="228266388" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>High intensity breath.wav</ShortName>
@@ -110,7 +138,7 @@
 				</File>
 				<File Id="345519740" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Med intensity breath.wav</ShortName>
-					<CachePath>SFX/Med intensity breath_19B46AF6.wem</CachePath>
+					<CachePath>SFX/Med intensity breath_25CEB2C0.wem</CachePath>
 				</File>
 				<File Id="348220615" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</ShortName>
@@ -122,7 +150,7 @@
 				</File>
 				<File Id="364721004" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>low intensity breath.wav</ShortName>
-					<CachePath>SFX/low intensity breath_45BE2ED0.wem</CachePath>
+					<CachePath>SFX/low intensity breath_39F49487.wem</CachePath>
 				</File>
 				<File Id="369482409" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Dirty Ground, Walk SND62078.wav</ShortName>
@@ -134,15 +162,11 @@
 				</File>
 				<File Id="373212268" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Med intensity breath.wav</ShortName>
-					<CachePath>SFX/Med intensity breath_B28AA2C9.wem</CachePath>
+					<CachePath>SFX/Med intensity breath_AA1AF9C3.wem</CachePath>
 				</File>
 				<File Id="381506412" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>High intensity breath.wav</ShortName>
 					<CachePath>SFX/High intensity breath_A2004463.wem</CachePath>
-				</File>
-				<File Id="384430572" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Footsteps, Human, Walking, Puddle, Forest, Boots SND17456.wav</ShortName>
-					<CachePath>SFX/Footsteps, Human, Walking, Puddle, Forest, Boots SND17456_F0081714.wem</CachePath>
 				</File>
 				<File Id="392359634" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
@@ -150,7 +174,7 @@
 				</File>
 				<File Id="415026738" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GrowTileMagic.wav</ShortName>
-					<CachePath>SFX/GrowTileMagic_42A88BF1.wem</CachePath>
+					<CachePath>SFX/GrowTileMagic_81F1ECB9.wem</CachePath>
 				</File>
 				<File Id="430892935" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GrowTilePops1.wav</ShortName>
@@ -166,7 +190,11 @@
 				</File>
 				<File Id="498971622" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Med intensity breath.wav</ShortName>
-					<CachePath>SFX/Med intensity breath_B25070C5.wem</CachePath>
+					<CachePath>SFX/Med intensity breath_591C3159.wem</CachePath>
+				</File>
+				<File Id="537832675" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Water, Splash, Rock Thrown In Puddle SND30264.wav</ShortName>
+					<CachePath>SFX/Water, Splash, Rock Thrown In Puddle SND30264_7EC043EF.wem</CachePath>
 				</File>
 				<File Id="538186697" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>High intensity breath.wav</ShortName>
@@ -176,17 +204,13 @@
 					<ShortName>Use air canister.wav</ShortName>
 					<CachePath>SFX/Use air canister_10C4C929.wem</CachePath>
 				</File>
-				<File Id="551084772" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Footsteps, Human, Walking, Puddle, Forest, Boots SND17456.wav</ShortName>
-					<CachePath>SFX/Footsteps, Human, Walking, Puddle, Forest, Boots SND17456_E6326C29.wem</CachePath>
-				</File>
 				<File Id="551451345" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>low intensity breath.wav</ShortName>
-					<CachePath>SFX/low intensity breath_209D0095.wem</CachePath>
+					<CachePath>SFX/low intensity breath_830F9BC1.wem</CachePath>
 				</File>
 				<File Id="573738324" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>whistly wind loop.wav</ShortName>
-					<CachePath>SFX/whistly wind loop_9104FA25.wem</CachePath>
+					<CachePath>SFX/whistly wind loop_4EF4E126.wem</CachePath>
 				</File>
 				<File Id="588652881" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
@@ -226,7 +250,7 @@
 				</File>
 				<File Id="726954079" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Med intensity breath.wav</ShortName>
-					<CachePath>SFX/Med intensity breath_F73A9278.wem</CachePath>
+					<CachePath>SFX/Med intensity breath_CD8BE92F.wem</CachePath>
 				</File>
 				<File Id="730147860" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Grass, Dirt, Male, Leather Sole, Running, Scuff SND11529.wav</ShortName>
@@ -240,10 +264,6 @@
 					<ShortName>Footsteps, Human, Dirty Ground, Walk SND62078.wav</ShortName>
 					<CachePath>SFX/Footsteps, Human, Dirty Ground, Walk SND62078_36AA4836.wem</CachePath>
 				</File>
-				<File Id="754351117" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Oxygen tank refill.wav</ShortName>
-					<CachePath>SFX/Oxygen tank refill_10C4C929.wem</CachePath>
-				</File>
 				<File Id="762911541" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Water, Ice, Puddle, Deep SND51723.wav</ShortName>
 					<CachePath>SFX/Footsteps, Human, Water, Ice, Puddle, Deep SND51723_FF4E6EAD.wem</CachePath>
@@ -254,7 +274,7 @@
 				</File>
 				<File Id="806302502" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Med intensity breath.wav</ShortName>
-					<CachePath>SFX/Med intensity breath_8B9F8E60.wem</CachePath>
+					<CachePath>SFX/Med intensity breath_04C58D24.wem</CachePath>
 				</File>
 				<File Id="808539231" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Dirty Ground, Walk SND62078.wav</ShortName>
@@ -262,7 +282,7 @@
 				</File>
 				<File Id="808603451" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Med intensity breath.wav</ShortName>
-					<CachePath>SFX/Med intensity breath_825C2952.wem</CachePath>
+					<CachePath>SFX/Med intensity breath_48A04ABE.wem</CachePath>
 				</File>
 				<File Id="826208891" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Club impact.wav</ShortName>
@@ -270,7 +290,7 @@
 				</File>
 				<File Id="830059164" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>low intensity breath.wav</ShortName>
-					<CachePath>SFX/low intensity breath_1ADC2669.wem</CachePath>
+					<CachePath>SFX/low intensity breath_222A2F8C.wem</CachePath>
 				</File>
 				<File Id="833378520" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Dirty Ground, Walk SND62078.wav</ShortName>
@@ -288,13 +308,21 @@
 					<ShortName>High intensity breath.wav</ShortName>
 					<CachePath>SFX/High intensity breath_FCE75E2F.wem</CachePath>
 				</File>
+				<File Id="887517597" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>leaves rustling.wav</ShortName>
+					<CachePath>SFX/leaves rustling_964D0D0C.wem</CachePath>
+				</File>
 				<File Id="897591067" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps, Human, Dirty Ground, Walk SND62078.wav</ShortName>
 					<CachePath>SFX/Footsteps, Human, Dirty Ground, Walk SND62078_F09AA35C.wem</CachePath>
 				</File>
+				<File Id="952752396" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>deep breath, single.wav</ShortName>
+					<CachePath>SFX/deep breath, single_10C4C929.wem</CachePath>
+				</File>
 				<File Id="961389808" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>low intensity breath.wav</ShortName>
-					<CachePath>SFX/low intensity breath_C1D439E3.wem</CachePath>
+					<CachePath>SFX/low intensity breath_662B1611.wem</CachePath>
 				</File>
 				<File Id="962728614" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>High intensity breath.wav</ShortName>
@@ -320,16 +348,15 @@
 					<ShortName>stone crumble 1.wav</ShortName>
 					<CachePath>SFX/stone crumble 1_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1065239075" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Death gasps.wav</ShortName>
+					<CachePath>SFX/Death gasps_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1066749036" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>satisfying woodwinds.wav</ShortName>
 					<CachePath>SFX/satisfying woodwinds_10C4C929.wem</CachePath>
 				</File>
 			</Media>
-			<Plugins>
-				<ShareSets>
-					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
-				</ShareSets>
-			</Plugins>
 			<Events>
 				<Event Id="3614189553" Name="BreakRock" DurationType="OneShot" DurationMin="1.36475" DurationMax="1.36475">
 					<MediaRefs>
@@ -380,6 +407,17 @@
 						<MediaRef Id="168313430"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="779278001" Name="Death" DurationType="OneShot" DurationMin="4.2213144" DurationMax="4.2213144">
+					<MediaRefs>
+						<MediaRef Id="1065239075"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1956601267" Name="EnterBubble" DurationType="OneShot" DurationMin="1.9927083" DurationMax="1.9927083">
+					<MediaRefs>
+						<MediaRef Id="200148865"/>
+						<MediaRef Id="952752396"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1913626152" Name="GrowTile" DurationType="OneShot" DurationMin="4" DurationMax="4.6967626">
 					<MediaRefs>
 						<MediaRef Id="91455883"/>
@@ -401,8 +439,12 @@
 						<MediaRef Id="1022091674"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="213112866" Name="LoseTile" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1712852617" Name="PlayFootstep" DurationType="OneShot" DurationMin="0" DurationMax="0.28226146">
+				<Event Id="3272521878" Name="LeavesRustle" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="887517597"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1712852617" Name="PlayFootstep" DurationType="OneShot" DurationMin="0" DurationMax="0.2860392">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2720040714" Id="2195636714" Default="true"/>
@@ -434,8 +476,7 @@
 							<MediaRefs>
 								<MediaRef Id="8121666"/>
 								<MediaRef Id="348220615"/>
-								<MediaRef Id="384430572"/>
-								<MediaRef Id="551084772"/>
+								<MediaRef Id="537832675"/>
 								<MediaRef Id="667377362"/>
 								<MediaRef Id="762911541"/>
 							</MediaRefs>
@@ -446,24 +487,15 @@
 					<MediaRefs>
 						<MediaRef Id="573738324"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="48620415"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 				<Event Id="3282522952" Name="UseAirCan" DurationType="OneShot" DurationMin="1.261375" DurationMax="1.261375">
 					<MediaRefs>
 						<MediaRef Id="548506324"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4290731854" Name="UseOxygen" DurationType="OneShot" DurationMin="1.9927083" DurationMax="1.9927083">
-					<MediaRefs>
-						<MediaRef Id="754351117"/>
-					</MediaRefs>
-				</Event>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="761609972" Name="DistanceFromTile"/>
 				<GameParameter Id="3660512661" Name="Oxygen"/>
 			</GameParameters>
 			<SwitchGroups>
@@ -478,5 +510,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6B084913-5900-22FA-02D1-D2A3A9CFAB30}</FileHash>
+	<FileHash>{C2B7DD3E-C3CB-A967-D222-FCCDF97832C1}</FileHash>
 </SoundBanksInfo>

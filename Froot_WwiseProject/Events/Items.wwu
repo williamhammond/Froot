@@ -3,17 +3,6 @@
 	<Events>
 		<WorkUnit Name="Items" ID="{D246DAED-4CA1-457C-86D6-474A1407CB53}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="UseOxygen" ID="{9033D646-C4CE-415A-B2A2-534630C1DE59}">
-					<ChildrenList>
-						<Action Name="" ID="{2960CC31-4F47-4A82-B541-988E0A2809FD}" ShortID="339725338">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Oxygen tank refill" ID="{AA24D066-7C2A-4557-BAD1-F0FA40191434}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="CollectAirCan" ID="{9412E3B9-E901-44AF-AC12-41DFCF4A5176}">
 					<ChildrenList>
 						<Action Name="" ID="{0364CE24-9806-40A6-8498-8F1BF547196E}" ShortID="927825607">
@@ -96,6 +85,24 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="RockImpact" ID="{7D00BCFF-5CC0-4E00-8A60-EC72496E8DEB}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="EnterBubble" ID="{B0563C0A-244D-4B2B-940C-4CA81DC87970}">
+					<ChildrenList>
+						<Action Name="" ID="{02C31455-4FEA-49D1-B0CD-8E1A33F3601B}" ShortID="94487238">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="deep breath, single" ID="{30F84341-9A0E-4B9D-8F71-12448A9231F8}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4B089FEE-5F27-4D10-8650-21050C3BA063}" ShortID="799173361">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Oxygen tank refill 2" ID="{E1FF84EA-1938-4700-9939-F85F92AB82BD}" WorkUnitID="{3D9B583A-243C-4044-A08F-B4FAB5427C63}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

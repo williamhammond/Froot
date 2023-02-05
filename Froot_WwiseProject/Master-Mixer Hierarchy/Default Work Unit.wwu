@@ -33,6 +33,32 @@
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
+						<Bus Name="Music" ID="{25BA96C1-F989-444C-B3C3-5AC3A4B30287}">
+							<PropertyList>
+								<Property Name="RecoveryTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="2D World" ID="{1C5084CC-558F-4B7D-9BB5-85BFA606E65C}"/>
+									<DuckingParam>
+										<Volume>-14</Volume>
+										<FadeInTime>2</FadeInTime>
+										<FadeOutTime>0</FadeOutTime>
+										<FadeCurve>FadeLinear</FadeCurve>
+										<TargetProp>BusVolume</TargetProp>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
+						</Bus>
+						<Bus Name="UI" ID="{F916C9E7-B857-4266-AF98-1CE2D36CE6C6}"/>
+						<Bus Name="2D World" ID="{1C5084CC-558F-4B7D-9BB5-85BFA606E65C}"/>
+						<Bus Name="3D World" ID="{D67FDFBB-9995-408F-A3FE-5F1E72D13701}">
+							<ReferenceList>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="OutdoorReverb" ID="{A4FF69B3-07E7-4CBD-869C-71C96490E5AD}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+								</Reference>
+							</ReferenceList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>
