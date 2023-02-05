@@ -10,9 +10,9 @@
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise 2022.1.1.8100/Wwise.app</WwiseInstallationPathMac>
-  <WwiseInstallationPathWindows />
-  <WwiseProjectPath>../Froot_WwiseProject/Froot_WwiseProject.wproj</WwiseProjectPath>
-  <UseWaapi>false</UseWaapi>
+  <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise 2022.1.1.8100</WwiseInstallationPathWindows>
+  <WwiseProjectPath>../../Froot/Froot_WwiseProject/Froot_WwiseProject.wproj</WwiseProjectPath>
+  <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>
   <XMLTranslatorTimeout>10</XMLTranslatorTimeout>
