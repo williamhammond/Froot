@@ -7,10 +7,11 @@ using UnityEngine.Events;
 public class PlayerWalk : MonoBehaviour
 {
     [SerializeField]
-    AnimationCurve walkPattern, heightCurve;
+    AnimationCurve walkPattern, heightCurve,durationCurve;
     [SerializeField]
     float speed = 0f;
-    
+
+    [SerializeField] Transform view;
 
     Tween myTween;
     Vector3 lastPos;
@@ -28,7 +29,6 @@ public class PlayerWalk : MonoBehaviour
         if(lastPos!=null)
         {
             speed = Vector3.Distance(FlattenVector(transform.position), lastPos)/Time.deltaTime;
-            Debug.Log("My speed: " + speed);
         }
         lastPos = FlattenVector(transform.position);
         if(controller!=null)
@@ -52,14 +52,8 @@ public class PlayerWalk : MonoBehaviour
         if(true)//speed>=threshold)
         {
             var skipIntensity = Mathf.InverseLerp(0, maxDistance, speed);
-            Debug.Log("Skip intensity: " + skipIntensity);
-            var duration = skipIntensity;
-            if (duration < .2)
-            {
-                duration = .2f;
-            }
-            Debug.Log("Initiating skip: " + duration);
-            myTween = transform.DOMoveY(controller.transform.position.y + (skipHeight * heightCurve.Evaluate(skipIntensity)), duration);
+
+            myTween = view.DOLocalMoveY((skipHeight * heightCurve.Evaluate(skipIntensity)), durationCurve.Evaluate(skipIntensity));
             myTween.SetEase(walkPattern);
             myTween.Play();
             myTween.OnComplete(() => stepLand?.Invoke()) ;

@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class OxygenTank : MonoBehaviour
 {
+    [SerializeField] bool debug;   
     [SerializeField]
     public float oxygenReal = 100f;
 
@@ -52,6 +53,7 @@ public class OxygenTank : MonoBehaviour
 
     private void Update()
     {
+        if (debug) return;
         //Debug.Log("Oxygen: " + oxygenRounded);
         Check();
     }
