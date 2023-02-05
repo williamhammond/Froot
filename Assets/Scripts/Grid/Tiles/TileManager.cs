@@ -60,7 +60,7 @@ public class TileManager : MonoBehaviour
         while (i > 0)
         {
             var tile = Random.Range(0, tiles.Count);
-            if (usedTiles.Contains(tile)) {
+            if (usedTiles.Contains(tile) || !tiles[tile].IsInteractable) {
                 continue;
             }
             usedTiles.Add(tile);

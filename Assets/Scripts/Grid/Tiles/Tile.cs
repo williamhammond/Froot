@@ -9,6 +9,8 @@ using TMPro;
 
 public class Tile : MonoBehaviour
 {
+    [SerializeField] bool isInteractable = true;
+    public bool IsInteractable => isInteractable;
     bool walkable = true;
     bool buildable = false;
 
@@ -100,7 +102,8 @@ public class Tile : MonoBehaviour
 
         TileManager.Instance.RegisterTile(this);
 
-        borderOriginalCol = ringMesh.materials[0].color;
+        if(ringMesh != null)
+            borderOriginalCol = ringMesh.materials[0].color;
 
     }
 

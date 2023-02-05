@@ -24,7 +24,7 @@ public class Targeter : MonoBehaviour
         {
            if(hit.collider.transform.parent.parent.gameObject.TryGetComponent<Tile>(out Tile t))
             {
-                if(target != t)
+                if(target != t && t.IsInteractable)
                 {
                     if(target != null)
                         target.Deselect();

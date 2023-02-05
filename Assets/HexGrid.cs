@@ -16,8 +16,10 @@ public class HexGrid : MonoBehaviour
     [SerializeField] AnimationCurve falloff;
 
     [SerializeField]Tile baseTilePrefab;
+    [SerializeField] Tile mountainTile;
+    [SerializeField] Buildable rockPrefab;
 
-    [SerializeField] float cutoff = .05f;
+    [SerializeField] float cutoff = .05f, rockCutoff = .25f;
 
     Dictionary<int2, Tile> TileDict;
 
@@ -34,7 +36,7 @@ public class HexGrid : MonoBehaviour
         //CreateGrid();
     }
 
-
+    [ContextMenu("Destroy Kids")]
     void DestroyChildren()
     {
         foreach (var tile in GetComponentsInChildren<Tile>())
@@ -89,7 +91,10 @@ public class HexGrid : MonoBehaviour
                     newTile.transform.position = pos;
                     TileDict.Add(new int2(x, y), newTile);
 
-
+                    if(noiseVal < rockCutoff)
+                    {
+                        Buildable rock = Instantiate < Buildable >( rockPrefab,newTile.transform);
+                    }
 
                     //visualize debug
                     MaterialPropertyBlock block = new MaterialPropertyBlock();
@@ -97,6 +102,13 @@ public class HexGrid : MonoBehaviour
 
                     block.SetColor("_BaseColor", Color.white * noiseVal);
                     newTile.baseMesh.SetPropertyBlock(block);
+                }
+                else
+                {
+                    var newTile = Instantiate<Tile>(mountainTile);
+                    newTile.gameObject.name = $"Tile {x}, {y}";
+                    newTile.transform.parent = transform;
+                    newTile.transform.position = pos;
                 }
 
 
