@@ -25,10 +25,6 @@ public class PlayerWalk : MonoBehaviour
     Tween myTween;
     Vector3 lastPos;
 
-    private void Start()
-    {
-        StartSkip();
-    }
     static Vector3 FlattenVector(Vector3 input)
     {
         return new Vector3(input.x, 0, input.z);
