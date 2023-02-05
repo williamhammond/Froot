@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Vector2=UnityEngine.Vector2;
@@ -17,7 +18,7 @@ namespace Player {
 
         Vector3 mousePos;
         Plane originPlane;
-
+        [SerializeField] DeathScreen deathScreen;
         public void Awake () {
             originPlane = new Plane(Vector3.up, Vector3.zero);
 
@@ -28,10 +29,19 @@ namespace Player {
 
         public void OnEnable () {
             _playerAction = _playerInput.actions["Action"];
+            _playerInput.actions["Reset"].performed += HandleReset;
             _playerAction.performed += HandlePlayerAction;
         }
-        
+
+        private void HandleReset(InputAction.CallbackContext obj) {
+            if (deathScreen.gameObject.activeSelf) deathScreen.Restart();
+            else {
+                deathScreen.gameObject.SetActive(true);
+            }
+        }
+
         public void OnDisable () {
+            _playerInput.actions["Reset"].performed -= HandleReset;
             _playerAction.performed -= HandlePlayerAction;
         }
 

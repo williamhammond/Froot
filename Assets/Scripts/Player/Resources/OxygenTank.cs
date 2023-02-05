@@ -58,7 +58,7 @@ public class OxygenTank : MonoBehaviour
         Check();
     }
 
-    UnityEvent tankDepleted;
+    public UnityEvent tankDepleted;
     void Die()
     {
         tankDepleted?.Invoke();

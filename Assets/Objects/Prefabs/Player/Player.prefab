@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bcb7148af0735f47bbaca36b3104c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCam: {fileID: 0}
+  mainCam: {fileID: 8184576844586596204}
   MoveSpeed: 1.4
 --- !u!114 &4240999363501069633
 MonoBehaviour:
@@ -1948,6 +1948,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDefaultListener: 1
   listenerId: 0
+--- !u!20 &8184576844586596204 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2635768830855540036, guid: 6bc7ab5f604d74243b7e78a99a9d150e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6125269944231287336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8184576845215950785 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2635768830377573865, guid: 6bc7ab5f604d74243b7e78a99a9d150e,
