@@ -4,6 +4,7 @@
 		<WorkUnit Name="Default Work Unit" ID="{C144AA49-3302-4D9B-AF82-003BE47D1D36}" PersistMode="Standalone">
 			<ChildrenList>
 				<Effect Name="New_Compressor" ID="{EBF9AED7-2A37-4448-8ED1-51ED56CE23AC}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3"/>
+				<Effect Name="New_Guitar_Distortion" ID="{5087003C-962D-4FC0-830F-8CE70AF52559}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>
