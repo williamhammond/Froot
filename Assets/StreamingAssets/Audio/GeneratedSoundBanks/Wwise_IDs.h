@@ -24,6 +24,7 @@ namespace AK
         static const AkUniqueID PLAYFOOTSTEP = 1712852617U;
         static const AkUniqueID PLAYWIND = 1592727253U;
         static const AkUniqueID USEAIRCAN = 3282522952U;
+        static const AkUniqueID USEOXYGEN = 4290731854U;
     } // namespace EVENTS
 
     namespace SWITCHES
