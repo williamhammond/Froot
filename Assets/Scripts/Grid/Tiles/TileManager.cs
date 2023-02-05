@@ -58,4 +58,14 @@ public class TileManager : MonoBehaviour
             tile.GrowRoots();
         }
     }
+
+
+    [ContextMenu("FetchTiles")]
+    public void ParentAllTiles()
+    {
+        foreach (var t in FindObjectsOfType<Tile>())
+        {
+            t.transform.parent = transform;
+        }
+    }
 }
