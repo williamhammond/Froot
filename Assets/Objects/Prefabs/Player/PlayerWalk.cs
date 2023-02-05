@@ -89,7 +89,7 @@ public class PlayerWalk : MonoBehaviour
     }
 
     public void PlayStepSound () {
-        AkSoundEngine.PostEvent(SoundManager.PlayFootstep, gameObject);
+        //AkSoundEngine.PostEvent(SoundManager.PlayFootstep, gameObject);
     }
 
     [SerializeField]

@@ -287,7 +287,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCam: {fileID: 8184576844586596204}
   MoveSpeed: 1.4
-  deathScreen: {fileID: 0}
 --- !u!114 &4240999363501069633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1365,19 +1364,7 @@ MonoBehaviour:
   stepLength: 0.4
   stepLand:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5655690360187532298}
-        m_TargetAssemblyTypeName: PlayerWalk, Assembly-CSharp
-        m_MethodName: PlayStepSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   controller: {fileID: 2902679191933961447}
   maxDistance: 2.8
 --- !u!136 &5434242144896172516
@@ -1427,9 +1414,6 @@ MonoBehaviour:
   maxOxygen: 100
   drainRate: 4
   activeSources: []
-  tankDepleted:
-    m_PersistentCalls:
-      m_Calls: []
   changedOxygen:
     m_PersistentCalls:
       m_Calls:
