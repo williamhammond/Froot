@@ -20,9 +20,9 @@ public class Spin : MonoBehaviour
         upTween.SetEase(Ease.InOutSine);
         upTween.SetLoops(-1,LoopType.Yoyo);
         mySequence.Append(upTween);
-        var rotTween = transform.DORotate(transform.rotation.eulerAngles, 1f, RotateMode.FastBeyond360);
-        rotTween.SetLoops(-1);
-        mySequence.Join(rotTween);
+        //var rotTween = transform.DORotate(transform.rotation.eulerAngles, 1f, RotateMode.FastBeyond360);
+        //rotTween.SetLoops(-1);
+        //mySequence.Join(rotTween);
         mySequence.Play();
         //mySequence.OnComplete(() => StartSequence());
     }

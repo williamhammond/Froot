@@ -6,7 +6,8 @@ namespace Player {
     public class PlayerInputController : MonoBehaviour {
         [SerializeField] Camera mainCam;
 
-        private const int MoveSpeed = 5;
+        [SerializeField]
+        private float MoveSpeed = 2;
         private CharacterController _controller;
     
         private PlayerInput _playerInput;

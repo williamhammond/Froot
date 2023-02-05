@@ -155,7 +155,7 @@ public class Tile : MonoBehaviour
         onAreate?.Invoke(this);
 
 
-        MaterialPropertyBlock block = new();
+        MaterialPropertyBlock block = new MaterialPropertyBlock();
         baseMesh.GetPropertyBlock(block,1);
 
         block.SetColor("_BaseColor", Color.green);
@@ -166,7 +166,7 @@ public class Tile : MonoBehaviour
         isAreable = false;
         onUnAreate?.Invoke(this);
 
-        MaterialPropertyBlock block = new();
+        MaterialPropertyBlock block = new MaterialPropertyBlock();
         baseMesh.GetPropertyBlock(block,0);
 
         block.SetColor("_BaseColor", Color.grey);
