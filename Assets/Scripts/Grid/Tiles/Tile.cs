@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Linq;
+using System;
+using TMPro;
 
 public class Tile : MonoBehaviour
 {
@@ -12,8 +15,8 @@ public class Tile : MonoBehaviour
     [SerializeField]
     public Transform tileTop;
 
-    [SerializeField]
     List<Tile> neighbors;
+
 
     [SerializeField]
     public Buildable occupant;
@@ -24,8 +27,21 @@ public class Tile : MonoBehaviour
     [SerializeField]
     GameObject indicator;
 
+    [SerializeField] MeshRenderer baseMesh;
+    [SerializeField]
+    bool isAreable;
+
+    [SerializeField] TMP_Text energyDebug;
+    int energy = 0;
+    public bool IsAreable => isAreable;
+    public UnityEvent<Tile> onAreate;
+    public UnityEvent<Tile> onUnAreate;
+
+    
+
     public UnityEvent onSelected;
     public UnityEvent onDeselected;
+
     public void Vacate()
     {
         occupant = null;
@@ -46,27 +62,28 @@ public class Tile : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider collider)
+    public void GrowRoots()
     {
-        //Build tile network
-       
-        if (neighbors==null)
+        if (energy <= 0) return;
+        var randoNeighbor = neighbors[UnityEngine.Random.Range(0, neighbors.Count)];
+        energy--;
+        randoNeighbor.MakeAreable(energy);
+    }
+
+
+    private void OnEnable()
+    {
+        neighbors = new();
+        foreach (var col in Physics.OverlapSphere(transform.position, transform.localScale.x * 1.3f))
         {
-            neighbors = new List<Tile>();
-        }
-        var newTile = collider.GetComponent<Tile>();
-        if (newTile!=null)
-        {
-            if(!neighbors.Contains(newTile))
+            if (col.gameObject == gameObject) continue;
+            if(col.TryGetComponent<Tile>(out Tile tile))
             {
-                neighbors.Add(newTile);
+                neighbors.Add(tile);
             }
         }
-    }
-    [SerializeField]
-    Tile testTile;
-    void Update()
-    {
+
+        TileManager.Instance.RegisterTile(this);
     }
 
     public bool IsConnected(Tile targetTile)
@@ -98,6 +115,44 @@ public class Tile : MonoBehaviour
         //Debug.Log("deselecting");
         indicator.SetActive(false);
         onDeselected?.Invoke();
+    }
+
+
+    public void MakeAreable(int energy)
+    {
+        this.energy = energy;
+        isAreable = true;
+        onAreate?.Invoke(this);
+
+        MaterialPropertyBlock block = new();
+        baseMesh.GetPropertyBlock(block);
+        block.SetColor("_BaseColor", Color.green);
+        baseMesh.SetPropertyBlock(block);
+    }
+    public void MakeUnAreable()
+    {
+        isAreable = false;
+        onUnAreate?.Invoke(this);
+
+        MaterialPropertyBlock block = new();
+        baseMesh.GetPropertyBlock(block);
+        block.SetColor("_BaseColor", Color.grey);
+        baseMesh.SetPropertyBlock(block);
+    }
+
+
+
+
+    private void OnDrawGizmosSelected()
+    {
+        if (neighbors == null) return;
+        foreach (var tile in neighbors)
+        {
+            Gizmos.color = tile.IsAreable ? Color.green : Color.red;
+
+            Gizmos.DrawWireSphere(tile.transform.position, .2f);
+        }
+        Gizmos.color = Color.white;
     }
 
 }
