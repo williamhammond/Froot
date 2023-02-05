@@ -13,7 +13,7 @@ public class TankPickup : Pickupable
         {
            // Debug.Log("Found tank");
             tank.FillMax();
-            //AkSoundEngine.PostEvent(SoundManager.CollectSoil, gameObject);
+            AkSoundEngine.PostEvent(SoundManager.CollectSoil, gameObject);
         }
         base.Pickup(picker);
         Destroy(gameObject);
