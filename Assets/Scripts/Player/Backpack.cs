@@ -2,29 +2,38 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class Backpack : MonoBehaviour {
-    [SerializeField] private int maxSeeds = 10;
-    [SerializeField] private UnityEvent<int> seedChange;
-    [SerializeField] private UnityEvent seedsDepleted;
-    [SerializeField] private UnityEvent seedsMaxed;
-    private int seeds = 1;
+    int seeds = 1;
+    [SerializeField]
+    int maxSeeds = 10;
+    [SerializeField]
+    UnityEvent<int> seedChange;
+    [SerializeField]
+    UnityEvent seedsDepleted;
+    [SerializeField]
+    UnityEvent seedsMaxed;
 
-    private void Awake () {
+    private void Awake()
+    {
         SetSeeds(0);
     }
-    public void SetSeeds (int add) {
+    public void SetSeeds(int add)
+    {
         seeds += add;
-        if (seeds > maxSeeds) {
+        if(seeds>maxSeeds)
+        {
             seeds = maxSeeds;
             seedsMaxed?.Invoke();
         }
-        if (seeds < 0) {
+        if(seeds<0)
+        {
             seeds = 0;
             seedsDepleted?.Invoke();
         }
         seedChange?.Invoke(seeds);
     }
 
-    public bool HasSeeds (int count) {
+    public bool HasSeeds(int count)
+    {
         if (count <= seeds) return true;
         return false;
     }
