@@ -18,8 +18,9 @@ public class Pickup : MonoBehaviour {
         }
         */
         var pickupable = other.gameObject.GetComponent<Pickupable>();
-        if (pickupable != null) {
-            pickupable.Pickup(gameObject);
+        if (pickupable!=null)
+        {
+            pickupable.Pickup(this.gameObject);
         }
     }
 }

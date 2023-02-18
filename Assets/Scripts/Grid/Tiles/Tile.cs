@@ -1,16 +1,27 @@
+using System.Collections;
 using System.Collections.Generic;
-using TMPro;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Linq;
+using System;
+using TMPro;
 
-public class Tile : MonoBehaviour {
-    [SerializeField] private bool isInteractable = true;
+public class Tile : MonoBehaviour
+{
+    [SerializeField] bool isInteractable = true;
+    public bool IsInteractable => isInteractable;
+    bool walkable = true;
+    bool buildable = false;
 
     [SerializeField]
     public Transform tileTop;
 
     [SerializeField]
     public GameObject seed;
+    
+
+    List<Tile> neighbors;
 
 
     [SerializeField]
@@ -19,122 +30,120 @@ public class Tile : MonoBehaviour {
     public UnityEvent onOccupy;
     public UnityEvent onVacate;
 
-    [SerializeField] private GameObject indicator;
+    [SerializeField]
+    GameObject indicator;
 
-    [SerializeField] public MeshRenderer baseMesh, ringMesh;
+    [SerializeField]public MeshRenderer baseMesh, ringMesh;
+    
+    [SerializeField, ColorUsage(true,true)] Color selectedColor = Color.green;
+    Color borderOriginalCol;
 
-    [SerializeField] [ColorUsage(true, true)] private Color selectedColor = Color.green;
+    [SerializeField]
+    bool isAreable;
 
-    [SerializeField] private bool isAreable;
-
-    [SerializeField] private TMP_Text energyDebug;
+    [SerializeField] TMP_Text energyDebug;
+    int energy = 0;
+    public bool IsAreable => isAreable;
     public UnityEvent<Tile> onAreate;
     public UnityEvent<Tile> onUnAreate;
 
-
+    
 
     public UnityEvent onSelected;
     public UnityEvent onDeselected;
-    private Color borderOriginalCol;
-    private bool buildable = false;
-    private int energy;
+
+    public void Vacate()
+    {
+        occupant = null;
+        onVacate?.Invoke();
+    }
+    public bool Occupy(Buildable newOccupant)
+    {
+        if(occupant == null)
+        {
+            occupant = newOccupant;
+            onOccupy?.Invoke();
+            return true;
+        }
+        else
+        {
+            return false;
+            Debug.LogError("Assigning occupant to occupied tile!");
+        }
+    }
+
+    public void GrowRoots()
+    {
+        if (energy <= 0) return;
+        var randoNeighbor = neighbors[UnityEngine.Random.Range(0, neighbors.Count)];
+        energy--;
+        randoNeighbor.MakeAreable(energy);
+    }
+
+    public void SpawnSeed () {
+        var seedPosition = transform.position + Vector3.up * 0.5f; 
+       var blah = Instantiate(seed, seedPosition, Quaternion.identity);
+       blah.gameObject.SetActive(true);
+
+    }
 
 
-    private List<Tile> neighbors;
-    private bool walkable = true;
-    public bool IsInteractable => isInteractable;
-    public bool IsAreable => isAreable;
-
-
-    private void OnEnable () {
+    private void OnEnable()
+    {
         neighbors = new List<Tile>();
-        foreach (var col in Physics.OverlapSphere(transform.position, transform.localScale.x * 1.3f)) {
+        foreach (var col in Physics.OverlapSphere(transform.position, transform.localScale.x * 1.3f))
+        {
             if (col.gameObject == gameObject) continue;
-            if (col.TryGetComponent(out Tile tile)) {
+            if(col.TryGetComponent<Tile>(out Tile tile))
+            {
                 neighbors.Add(tile);
             }
         }
 
         TileManager.Instance.RegisterTile(this);
 
-        if (ringMesh != null)
+        if(ringMesh != null)
             borderOriginalCol = ringMesh.materials[0].color;
 
     }
 
-
-
-
-    private void OnDrawGizmosSelected () {
-        if (neighbors == null) return;
-        foreach (var tile in neighbors) {
-            Gizmos.color = tile.IsAreable ? Color.green : Color.red;
-
-            Gizmos.DrawWireSphere(tile.transform.position, .2f);
-        }
-        Gizmos.color = Color.white;
-    }
-
-    public void Vacate () {
-        occupant = null;
-        onVacate?.Invoke();
-    }
-    public bool Occupy (Buildable newOccupant) {
-        if (occupant == null) {
-            occupant = newOccupant;
-            onOccupy?.Invoke();
-            return true;
-        }
-        return false;
-        Debug.LogError("Assigning occupant to occupied tile!");
-    }
-
-    public void GrowRoots () {
-        if (energy <= 0) return;
-        var randoNeighbor = neighbors[Random.Range(0, neighbors.Count)];
-        energy--;
-        randoNeighbor.MakeAreable(energy);
-    }
-
-    public void SpawnSeed () {
-        var seedPosition = transform.position + Vector3.up * 0.5f;
-        var blah = Instantiate(seed, seedPosition, Quaternion.identity);
-        blah.gameObject.SetActive(true);
-
-    }
-
-    public bool IsConnected (Tile targetTile) {
+    public bool IsConnected(Tile targetTile)
+    {
         return true;
         //A* Algorithm here
     }
-    public Stack<Tile> GetPath (Tile targetTile) {
+    public Stack<Tile> GetPath(Tile targetTile)
+    {
         return null;
         //A* pathway here
     }
 
-    private float FTile (Tile targetTile) {
+    float FTile(Tile targetTile)
+    {
         //for use in A*
-        return Vector3.Distance(transform.position, targetTile.transform.position);
+        return (Vector3.Distance(transform.position, targetTile.transform.position));
     }
 
-    public void Select () {
+    public void Select()
+    {
         //Debug.Log("selecting");
         indicator.SetActive(true);
 
         var block = new MaterialPropertyBlock();
-        ringMesh.GetPropertyBlock(block);//This is some dumb shit cause i dunno what the final mesh will look like
+        ringMesh.GetPropertyBlock(block); //This is some dumb shit cause i dunno what the final mesh will look like
         block.SetColor("_BaseColor", selectedColor);
         ringMesh.SetPropertyBlock(block);
 
         onSelected?.Invoke();
     }
 
-    public void Deselect () {
+    public void Deselect()
+    {
         //Debug.Log("deselecting");
         indicator.SetActive(false);
 
         var block = new MaterialPropertyBlock();
-        ringMesh.GetPropertyBlock(block);//This is some dumb shit cause i dunno what the final mesh will look like
+        ringMesh.GetPropertyBlock(block); //This is some dumb shit cause i dunno what the final mesh will look like
         block.SetColor("_BaseColor", borderOriginalCol);
         ringMesh.SetPropertyBlock(block);
 
@@ -142,26 +151,44 @@ public class Tile : MonoBehaviour {
     }
 
 
-    public void MakeAreable (int energy) {
+    public void MakeAreable(int energy)
+    {
         this.energy = energy;
         isAreable = true;
         onAreate?.Invoke(this);
 
 
-        var block = new MaterialPropertyBlock();
+        MaterialPropertyBlock block = new MaterialPropertyBlock();
         baseMesh.GetPropertyBlock(block);
 
         block.SetColor("_BaseColor", Color.green);
         baseMesh.SetPropertyBlock(block);
     }
-    public void MakeUnAreable () {
+    public void MakeUnAreable()
+    {
         isAreable = false;
         onUnAreate?.Invoke(this);
 
-        var block = new MaterialPropertyBlock();
+        MaterialPropertyBlock block = new MaterialPropertyBlock();
         baseMesh.GetPropertyBlock(block);
 
         block.SetColor("_BaseColor", Color.grey);
         baseMesh.SetPropertyBlock(block);
     }
+
+
+
+
+    private void OnDrawGizmosSelected()
+    {
+        if (neighbors == null) return;
+        foreach (var tile in neighbors)
+        {
+            Gizmos.color = tile.IsAreable ? Color.green : Color.red;
+
+            Gizmos.DrawWireSphere(tile.transform.position, .2f);
+        }
+        Gizmos.color = Color.white;
+    }
+
 }
