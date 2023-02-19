@@ -2,39 +2,18 @@
 
 on:
   push:
-    branches: ['main']
+    branches: ['*']
     paths: ['Assets/**', '.github/**', 'ProjectSettings/**']
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+  UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+  UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
 
 jobs:
   build:
     uses: ./.github/workflows/build.yml
     secrets:
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-  
-  deployPages:
-    name: Deploy to Github Pages 🚀
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - uses: actions/download-artifact@v2
-        with:
-          name: build-WebGL
-          path: build
-
-      - name: Display structure of root files
-        run: ls -R
-        working-directory: build/WebGL
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages
-          folder: build/WebGL
-          commit-message: Deploy
-          single-commit: true
+      UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
