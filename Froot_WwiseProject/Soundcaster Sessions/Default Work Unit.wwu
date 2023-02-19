@@ -3,7 +3,7 @@
 	<SoundcasterSessions>
 		<WorkUnit Name="Default Work Unit" ID="{B1F9A5A7-C84E-463C-9430-C9DDD00EC73D}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundcasterSession Name="Test" ID="{4AA2327F-A31C-4210-B230-37064B8EDFC4}">
+				<SoundcasterSession Name="FullMix" ID="{4AA2327F-A31C-4210-B230-37064B8EDFC4}">
 					<ModuleList>
 						<Module>
 							<ObjectRef Name="Breath" ID="{D93F811E-3362-414D-90FA-87F230223D4B}" WorkUnitID="{7CD8E6E1-B106-43C4-B90A-FB93AA523186}"/>
@@ -21,7 +21,11 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Oxygen" ID="{CE208EC0-8892-434D-8C91-B6DD00CCC3C1}"/>
-							<Value>2.19072164948454</Value>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="DistanceFromTile" ID="{8019D27B-A013-4E7C-B1B3-EDEB6779D5FD}"/>
+							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>

@@ -929,9 +929,19 @@
 								<Value>4</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>580</Value>
+							</ValueList>
+						</Property>
 						<Property Name="UseMaxSoundPerInstance" Type="bool">
 							<ValueList>
 								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -1727,6 +1737,46 @@
 											</RTPC>
 										</Local>
 									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{DDFE3C0F-DCDD-4A39-B8BC-6DB90F242E9D}" ShortID="407414879">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Highpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Oxygen" ID="{CE208EC0-8892-434D-8C91-B6DD00CCC3C1}" WorkUnitID="{CD436DBB-4B35-425E-A70A-5D95332DC322}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{E0E4C02B-7703-44F8-AA7B-EEA97D28293A}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>84</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>33.10902</XPos>
+																		<YPos>-100</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-100</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
 								</ObjectList>
 							</ObjectLists>
 							<BlendTrackAssocList>
@@ -1774,7 +1824,7 @@
 										<Local>
 											<RTPC Name="" ID="{4EE9CF09-3D0F-4178-B070-9EFC788863F2}" ShortID="22668578">
 												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+													<Property Name="PropertyName" Type="string" Value="Highpass"/>
 												</PropertyList>
 												<ReferenceList>
 													<Reference Name="ControlInput">
@@ -1789,11 +1839,11 @@
 																<PointList>
 																	<Point>
 																		<XPos>0</XPos>
-																		<YPos>77</YPos>
+																		<YPos>73</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>27.6037</XPos>
+																		<XPos>33.92941</XPos>
 																		<YPos>-100</YPos>
 																		<Flags>0</Flags>
 																	</Point>
@@ -1815,6 +1865,43 @@
 						</BlendTrack>
 					</BlendTrackList>
 				</BlendContainer>
+				<Sound Name="Death gasps" ID="{010D3BC9-F082-4DD0-9884-9A645A21E45B}" ShortID="69621691">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>580</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B9286A18-9D91-4F92-BC7F-F2FDACC5C8FE}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+							<ObjectRef Name="New_Guitar_Distortion" ID="{5087003C-962D-4FC0-830F-8CE70AF52559}" WorkUnitID="{C144AA49-3302-4D9B-AF82-003BE47D1D36}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CD3FA6E5-6614-431C-8927-4EF81F5E2F8B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Death gasps" ID="{F01D4C80-6FC0-4CE0-A6AE-A9A8F1CA0D4D}">
+							<Language>SFX</Language>
+							<AudioFile>Death gasps.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1065239075"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Death gasps" ID="{F01D4C80-6FC0-4CE0-A6AE-A9A8F1CA0D4D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
