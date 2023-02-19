@@ -5,6 +5,10 @@ on:
     secrets:
       UNITY_LICENSE:
         required: true
+      UNITY_EMAIL:
+        required: true
+      UNITY_PASSWORD:
+        required: true
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -14,7 +18,7 @@ env:
 jobs:
   buildWebGL:
     name: Build for WebGL 🖥️
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     strategy:
       fail-fast: false
     steps:
@@ -40,7 +44,7 @@ jobs:
 
   buildWindows:
     name: Build for Windows 🖥️
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     strategy:
       fail-fast: true
     steps:
